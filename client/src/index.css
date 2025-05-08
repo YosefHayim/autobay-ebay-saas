@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Noto Sans Hebrew";
+  src: url("../public/fonts/NotoSansHebrew-VariableFont_wdth\,wght.ttf");
+}
+
 #root {
+  font-family: "Noto Sans Hebrew";
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  direction: rtl;
 }
