@@ -1,7 +1,8 @@
-import React, { StrictMode } from "react";
+import  { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router";
-import App from "./app";
+import App from "./App";
+import './index.css'
 
 const root = document.getElementById("root");
 

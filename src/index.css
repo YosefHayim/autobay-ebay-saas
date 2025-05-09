@@ -2,10 +2,11 @@
 
 @font-face {
   font-family: "Noto Sans Hebrew";
-  src: url("../public/fonts/NotoSansHebrew-VariableFont_wdth\,wght.ttf");
+  src: url("fonts/NotoSansHebrew-VariableFont_wdth\,wght.ttf");
 }
 
 #root {
+  width: 100%;
   font-family: "Noto Sans Hebrew";
   direction: rtl;
 }
