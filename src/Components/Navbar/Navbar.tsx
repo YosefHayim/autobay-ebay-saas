@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav aria-label="Main navigation">
-      <ul>
+      <ul className="flex items-center justify-center gap-1 w-full">
         <li>
           <a href="#reserve">Reserve Me</a>
         </li>
