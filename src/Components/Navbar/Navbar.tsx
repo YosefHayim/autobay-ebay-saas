@@ -3,7 +3,7 @@ import { SidebarTrigger } from "../ui/sidebar";
 
 const Navbar = () => {
   return (
-    <nav aria-label="Main navigation" className="mb-2">
+    <nav aria-label="Main navigation" className="mb-2 w-full">
       <AppSidebar />
       <SidebarTrigger />
     </nav>
