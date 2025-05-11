@@ -13,15 +13,15 @@ const Contact = () => {
         <p className="text-base">We’re here to help! Reach out with any questions, and we’ll gladly assist.</p>
         <ul className="mt-2 flex list-disc flex-col gap-2">
           <li className="flex items-center gap-2">
-            <IoCheckmarkCircleSharp className="text-green-600" />
+            <IoCheckmarkCircleSharp className="shrink-0 text-green-600" />
             Schedule a call with our sales team
           </li>
           <li className="flex items-center gap-2">
-            <IoCheckmarkCircleSharp className="text-green-600" />
+            <IoCheckmarkCircleSharp className="shrink-0 text-green-600" />
             Get a full system demo and tailored customization
           </li>
           <li className="flex items-center gap-2">
-            <IoCheckmarkCircleSharp className="text-green-600" />
+            <IoCheckmarkCircleSharp className="shrink-0 text-green-600" />
             Discover how Quickly can streamline your operations
           </li>
         </ul>
