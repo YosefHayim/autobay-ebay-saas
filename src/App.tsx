@@ -2,8 +2,8 @@ import { Route, Routes } from "react-router";
 import Homepage from "./Pages/Homepage/Homepage";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
-import Pricing from "./Pages/Pricing/Pricing";
 import Contact from "./Pages/Contact/Contact";
+import { Pricing } from "./Pages/Pricing/Pricing";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
