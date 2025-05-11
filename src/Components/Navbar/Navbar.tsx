@@ -1,24 +1,23 @@
+import { Link } from "react-router";
+
 const Navbar = () => {
   return (
     <nav aria-label="Main navigation">
-      <ul className="flex items-center justify-center gap-1 w-full">
+      <ul className="flex w-full items-center justify-center gap-1">
         <li>
-          <a href="#reserve">Reserve Me</a>
+          <Link to="/">Reserve Me</Link>
         </li>
         <li>
-          <a href="#business-types">Business Types</a>
+          <Link to="/support">Support</Link>
         </li>
         <li>
-          <a href="#support">Information and Support</a>
+          <Link to="/contact">Contact Us</Link>
         </li>
         <li>
-          <a href="#contact">Contact Us</a>
+          <Link to="/pricing">Price</Link>
         </li>
         <li>
-          <a href="#price">Price</a>
-        </li>
-        <li>
-          <a href="">Start Now</a>
+          <Link to="/register">Start Now</Link>
         </li>
       </ul>
     </nav>
