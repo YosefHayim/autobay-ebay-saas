@@ -1,25 +1,11 @@
-import { Link } from "react-router";
+import { AppSidebar } from "../Sidebar/app-sidebar";
+import { SidebarTrigger } from "../ui/sidebar";
 
 const Navbar = () => {
   return (
     <nav aria-label="Main navigation" className="mb-2">
-      <ul className="flex w-full items-center justify-center gap-1">
-        <li>
-          <Link to="/">Reserve Me</Link>
-        </li>
-        <li>
-          <Link to="/support">Support</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact Us</Link>
-        </li>
-        <li>
-          <Link to="/pricing">Price</Link>
-        </li>
-        <li>
-          <Link to="/register">Start Now</Link>
-        </li>
-      </ul>
+      <AppSidebar />
+      <SidebarTrigger />
     </nav>
   );
 };
