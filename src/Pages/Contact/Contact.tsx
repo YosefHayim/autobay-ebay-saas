@@ -10,6 +10,9 @@ const Contact = () => {
           <li>Understanding how Quickly will help you run your business more efficiently</li>
         </ul>
       </div>
+      <form>
+        
+      </form>
     </div>
   );
 };
