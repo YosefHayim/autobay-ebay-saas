@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Navbar = () => {
   return (
-    <nav aria-label="Main navigation">
+    <nav aria-label="Main navigation" className="mb-2">
       <ul className="flex w-full items-center justify-center gap-1">
         <li>
           <Link to="/">Reserve Me</Link>
