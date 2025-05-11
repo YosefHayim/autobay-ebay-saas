@@ -8,10 +8,10 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 const Contact = () => {
   return (
     <section className="flex w-full flex-col items-start justify-start gap-4 p-4">
-      <h1 className="text-2xl font-semibold">Contact the Quickly Team</h1>
+      <h1 className="text-2xl font-semibold">Contact the Quickly Crew</h1>
       <div>
         <p className="text-base">We’re here to help! Reach out with any questions, and we’ll gladly assist.</p>
-        <ul className="mt-2 flex list-disc flex-col gap-2 pl-4">
+        <ul className="mt-2 flex list-disc flex-col gap-2">
           <li className="flex items-center gap-2">
             <IoCheckmarkCircleSharp className="text-green-600" />
             Schedule a call with our sales team

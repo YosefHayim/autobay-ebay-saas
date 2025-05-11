@@ -1,11 +1,15 @@
-import { AppSidebar } from "../Sidebar/app-sidebar";
+import Logo from "../Logo/Logo";
+import { AppSidebar } from "../Sidebar/Sidebar";
 import { SidebarTrigger } from "../ui/sidebar";
 
 const Navbar = () => {
   return (
-    <nav aria-label="Main navigation" className="mb-2 w-full">
-      <AppSidebar />
-      <SidebarTrigger />
+    <nav aria-label="Main navigation">
+      <div>
+        <AppSidebar />
+        <SidebarTrigger />
+      </div>
+      <Logo />
     </nav>
   );
 };
