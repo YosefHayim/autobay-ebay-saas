@@ -1,4 +1,16 @@
-export const demoPlans = [
+interface PricingPlan {
+  name: string;
+  price: string;
+  yearlyPrice: string;
+  period: string;
+  features: string[];
+  description: string;
+  buttonText: string;
+  href: string;
+  isPopular: boolean;
+}
+
+export const PLANS: PricingPlan[] = [
   {
     name: "Basic",
     price: "99",
@@ -40,7 +52,7 @@ export const demoPlans = [
       "Forms and questionnaires",
     ],
     description: "Ideal for growing teams and businesses",
-    buttonText: "Get Started",
+    buttonText: "Start Free Trial",
     href: "/sign-up",
     isPopular: true,
   },
@@ -62,8 +74,8 @@ export const demoPlans = [
       "Product and inventory management",
     ],
     description: "For large organizations with specific needs",
-    buttonText: "Contact Sales",
-    href: "/contact",
+    buttonText: "Start Free Trial",
+    href: "/sign-up",
     isPopular: false,
   },
 ];

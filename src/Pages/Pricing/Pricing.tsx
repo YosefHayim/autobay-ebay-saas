@@ -1,6 +1,6 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useMediaQuery } from "usehooks-ts";
@@ -11,29 +11,17 @@ import { useState, useRef } from "react";
 import confetti from "canvas-confetti";
 import NumberFlow from "@number-flow/react";
 import { Link } from "react-router";
-import { demoPlans } from "./plans";
-
-interface PricingPlan {
-  name: string;
-  price: string;
-  yearlyPrice: string;
-  period: string;
-  features: string[];
-  description: string;
-  buttonText: string;
-  href: string;
-  isPopular: boolean;
-}
+import { Faq } from "./Faq";
+import { PLANS } from "./plans";
 
 interface PricingProps {
-  plans: PricingPlan[];
   title?: string;
   description?: string;
 }
 
 const Pricing = ({
-  title = "Simple, Transparent Pricing",
-  description = "Choose the plan that works for you\nAll plans include access to our platform, lead generation tools, and dedicated support.",
+  title = "Try Quickly's calendar for free now.",
+  description = "Whether you're a new business or a national chain, Quickly has you covered at every stage.",
 }: PricingProps) => {
   const [isMonthly, setIsMonthly] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -68,6 +56,18 @@ const Pricing = ({
       <div className="mb-12 space-y-4 text-center">
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">{title}</h2>
         <p className="text-muted-foreground text-lg whitespace-pre-line">{description}</p>
+        <Button
+          className={cn(
+            buttonVariants({
+              variant: "outline",
+            }),
+            "group relative w-min gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
+            "hover:ring-primary hover:bg-primary hover:text-primary-foreground transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-offset-1",
+            "bg-background text-foreground",
+            "cursor-pointer",
+          )}>
+          Try now for free.
+        </Button>
       </div>
 
       <div className="mb-10 flex justify-center">
@@ -82,7 +82,7 @@ const Pricing = ({
       </div>
 
       <div className="sm:2 grid grid-cols-1 gap-4 md:grid-cols-3">
-        {demoPlans.map((plan, index) => (
+        {PLANS.map((plan, index) => (
           <motion.div
             key={index}
             initial={{ y: 50, opacity: 1 }}
@@ -128,11 +128,11 @@ const Pricing = ({
                     value={isMonthly ? Number(plan.price) : Number(plan.yearlyPrice)}
                     format={{
                       style: "currency",
-                      currency: "USD",
+                      currency: "ILS",
                       minimumFractionDigits: 0,
                       maximumFractionDigits: 0,
                     }}
-                    formatter={(value) => `$${value}`}
+                    formatter={(value) => `₪${value}`}
                     transformTiming={{
                       duration: 500,
                       easing: "ease-out",
@@ -176,6 +176,7 @@ const Pricing = ({
           </motion.div>
         ))}
       </div>
+      <Faq />
     </div>
   );
 };
