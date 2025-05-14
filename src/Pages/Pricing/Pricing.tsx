@@ -3,14 +3,15 @@
 import { buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import { useMediaQuery } from "@/hooks/use-media-query";
+import { useMediaQuery } from "usehooks-ts";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
-import Link from "next/link";
 import { useState, useRef } from "react";
 import confetti from "canvas-confetti";
 import NumberFlow from "@number-flow/react";
+import { Link } from "react-router";
+import { demoPlans } from "./plans";
 
 interface PricingPlan {
   name: string;
@@ -30,11 +31,10 @@ interface PricingProps {
   description?: string;
 }
 
-export function Pricing({
-  plans,
+const Pricing = ({
   title = "Simple, Transparent Pricing",
   description = "Choose the plan that works for you\nAll plans include access to our platform, lead generation tools, and dedicated support.",
-}: PricingProps) {
+}: PricingProps) => {
   const [isMonthly, setIsMonthly] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const switchRef = useRef<HTMLButtonElement>(null);
@@ -82,7 +82,7 @@ export function Pricing({
       </div>
 
       <div className="sm:2 grid grid-cols-1 gap-4 md:grid-cols-3">
-        {plans.map((plan, index) => (
+        {demoPlans.map((plan, index) => (
           <motion.div
             key={index}
             initial={{ y: 50, opacity: 1 }}
@@ -160,7 +160,7 @@ export function Pricing({
               <hr className="my-4 w-full" />
 
               <Link
-                href={plan.href}
+                to={plan.href}
                 className={cn(
                   buttonVariants({
                     variant: "outline",
@@ -178,4 +178,6 @@ export function Pricing({
       </div>
     </div>
   );
-}
+};
+
+export default Pricing;
