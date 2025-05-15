@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
-import { Link, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "../Logo";
+import { Link } from "react-router";
 
 const menuItems = [
   { name: "Features", href: "#link" },
