@@ -3,16 +3,33 @@ import type { ComponentProps, ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { FrameIcon } from "lucide-react";
 import { footerLinks } from "./footerLinks";
+import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router";
+
+const sociaLinks = [
+  { title: "Facebook", to: "", icon: <FaFacebookF size={30} className="rounded-full bg-black p-2 text-white" /> },
+  { title: "Instagram", to: "", icon: <FaInstagram size={30} className="rounded-full bg-black p-2 text-white" /> },
+  { title: "Tiktok", to: "", icon: <FaYoutube size={30} className="rounded-full bg-black p-2 text-white" /> },
+  { title: "Youtube", to: "", icon: <FaTiktok size={30} className="rounded-full bg-black p-2 text-white" /> },
+];
 
 const Footer = () => {
   return (
     <footer className="md:rounded-t-6xl relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center rounded-t-4xl border-t bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)] px-6 py-12 lg:py-16">
       <div className="bg-foreground/20 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur" />
-
       <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
           <FrameIcon className="size-8" />
-          <p className="text-muted-foreground mt-8 text-sm md:mt-0">© {new Date().getFullYear()} Asme. All rights reserved.</p>
+          <div className="mt-8 text-sm md:mt-0">
+            <div className="mb-4 flex gap-2">
+              {sociaLinks.map((socialPlatform) => (
+                <Link to={socialPlatform.to} aria-valuetext={socialPlatform.title}>
+                  {socialPlatform.icon}
+                </Link>
+              ))}
+            </div>
+            <p className="text-muted-foreground">© {new Date().getFullYear()} Asme. All rights reserved.</p>
+          </div>
         </AnimatedContainer>
 
         <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">

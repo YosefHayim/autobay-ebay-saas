@@ -13,39 +13,29 @@ interface FooterSection {
 
 export const footerLinks: FooterSection[] = [
   {
-    label: "Product",
+    label: "אודות",
     links: [
-      { title: "Features", href: "#features" },
-      { title: "Pricing", href: "#pricing" },
-      { title: "Testimonials", href: "#testimonials" },
-      { title: "Integration", href: "/" },
+      { title: "הורדת האפליקציה", href: "#features" },
+      { title: "מחירון", href: "#pricing" },
+      { title: "צרו קשר", href: "#testimonials" },
+      { title: "התחלת התנסות", href: "/" },
     ],
   },
   {
-    label: "Company",
+    label: "מוצר",
     links: [
-      { title: "FAQs", href: "/faqs" },
-      { title: "About Us", href: "/about" },
-      { title: "Privacy Policy", href: "/privacy" },
-      { title: "Terms of Services", href: "/terms" },
+      { title: "אישורי הגעה", href: "/faqs" },
+      { title: "ניהול יומן", href: "/about" },
+      { title: "קבלת תשלום", href: "/privacy" },
+      { title: "דוחות", href: "/terms" },
     ],
   },
   {
-    label: "Resources",
+    label: "שירות לקוחות",
     links: [
-      { title: "Blog", href: "/blog" },
-      { title: "Changelog", href: "/changelog" },
-      { title: "Brand", href: "/brand" },
-      { title: "Help", href: "/help" },
-    ],
-  },
-  {
-    label: "Social Links",
-    links: [
-      { title: "Facebook", href: "#", icon: FacebookIcon },
-      { title: "Instagram", href: "#", icon: InstagramIcon },
-      { title: "Youtube", href: "#", icon: YoutubeIcon },
-      { title: "LinkedIn", href: "#", icon: LinkedinIcon },
+      { title: "חייגו אלינו", href: "/blog" },
+      { title: "שליחת הודעה", href: "/changelog" },
+      { title: "שירות לקוחות", href: "/brand" },
     ],
   },
 ];
