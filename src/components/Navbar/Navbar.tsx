@@ -5,13 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "../Logo";
 import { Link } from "react-router";
 import ToggleBtn from "../ToggleBtn/ToggleBtn";
-
-const menuItems = [
-  { name: "דף הבית", href: "#link" },
-  { name: "מידע ותמיכה", href: "#link" },
-  { name: "צרו קשר", href: "#link" },
-  { name: "מחירון", href: "#link" },
-];
+import { menuItems } from "./menuItems";
 
 const Navbar = () => {
   const [menuState, setMenuState] = React.useState(false);

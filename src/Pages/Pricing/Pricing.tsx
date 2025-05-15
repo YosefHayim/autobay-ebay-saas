@@ -10,6 +10,8 @@ import { Check, Star } from "lucide-react";
 import { useState, useRef } from "react";
 import confetti from "canvas-confetti";
 import NumberFlow from "@number-flow/react";
+import { Link } from "react-router";
+import { plans } from "./plans";
 
 interface PricingPlan {
   name: string;
@@ -29,11 +31,10 @@ interface PricingProps {
   description?: string;
 }
 
-export function Pricing({
-  plans,
+const Pricing = ({
   title = "Simple, Transparent Pricing",
   description = "Choose the plan that works for you\nAll plans include access to our platform, lead generation tools, and dedicated support.",
-}: PricingProps) {
+}: PricingProps) => {
   const [isMonthly, setIsMonthly] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const switchRef = useRef<HTMLButtonElement>(null);
@@ -128,7 +129,7 @@ export function Pricing({
                     value={isMonthly ? Number(plan.price) : Number(plan.yearlyPrice)}
                     format={{
                       style: "currency",
-                      currency: "USD",
+                      currency: "ILS",
                       minimumFractionDigits: 0,
                       maximumFractionDigits: 0,
                     }}
@@ -160,7 +161,7 @@ export function Pricing({
               <hr className="my-4 w-full" />
 
               <Link
-                href={plan.href}
+                to={plan.href}
                 className={cn(
                   buttonVariants({
                     variant: "outline",
@@ -179,4 +180,6 @@ export function Pricing({
       </div>
     </div>
   );
-}
+};
+
+export default Pricing;
