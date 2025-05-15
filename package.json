@@ -14,6 +14,9 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@heroui/navbar": "^2.2.17",
+    "@heroui/system": "^2.4.15",
+    "@heroui/theme": "^2.4.15",
     "@number-flow/react": "^0.5.9",
     "@radix-ui/react-accordion": "^1.2.10",
     "@radix-ui/react-avatar": "^1.1.9",
@@ -29,7 +32,7 @@
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.11.3",
+    "framer-motion": "^12.11.4",
     "lucide-react": "^0.509.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
