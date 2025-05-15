@@ -1,10 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { Link } from "react-router";
-import { Navbar } from "../../../components/Navbar";
 import TextColor from "../TextColor/TextColor";
-import { InfiniteSlider } from "@/components/ui/infinite-slider";
-import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 const transitionVariants = {
   item: {
@@ -29,7 +26,6 @@ const transitionVariants = {
 const HeroSection = () => {
   return (
     <>
-      <Navbar />
       <main className="overflow-hidden">
         <div aria-hidden className="pointer-events-none absolute inset-0 isolate z-[2] hidden opacity-50 contain-strict lg:block">
           <div className="absolute top-0 left-0 h-[80rem] w-[35rem] -translate-y-[350px] -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]" />
