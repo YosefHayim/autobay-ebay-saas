@@ -1,5 +1,3 @@
-import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from "lucide-react";
-
 interface FooterLink {
   title: string;
   href: string;
