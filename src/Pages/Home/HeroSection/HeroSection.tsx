@@ -1,8 +1,9 @@
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { Link } from "react-router";
 import { Navbar } from "../../../components/Navbar";
+import TextColor from "../TextColor/TextColor";
 
 const transitionVariants = {
   item: {
@@ -71,6 +72,8 @@ const HeroSection = () => {
                 height="4095"
               />
             </AnimatedGroup>
+            <TextColor />
+
             <div
               aria-hidden
               className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]"
@@ -78,30 +81,9 @@ const HeroSection = () => {
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mt-0 lg:mr-auto">
                 <AnimatedGroup variants={transitionVariants}>
-                  <Link
-                    to="#link"
-                    className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-                  >
-                    <span className="text-foreground text-sm">Introducing Support for AI Models</span>
-                    <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
-
-                    <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                      <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                        <span className="flex size-6">
-                          <ArrowRight className="m-auto size-3" />
-                        </span>
-                        <span className="flex size-6">
-                          <ArrowRight className="m-auto size-3" />
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-
-                  <h1 className="mx-auto mt-8 max-w-4xl text-6xl text-balance md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                    Modern Solutions for Customer Engagement
-                  </h1>
+                  <h1 className="mx-auto mt-8 max-w-4xl text-6xl text-balance md:text-7xl lg:mt-16 xl:text-[5.25rem]">פשוט יומן שעובד בשבילך</h1>
                   <p className="mx-auto mt-8 max-w-2xl text-lg text-balance">
-                    Highly customizable components for building modern websites and applications that look and feel the way you mean it.
+                    קוויקלי תוריד ממך את העומס בניהול העסק. לקוחות יקבעו תורים לבד, אישורי הגעה ישלחו אוטומטית ב WhatsApp והתשלום יתקבל בקליק.
                   </p>
                 </AnimatedGroup>
 
@@ -119,18 +101,14 @@ const HeroSection = () => {
                   }}
                   className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
                 >
-                  <div key={1} className="bg-foreground/10 rounded-[14px] border p-0.5">
-                    <Button asChild size="lg" className="rounded-xl px-5 text-base">
+                  <div key={1} className="flex flex-col">
+                    <Button size="lg" className="rounded-xl px-5 text-base">
                       <Link to="#link">
-                        <span className="text-nowrap">Start Building</span>
+                        <span className="text-nowrap">התחילו עכשיו</span>
                       </Link>
                     </Button>
+                    <span className="text-nowrap">אין צורך בפרטי באשראי</span>
                   </div>
-                  <Button key={2} asChild size="lg" variant="ghost" className="h-10.5 rounded-xl px-5">
-                    <Link to="#link">
-                      <span className="text-nowrap">Request a demo</span>
-                    </Link>
-                  </Button>
                 </AnimatedGroup>
               </div>
             </div>
