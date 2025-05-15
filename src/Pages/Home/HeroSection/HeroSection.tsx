@@ -2,7 +2,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { Link } from "react-router";
-import { Navbar } from "../Navbar";
+import { Navbar } from "../../../components/Navbar";
 
 const transitionVariants = {
   item: {
@@ -24,7 +24,7 @@ const transitionVariants = {
   },
 };
 
-export function HeroSection() {
+const HeroSection = () => {
   return (
     <>
       <Navbar />
@@ -260,4 +260,6 @@ export function HeroSection() {
       </main>
     </>
   );
-}
+};
+
+export default HeroSection;

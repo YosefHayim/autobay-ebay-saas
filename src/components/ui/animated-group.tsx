@@ -1,8 +1,7 @@
 "use client";
-import { ReactNode } from "react";
-import { motion, Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { type ReactNode } from "react";
 
 type PresetType = "fade" | "slide" | "scale" | "blur" | "blur-slide" | "zoom" | "flip" | "bounce" | "rotate" | "swing";
 
