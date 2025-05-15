@@ -6,10 +6,10 @@ import { Logo } from "../Logo";
 import { Link } from "react-router";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "דף הבית", href: "#link" },
+  { name: "מידע ותמיכה", href: "#link" },
+  { name: "צרו קשר", href: "#link" },
+  { name: "מחירון", href: "#link" },
 ];
 
 const Navbar = () => {
@@ -75,12 +75,12 @@ const Navbar = () => {
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild variant="outline" size="sm" className={cn(isScrolled && "lg:hidden")}>
                   <Link to="#">
-                    <span>Login</span>
+                    <span>התחברות</span>
                   </Link>
                 </Button>
                 <Button asChild size="sm" className={cn(isScrolled && "lg:hidden")}>
                   <Link to="#">
-                    <span>Sign Up</span>
+                    <span>הרשמה</span>
                   </Link>
                 </Button>
                 <Button asChild size="sm" className={cn(isScrolled ? "lg:inline-flex" : "hidden")}>
