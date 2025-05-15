@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "../Logo";
 import { Link } from "react-router";
+import ToggleBtn from "../ToggleBtn/ToggleBtn";
 
 const menuItems = [
   { name: "דף הבית", href: "#link" },
@@ -73,6 +74,7 @@ const Navbar = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+                <ToggleBtn />
                 <Button asChild variant="outline" size="sm" className={cn(isScrolled && "lg:hidden")}>
                   <Link to="#">
                     <span>התחברות</span>
@@ -85,7 +87,7 @@ const Navbar = () => {
                 </Button>
                 <Button asChild size="sm" className={cn(isScrolled ? "lg:inline-flex" : "hidden")}>
                   <Link to="#">
-                    <span>Get Started</span>
+                    <span>התחילו עכשיו</span>
                   </Link>
                 </Button>
               </div>

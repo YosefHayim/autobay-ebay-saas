@@ -153,7 +153,7 @@ const HeroSection = () => {
           <div className="group relative m-auto max-w-6xl px-6">
             <div className="flex flex-col items-center md:flex-row">
               <div className="md:max-w-44 md:border-r md:pr-6">
-                <p className="text-end text-sm">כל המפלצות כבר הצטרפו</p>
+                <p className="text-end text-sm">כל הגדולים כבר הצטרפו</p>
               </div>
               <div className="relative py-6 md:w-[calc(100%-11rem)]">
                 <InfiniteSlider durationOnHover={20} duration={40} gap={112}>
