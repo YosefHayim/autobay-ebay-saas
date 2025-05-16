@@ -13,20 +13,7 @@ import NumberFlow from "@number-flow/react";
 import { Link } from "react-router";
 import { plans } from "./plans";
 
-interface PricingPlan {
-  name: string;
-  price: string;
-  yearlyPrice: string;
-  period: string;
-  features: string[];
-  description: string;
-  buttonText: string;
-  href: string;
-  isPopular: boolean;
-}
-
 interface PricingProps {
-  plans: PricingPlan[];
   title?: string;
   description?: string;
 }

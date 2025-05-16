@@ -1,4 +1,16 @@
-export const plans = [
+interface PricingPlan {
+  name: string;
+  price: string;
+  yearlyPrice: string;
+  period: string;
+  features: string[];
+  description: string;
+  buttonText: string;
+  href: string;
+  isPopular: boolean;
+}
+
+export const plans: PricingPlan[] = [
   {
     name: "STARTER",
     price: "50",

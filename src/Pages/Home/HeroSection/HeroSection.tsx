@@ -133,7 +133,7 @@ const HeroSection = () => {
                         <span className="text-nowrap">התחילו עכשיו</span>
                       </Link>
                     </Button>
-                    <span className="text-nowrap">אין צורך בפרטי באשראי</span>
+                    <span className="text-nowrap">אין צורך בפרטי אשראי</span>
                   </div>
                 </AnimatedGroup>
               </div>

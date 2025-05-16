@@ -51,7 +51,6 @@ const ForthHeroSection = ({ words, duration = 1500, className }: { words: string
         className={cn("relative z-10 inline-block px-2 text-left text-5xl font-extrabold text-neutral-900 dark:text-neutral-100", className)}
         key={currentWord}
       >
-        {/* edit suggested by Sajal: https://x.com/DewanganSajal */}
         {currentWord.split(" ").map((word, wordIndex) => (
           <motion.span
             key={word + wordIndex}
