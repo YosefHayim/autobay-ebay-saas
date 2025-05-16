@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { Link } from "react-router";
 import TextColor from "../TextColor/TextColor";
+import ForthHeroSection from "../ForthHeroSection/ForthHeroSection";
 
 const transitionVariants = {
   item: {
@@ -78,7 +79,35 @@ const HeroSection = () => {
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mt-0 lg:mr-auto">
                 <AnimatedGroup variants={transitionVariants}>
-                  <h1 className="mx-auto mt-8 max-w-4xl text-6xl font-extrabold text-balance md:text-7xl lg:mt-16 xl:text-[5.25rem]">פשוט יומן שעובד בשבילך</h1>
+                  <ForthHeroSection
+                    words={[
+                      "בלי טלפונים מיותרים",
+                      "פחות ביטולים, יותר הכנסות",
+                      "היומן שמתזמן לבד",
+                      "שקט נפשי לעסק שלך",
+                      "בלי רדיפה אחרי לקוחות",
+                      "שליטה מלאה בתורים",
+                      "יומן חכם שחוסך לך זמן",
+                      "היומן שמזכיר ללקוח לבד",
+                      "ניהול העסק בלי כאב ראש",
+                      "בלי לרדוף אחרי תשלומים",
+                      "פחות ניהול – יותר עבודה",
+                      "היומן שמזיז את העסק קדימה",
+                      "היומן שמוריד את הלחץ",
+                      "יומן שעובד גם כשאתה לא",
+                      "יומן שלא צריך אותך",
+                      "מערכת שתומכת בך באמת",
+                      "בלי שיחות, בלי הודעות, רק תורים",
+                      "היומן שמבין את השגרה שלך",
+                      "יומן עם תזכורות אוטומטיות",
+                      "תורים מסודרים בלחיצת כפתור",
+                      "סוף לסרבול – היומן הדיגיטלי שלך",
+                      "ניהול עסק כמו שצריך",
+                      "יומן שגם ההורים שלך יבינו",
+                      "היומן ששולח תזכורות לבד",
+                      "היומן שמפנה לך זמן",
+                    ]}
+                  />
                   <p className="mx-auto mt-8 max-w-2xl text-lg text-balance">
                     קוויקלי תוריד ממך את העומס בניהול העסק. לקוחות יקבעו תורים לבד, אישורי הגעה ישלחו אוטומטית ב WhatsApp והתשלום יתקבל בקליק.
                   </p>

@@ -6,8 +6,8 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
-      <TwoHeroSection />
       <ThirdHeroSection />
+      <TwoHeroSection />
     </div>
   );
 };
