@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="mt-8 text-sm md:mt-0">
             <div className="mb-4 flex gap-2">
               {sociaLinks.map((socialPlatform) => (
-                <Link to={socialPlatform.to} aria-valuetext={socialPlatform.title}>
+                <Link to={socialPlatform.to} aria-valuetext={socialPlatform.title} key={socialPlatform.title}>
                   {socialPlatform.icon}
                 </Link>
               ))}
