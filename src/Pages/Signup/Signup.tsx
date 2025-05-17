@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Stepper, StepperIndicator, StepperItem, StepperSeparator, StepperTrigger } from "@/components/ui/stepper";
 import { useState } from "react";
+import InputOTPAuth from "./InputOTPAuth/InputOTPAuth";
 
 const steps = [1, 2, 3, 4];
 
@@ -34,7 +35,13 @@ const SignUp = () => {
         break;
 
       case 2:
-        <section></section>;
+        return (
+          <section>
+            <form>
+              <InputOTPAuth />
+            </form>
+          </section>
+        );
         break;
 
       case 3:
@@ -63,7 +70,7 @@ const SignUp = () => {
             </StepperItem>
           ))}
         </Stepper>
-        <div>{stepSignUpProccess()}</div>
+        <div className="flex w-full items-center justify-center">{stepSignUpProccess()}</div>
         <div className="flex justify-center space-x-4">
           <Button variant="outline" className="w-32" onClick={() => setCurrentStep((prev) => prev - 1)} disabled={currentStep === 1}>
             חזור
