@@ -25,10 +25,10 @@ const SignUp = () => {
     switch (currentStep) {
       case 1:
         return (
-          <section>
-            <form>
+          <section className="justify flex w-full items-center justify-center">
+            <form className="w-1/3">
               <Label htmlFor="phone-number">מה מספר הנייד שלך?</Label>
-              <Input type="tel" id="phone" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+              <Input type="tel" id="phone" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required className="w-full" />
             </form>
           </section>
         );
@@ -36,8 +36,10 @@ const SignUp = () => {
 
       case 2:
         return (
-          <section>
-            <form>
+          <section className="flex w-1/2 flex-col items-center justify-center gap-3">
+            <h1>שלחנו לך הודעה עם קוד אימות</h1>
+            <p>הזן את הקוד שקיבלת</p>
+            <form dir="ltr">
               <InputOTPAuth />
             </form>
           </section>
@@ -58,7 +60,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="mx-auto max-w-xl min-w-[300px] space-y-8 text-center">
+    <div className="mx-auto h-100 max-w-xl min-w-[300px] space-y-8">
       <div>
         <Stepper value={currentStep} onValueChange={setCurrentStep}>
           {steps.map((step) => (
@@ -70,8 +72,8 @@ const SignUp = () => {
             </StepperItem>
           ))}
         </Stepper>
-        <div className="flex w-full items-center justify-center">{stepSignUpProccess()}</div>
-        <div className="flex justify-center space-x-4">
+        <div className="flex w-full flex-col items-center justify-center">{stepSignUpProccess()}</div>
+        <div className="mt-4 flex justify-center space-x-4">
           <Button variant="outline" className="w-32" onClick={() => setCurrentStep((prev) => prev - 1)} disabled={currentStep === 1}>
             חזור
           </Button>

@@ -21,7 +21,7 @@ const Navbar = () => {
   }, []);
   return (
     <header>
-      <nav data-state={menuState && "active"} className="group fixed z-20 w-full px-2">
+      <nav data-state={menuState && "active"} className={`${isScrolled ? "fixed" : "static"} group z-20 w-full px-2`}>
         <div
           className={cn(
             "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
