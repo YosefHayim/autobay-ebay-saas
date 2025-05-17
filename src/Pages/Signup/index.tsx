@@ -1,1 +1,1 @@
-export { default as SignUp } from "../../components/ProgressSignUp/ProgressSignUp";
+export { default as SignUp } from "./SignUp";
