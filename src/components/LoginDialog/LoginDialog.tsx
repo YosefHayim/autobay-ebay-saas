@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router";
 
 const LoginDialog = () => {
   return (
@@ -21,6 +23,17 @@ const LoginDialog = () => {
           <div className="grid gap-2">
             <Label htmlFor="password">סיסמה</Label>
             <Input required id="password" type="password" placeholder="••••••••••" autoComplete="current-password" />
+            <Link to="/forget-password" className="text-sm text-gray-300 hover:text-black">
+              שכחת סיסמה?
+            </Link>
+          </div>
+          <div>
+            <Button className="text-white after:flex-1">
+              התחבר עם גוגל
+              <span className="pointer-events-none me-2 flex-1">
+                <FcGoogle className="mr-1" size={16} aria-hidden="true" />
+              </span>
+            </Button>
           </div>
         </form>
         <DialogFooter>
