@@ -70,17 +70,17 @@ const Navbar = () => {
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <ToggleBtn />
                 <Button asChild variant="outline" size="sm" className={cn(isScrolled && "lg:hidden")}>
-                  <Link to="#">
+                  <Link to="/login">
                     <span>התחברות</span>
                   </Link>
                 </Button>
                 <Button asChild size="sm" className={cn(isScrolled && "lg:hidden")}>
-                  <Link to="#">
+                  <Link to="/signup">
                     <span>הרשמה</span>
                   </Link>
                 </Button>
                 <Button asChild size="sm" className={cn(isScrolled ? "lg:inline-flex" : "hidden")}>
-                  <Link to="#">
+                  <Link to="/signup">
                     <span>התחילו עכשיו</span>
                   </Link>
                 </Button>
