@@ -6,6 +6,7 @@ import { Logo } from "../Logo";
 import { Link } from "react-router";
 import ToggleBtn from "../ToggleBtn/ToggleBtn";
 import { menuItems } from "./menuItems";
+import LoginDialog from "../LoginDialog/LoginDialog";
 
 const Navbar = () => {
   const [menuState, setMenuState] = React.useState(false);
@@ -69,11 +70,8 @@ const Navbar = () => {
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <ToggleBtn />
-                <Button asChild variant="outline" size="sm" className={cn(isScrolled && "lg:hidden")}>
-                  <Link to="/login">
-                    <span>התחברות</span>
-                  </Link>
-                </Button>
+                <Button asChild variant="outline" size="sm" className={cn(isScrolled && "lg:hidden")}></Button>
+                <LoginDialog />
                 <Button asChild size="sm" className={cn(isScrolled && "lg:hidden")}>
                   <Link to="/signup">
                     <span>הרשמה</span>
