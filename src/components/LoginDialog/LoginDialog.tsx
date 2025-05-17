@@ -13,7 +13,7 @@ const LoginDialog = () => {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogDescription>היי כדי להמשיך צריך להתחבר. מה מספר הנייד שלך</DialogDescription>
+          <DialogDescription>היי, כדי להמשיך צריך להתחבר הזן את הפרטים הבאים:</DialogDescription>
         </DialogHeader>
         <form className="grid gap-4">
           <div className="grid gap-2">
@@ -27,6 +27,7 @@ const LoginDialog = () => {
               שכחת סיסמה?
             </Link>
           </div>
+
           <div>
             <Button className="text-white after:flex-1">
               התחבר עם גוגל
