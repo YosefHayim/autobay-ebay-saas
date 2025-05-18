@@ -6,9 +6,9 @@ const StepFour = () => {
       <form className="w-2/3">
         <h1>מה סוג העסק שלך?</h1>
         <p>בחר/י את סוג העסק שלך. ניתן לבחור עד 3 סוגי עסקים</p>
-        <div className="grid h-80 grid-cols-2 gap-1 overflow-y-scroll">
+        <div className="grid h-64 grid-cols-2 gap-2 overflow-y-scroll p-2">
           {businessTypes.map((typeOfB) => (
-            <div key={typeOfB.value}>{typeOfB.icon}</div>
+            <div key={typeOfB.value}>{typeOfB.children}</div>
           ))}
         </div>
       </form>

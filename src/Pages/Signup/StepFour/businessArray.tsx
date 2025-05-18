@@ -18,154 +18,154 @@ import fitnessIcon from "/svgs/fitness-icon.svg";
 export const businessTypes = [
   {
     value: "ברבר / מספרת גברים",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={barberIcon} alt="barber chair icon" />
-        <b>מספרת גברים / ברבר</b>
+        <p>מספרת גברים / ברבר</p>
       </div>
     ),
   },
   {
     value: "ציפורניים",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={nailGelIcon} alt="nail gel icon" />
-        <b>ציפורניים</b>
+        <p>ציפורניים</p>
       </div>
     ),
   },
   {
     value: "גבות",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={eyebrowIcon} alt="eyebrowns icon" />
-        <b>גבות</b>
+        <p>גבות</p>
       </div>
     ),
   },
   {
     value: "ריסים",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={eyelashesIcon} alt="eyelashes icon" />
-        <b>ריסים</b>
+        <p>ריסים</p>
       </div>
     ),
   },
   {
     value: "טיפוח עור",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={skincareIcon} alt="skincare icon" />
-        <b>טיפוח עור</b>
+        <p>טיפוח עור</p>
       </div>
     ),
   },
   {
     value: "מעצבי שיער",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={hairDesignIcon} alt="hair design icon" />
-        <b>מעצבי שיער</b>
+        <p>מעצבי שיער</p>
       </div>
     ),
   },
   {
     value: "הסרת שיער",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={hairRemovalIcon} alt="hair removal icon" />
-        <b>הסרת שיער</b>
+        <p>הסרת שיער</p>
       </div>
     ),
   },
   {
     value: "איפור",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={makeupIcon} alt="makeup icon" />
-        <b>איפור</b>
+        <p>איפור</p>
       </div>
     ),
   },
   {
     value: "קעקועים ופירסינג",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={tattoIcon} alt="barber chair icon" />
-        <b>קעקועים ופירסינג</b>
+        <p>קעקועים ופירסינג</p>
       </div>
     ),
   },
   {
     value: "עיסוי",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={massgeIon} alt="massage icon" />
-        <b>עיסוי</b>
+        <p>עיסוי</p>
       </div>
     ),
   },
   {
     value: "הזרקות ומילויים",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={botoxIcon} alt="lips icon" />
-        <b>הזרקות ומילויים</b>
+        <p>הזרקות ומילויים</p>
       </div>
     ),
   },
   {
     value: "רפואה ורופאי שיניים",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={dentistIcon} alt="teeth icon" />
-        <b>רפואה ורופאי שיניים</b>
+        <p>רפואה ורופאי שיניים</p>
       </div>
     ),
   },
   {
     value: "מספרה לכלבים",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={dogIcon} alt="dog icon" />
-        <b>מספרה לכלבים</b>
+        <p>מספרה לכלבים</p>
       </div>
     ),
   },
   {
     value: "ייעוץ וטיפול הוליסטי",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={hollisticIcon} alt="hollistic threapy icon" />
-        <b>ייעוץ וטיפול הוליסטי</b>
+        <p>ייעוץ וטיפול הוליסטי</p>
       </div>
     ),
   },
   {
     value: "פיטנס",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={fitnessIcon} alt="fitness icon" />
 
-        <b>פיטנס</b>
+        <p>פיטנס</p>
       </div>
     ),
   },
   {
     value: "אופטיקה",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={glassesIcon} alt="glasses icon" />
-        <b>אופטיקה</b>
+        <p>אופטיקה</p>
       </div>
     ),
   },
   {
     value: "אחר",
-    icon: (
-      <div className="flex flex-col items-center justify-center">
-        <b>אחר</b>
+    children: (
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+        <p>אחר</p>
       </div>
     ),
   },

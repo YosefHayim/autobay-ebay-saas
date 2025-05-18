@@ -23,7 +23,7 @@ const StepThree = () => {
         </div>
         <div>
           <label htmlFor="previous-calendar-use" className="w-full">
-            איזה יומן היה לך עד עכשיו ?
+            איזה יומן היה לך עד עכשיו?
           </label>
           <select name="previous-calendar-use" className="w-full">
             {whichCalendarYouHadOptions.map((pickOption) => (
@@ -35,7 +35,7 @@ const StepThree = () => {
         </div>
         <div>
           <label htmlFor="previous-calendar-use" className="w-full">
-            איך שמעת עלינו ?
+            איך שמעת עלינו?
           </label>
           <select name="previous-calendar-use" className="w-full">
             {howDidYouHearAboutUsOptions.map((pickOption) => (
