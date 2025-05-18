@@ -10,7 +10,7 @@ const StepThree = () => {
         <SparklesText text="עמוד מדהים" />
         <p>לעסק שלך אנחנו צריכים כמה פרטים</p>
       </div>
-      <form className="w-1/3">
+      <form className="flex w-1/3 flex-col items-center justify-center gap-3">
         <div>
           <Input placeholder="שם העסק"></Input>
         </div>

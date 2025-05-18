@@ -41,7 +41,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="mx-auto h-100 max-w-xl min-w-[300px] space-y-8">
+    <div className="mx-auto my-8 h-100 max-w-xl min-w-[300px] space-y-8">
       <div>
         <Stepper value={currentStep} onValueChange={setCurrentStep}>
           {steps.map((step) => (
