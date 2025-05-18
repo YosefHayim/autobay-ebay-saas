@@ -14,6 +14,7 @@ import hollisticIcon from "/svgs/hollistic-icon.svg";
 import dentistIcon from "/svgs/dentist-icon.svg";
 import glassesIcon from "/svgs/glasses-icon.svg";
 import fitnessIcon from "/svgs/fitness-icon.svg";
+import otherIcon from "/svgs/other-icon.svg";
 
 export const businessTypes = [
   {
@@ -147,7 +148,6 @@ export const businessTypes = [
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={fitnessIcon} alt="fitness icon" />
-
         <p>פיטנס</p>
       </div>
     ),
@@ -165,6 +165,8 @@ export const businessTypes = [
     value: "אחר",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+        <img src={otherIcon} alt="other icon" />
+
         <p>אחר</p>
       </div>
     ),
