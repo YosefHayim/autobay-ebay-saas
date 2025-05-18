@@ -1,5 +1,6 @@
 import { Input } from "@/components/ui/input";
 import { SparklesText } from "@/components/ui/sparkles-text";
+import { howDidYouHearAboutUsOptions, whichCalendarYouHadOptions } from "./customerOptions";
 
 const StepThree = () => {
   return (
@@ -24,27 +25,21 @@ const StepThree = () => {
           <label htmlFor="previous-calendar-use" className="w-full">
             איזה יומן היה לך עד עכשיו?
           </label>
-          <select name="previous-calendar-use" className="w-full">
-            <option value="">בחר יומן</option>
-            <option value="physical-calendar">יומן פיזי</option>
-            <option value="google-calendar">יומן גוגל</option>
-            <option value="other-calendar">מערכת אחרת</option>
-            <option value="none">אין לי יומן</option>
-          </select>
+          {whichCalendarYouHadOptions.map((pickOption) => (
+            <option key={pickOption.value} value={pickOption.value}>
+              {pickOption.text}
+            </option>
+          ))}
         </div>
         <div>
           <label htmlFor="previous-calendar-use" className="w-full">
             איך שמעת עלינו?
           </label>
-          <select name="previous-calendar-use" className="w-full">
-            <option value="internet-commercial">פרסומת באינטרנט</option>
-            <option value="google-commercial">פרסומת בגוגל</option>
-            <option value="facebook-commercial">פרסומת בפייסבוק</option>
-            <option value="google-search">חיפוש בגוגל</option>
-            <option value="recommendation-receive">קיבלתי המלצה </option>
-            <option value="appstore-search">חיפוש בחנות אפליקציות</option>
-            <option value="other business">ראיתי בעסק אחר</option>
-          </select>
+          {howDidYouHearAboutUsOptions.map((pickOption) => (
+            <option key={pickOption.value} value={pickOption.value}>
+              {pickOption.text}
+            </option>
+          ))}
         </div>
       </form>
     </section>
