@@ -1,10 +1,15 @@
 import { Input } from "@/components/ui/input";
+import { SparklesText } from "@/components/ui/sparkles-text";
 
 const StepThree = () => {
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
       <h1>קצת על העסק שלך</h1>
-      <p>כדי שנוכל לבנות עמוד מדהים לעסק שלך אנחנו צריכים כמה פרטים</p>
+      <div className="flex gap-1">
+        <p>כדי שנוכל לבנות</p>
+        <SparklesText text="עמוד מדהים" />
+        <p>לעסק שלך אנחנו צריכים כמה פרטים</p>
+      </div>
       <form className="w-1/3">
         <div>
           <Input placeholder="שם העסק"></Input>
