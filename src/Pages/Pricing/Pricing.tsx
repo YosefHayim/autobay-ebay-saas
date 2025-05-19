@@ -24,7 +24,7 @@ const Pricing = ({
 }: PricingProps) => {
   const [isMonthly, setIsMonthly] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const switchRef = useRef<HTMLButtonElement>(null);
+  const switchRef = useRef<HTMLButtonElement | null>(null);
 
   const handleToggle = (checked: boolean) => {
     setIsMonthly(!checked);
@@ -51,7 +51,7 @@ const Pricing = ({
   };
 
   return (
-    <div className="container py-20">
+    <div className="w-full p-20">
       <div className="mb-12 space-y-4 text-center">
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">{title}</h2>
         <p className="text-muted-foreground text-lg whitespace-pre-line">{description}</p>
@@ -68,7 +68,7 @@ const Pricing = ({
         </span>
       </div>
 
-      <div className="sm:2 grid grid-cols-1 gap-4 md:grid-cols-3">
+      <div className="sm:2 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
         {plans.map((plan, index) => (
           <motion.div
             key={index}

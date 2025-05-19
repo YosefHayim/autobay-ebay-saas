@@ -29,7 +29,7 @@ const LoginDialog = () => {
           </div>
 
           <div>
-            <Button className="text-white after:flex-1">
+            <Button>
               התחבר עם גוגל
               <span className="pointer-events-none me-2 flex-1">
                 <FcGoogle className="mr-1" size={16} aria-hidden="true" />
