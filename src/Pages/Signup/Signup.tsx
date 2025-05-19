@@ -8,8 +8,9 @@ import { StepTwo } from "./StepTwo";
 import { StepThree } from "./StepThree";
 import { StepFour } from "./StepFour";
 import { StepFive } from "./StepFive";
+import { StepSix } from "./StepSix";
 
-const steps = [1, 2, 3, 4, 5];
+const steps = [1, 2, 3, 4, 5, 6];
 
 const SignUp = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -39,6 +40,9 @@ const SignUp = () => {
 
       case 5:
         return <StepFive />;
+
+      case 6:
+        return <StepSix />;
 
       default:
         return <></>;

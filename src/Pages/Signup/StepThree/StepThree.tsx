@@ -5,7 +5,7 @@ import { howDidYouHearAboutUsOptions, whichCalendarYouHadOptions } from "./custo
 const StepThree = () => {
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
-      <h1>קצת על העסק שלך</h1>
+      <h1 className="text-2xl">קצת על העסק שלך</h1>
       <div className="flex gap-1">
         <p>כדי שנוכל לבנות</p>
         <SparklesText text="עמוד מדהים" />
