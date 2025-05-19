@@ -25,18 +25,18 @@ const ThemeProvider = ({ children, defaultTheme = "dark", storageKey = "vite-ui-
 
   useEffect(() => {
     const root = window.document.documentElement;
-
     root.classList.remove("light", "dark");
-
     root.classList.add(theme);
   }, [theme]);
 
+  const setThemeAndPersist = (newTheme: Theme) => {
+    localStorage.setItem(storageKey, newTheme);
+    setTheme(newTheme);
+  };
+
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
-    },
+    setTheme: setThemeAndPersist,
   };
 
   return (
