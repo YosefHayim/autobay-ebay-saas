@@ -10,14 +10,16 @@ const ToggleBtn = () => {
   return (
     <div>
       <Toggle
-        onProgressCapture={() => {
-          if (theme === "dark") setTheme("light");
-          else setTheme("dark");
-        }}
         variant="outline"
         className="group data-[state=on]:hover:bg-muted size-9 data-[state=on]:bg-transparent"
-        onPressedChange={() => console.log(theme)}
-        aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+        onPressedChange={(pressed) => {
+          if (pressed) {
+            setTheme("light");
+          } else {
+            setTheme("dark");
+          }
+        }}
+        aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       >
         <Sun
           size={16}

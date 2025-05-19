@@ -28,13 +28,6 @@ const ThemeProvider = ({ children, defaultTheme = "dark", storageKey = "vite-ui-
 
     root.classList.remove("light", "dark");
 
-    if (theme === "dark") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark";
-
-      root.classList.add(systemTheme);
-      return;
-    }
-
     root.classList.add(theme);
   }, [theme]);
 
