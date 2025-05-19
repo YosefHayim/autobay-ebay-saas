@@ -11,7 +11,7 @@ const ToggleBtn = () => {
     <div>
       <Toggle
         variant="outline"
-        className="group data-[state=on]:hover:bg-muted size-9 data-[state=on]:bg-transparent"
+        className="group data-[state=on]:hover:bg-muted size-9 p-[1.5em] data-[state=on]:bg-transparent"
         onPressedChange={(pressed) => {
           if (pressed) {
             setTheme("light");

@@ -25,7 +25,7 @@ const Navbar = () => {
         <div
           className={cn(
             "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
-            isScrolled && "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5",
+            isScrolled && "bg-background/50 max-w-5xl rounded-2xl border backdrop-blur-lg lg:px-5",
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
@@ -44,7 +44,7 @@ const Navbar = () => {
               </button>
             </div>
 
-            <div className="absolute inset-0 m-auto hidden size-fit lg:block">
+            <div className="absolute inset-0 m-auto hidden size-fit lg:flex">
               <ul className="flex gap-8 text-sm">
                 {menuItems.map((item, index) => (
                   <li key={index}>
@@ -68,8 +68,7 @@ const Navbar = () => {
                   ))}
                 </ul>
               </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <ToggleBtn />
+              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:items-center sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild variant="outline" size="sm" className={cn(isScrolled && "lg:hidden")}></Button>
                 <LoginDialog />
                 <Button asChild size="sm" className={cn(isScrolled && "lg:hidden")}>
@@ -82,6 +81,7 @@ const Navbar = () => {
                     <span>התחילו עכשיו</span>
                   </Link>
                 </Button>
+                <ToggleBtn />
               </div>
             </div>
           </div>
