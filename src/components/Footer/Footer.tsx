@@ -7,10 +7,10 @@ import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router";
 
 const sociaLinks = [
-  { title: "Facebook", to: "", icon: <FaFacebookF size={30} className="rounded-full bg-black p-2 text-white" /> },
-  { title: "Instagram", to: "", icon: <FaInstagram size={30} className="rounded-full bg-black p-2 text-white" /> },
-  { title: "Tiktok", to: "", icon: <FaYoutube size={30} className="rounded-full bg-black p-2 text-white" /> },
-  { title: "Youtube", to: "", icon: <FaTiktok size={30} className="rounded-full bg-black p-2 text-white" /> },
+  { title: "Facebook", to: "https://facebook.com", icon: <FaFacebookF size={30} className="rounded-full bg-black p-2 text-white" /> },
+  { title: "Instagram", to: "https://instagram.com", icon: <FaInstagram size={30} className="rounded-full bg-black p-2 text-white" /> },
+  { title: "Tiktok", to: "https://tiktok.com", icon: <FaYoutube size={30} className="rounded-full bg-black p-2 text-white" /> },
+  { title: "Youtube", to: "https://youtube.com", icon: <FaTiktok size={30} className="rounded-full bg-black p-2 text-white" /> },
 ];
 
 const Footer = () => {
