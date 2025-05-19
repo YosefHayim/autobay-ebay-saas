@@ -1,13 +1,13 @@
 import WorkingHours from "../WorkingHours/WorkingHours";
 
 const hebrewDayMap: Record<string, string> = {
-  Sunday: "יום ראשון",
-  Monday: "יום שני",
-  Tuesday: "יום שלישי",
-  Wednesday: "יום רביעי",
-  Thursday: "יום חמישי",
-  Friday: "יום שישי",
-  Saturday: "יום שבת",
+  Sunday: "יום א׳",
+  Monday: "יום ב׳",
+  Tuesday: "יום ג׳",
+  Wednesday: "יום ד׳",
+  Thursday: "יום ה׳",
+  Friday: "יום ו׳",
+  Saturday: "שבת",
 };
 
 const WorkingDay: React.FC<{ day: string }> = ({ day }) => {
