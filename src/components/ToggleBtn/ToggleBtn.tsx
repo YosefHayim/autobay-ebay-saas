@@ -2,18 +2,21 @@
 
 import { Toggle } from "@/components/ui/toggle";
 import { Moon, Sun } from "lucide-react";
-import { useState } from "react";
+import { useTheme } from "../ThemeProvider/ThemeProvider";
 
 const ToggleBtn = () => {
-  const [theme, setTheme] = useState<string>("light");
+  const { theme, setTheme } = useTheme();
 
   return (
     <div>
       <Toggle
+        onProgressCapture={() => {
+          if (theme === "dark") setTheme("light");
+          else setTheme("dark");
+        }}
         variant="outline"
         className="group data-[state=on]:hover:bg-muted size-9 data-[state=on]:bg-transparent"
-        pressed={theme === "dark"}
-        onPressedChange={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
+        onPressedChange={() => console.log(theme)}
         aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       >
         <Sun
