@@ -1,15 +1,11 @@
-import { workingHours } from "../workingHours";
+import WorkingHours from "../WorkingHours/WorkingHours";
 
-const WorkingDay = () => {
+const WorkingDay: React.FC<{ day: string }> = ({ day }) => {
   return (
-    <div className="flex w-full items-center justify-around gap-3">
-      <select name="" id="">
-        {workingHours.map((hour) => (
-          <option value={hour} key={hour}>
-            {hour}
-          </option>
-        ))}
-      </select>
+    <div className="flex w-full items-center justify-between">
+      <p>יום א׳</p>
+      <WorkingHours day={day} isOpen="open" />
+      <WorkingHours day={day} isOpen="close" />
     </div>
   );
 };
