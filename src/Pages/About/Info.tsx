@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { companies } from "./companies";
 
 interface About3Props {
   title?: string;
@@ -32,67 +33,33 @@ interface About3Props {
   }>;
 }
 
-const defaultCompanies = [
-  {
-    src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-1.svg",
-    alt: "Arc",
-  },
-  {
-    src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-2.svg",
-    alt: "Descript",
-  },
-  {
-    src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-3.svg",
-    alt: "Mercury",
-  },
-  {
-    src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-4.svg",
-    alt: "Ramp",
-  },
-  {
-    src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-5.svg",
-    alt: "Retool",
-  },
-  {
-    src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-6.svg",
-    alt: "Watershed",
-  },
-];
-
-const defaultAchievements = [
-  { label: "מספרות פעילות", value: "300+" },
-  { label: "לקוחות מרוצים", value: "99%" },
-  { label: "דירוג ממוצע", value: "10+" },
-];
-
 export const About3 = ({
-  description = "Shadcnblocks is a passionate team dedicated to creating innovative solutions that empower businesses to thrive in the digital age.",
+  description,
   mainImage = {
-    src: "https://shadcnblocks.com/images/block/placeholder-1.svg",
-    alt: "placeholder",
+    src: "",
+    alt: "",
   },
   secondaryImage = {
-    src: "https://shadcnblocks.com/images/block/placeholder-2.svg",
-    alt: "placeholder",
+    src: "",
+    alt: "",
   },
   breakout = {
-    src: "https://shadcnblocks.com/images/block/block-1.svg",
-    alt: "logo",
-    title: "Hundreds of blocks at Shadcnblocks.com",
-    description: "Providing businesses with effective tools to improve workflows, boost efficiency, and encourage growth.",
-    buttonText: "Discover more",
-    buttonUrl: "https://shadcnblocks.com",
+    src: "",
+    alt: "",
+    title: "",
+    description: "",
+    buttonText: "",
+    buttonUrl: "",
   },
-  companiesTitle = "Valued by clients worldwide",
-  companies = defaultCompanies,
-  achievementsTitle = "המספרים שלנו מדברים בעצמם",
-  achievementsDescription = "כל מה שצריך בשביל לנהל מספרה חכם – תורים, לקוחות, הכל בלחיצת כפתור.",
-  achievements = defaultAchievements,
+  companiesTitle,
+  achievementsTitle,
+  achievementsDescription,
+  achievements,
 }: About3Props = {}) => {
   return (
-    <section className="w-full py-32">
-      <div className="mx-auto">
-        <div className="mb-14 grid gap-5 text-center md:grid-cols-2 md:text-left">
+    <section className="py-32">
+      <div>
+        <div className="mb-14 flex gap-5 text-center">
           <p className="text-muted-foreground w-full">{description}</p>
         </div>
         <div className="grid gap-7 lg:grid-cols-3">
@@ -115,7 +82,7 @@ export const About3 = ({
         </div>
         <div className="py-32">
           <p className="text-center">{companiesTitle} </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-8">
+          <div className="bg-muted mt-8 flex flex-wrap justify-center gap-8 p-3">
             {companies.map((company, idx) => (
               <div className="flex items-center gap-3" key={company.src + idx}>
                 <img src={company.src} alt={company.alt} className="h-6 w-auto md:h-8" />

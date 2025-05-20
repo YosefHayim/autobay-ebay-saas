@@ -3,50 +3,24 @@ import { About3 } from "./Info";
 const About = () => {
   return (
     <About3
-      description="Shadcnblocks is a passionate team dedicated to creating innovative solutions that empower businesses to thrive in the digital age."
+      description="Bropify פה כדי לעשות סדר בבלאגן של התורים. פחות וואטסאפים, יותר לקוחות שמגיעים בזמן."
       mainImage={{
-        src: "https://shadcnblocks.com/images/block/placeholder-1.svg",
-        alt: "placeholder",
+        src: "/images/barber-main.jpg",
+        alt: "מספרה בתנועה",
       }}
       secondaryImage={{
-        src: "https://shadcnblocks.com/images/block/placeholder-2.svg",
-        alt: "placeholder",
+        src: "/images/barber-client.jpg",
+        alt: "לקוח מתואם ומחויך",
       }}
       breakout={{
-        src: "https://shadcnblocks.com/images/block/block-1.svg",
-        alt: "logo",
-        title: "Hundreds of blocks at Shadcnblocks.com",
-        description: "Providing businesses with effective tools to improve workflows, boost efficiency, and encourage growth.",
-        buttonText: "Discover more",
-        buttonUrl: "https://shadcnblocks.com",
+        src: "/images/bropify-logo.svg",
+        alt: "לוגו Bropify",
+        title: "עשרות ספרים כבר עלו על זה",
+        description: "Bropify נותנת לך שליטה על הלו״ז, חוסכת לך זמן ומתאמת תורים בלי כאב ראש. תתעסק במספרים – אנחנו נדאג לשאר.",
+        buttonText: "תראה איך זה עובד",
+        buttonUrl: "/how-it-works",
       }}
-      companiesTitle="Valued by clients worldwide"
-      companies={[
-        {
-          src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-1.svg",
-          alt: "Arc",
-        },
-        {
-          src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-2.svg",
-          alt: "Descript",
-        },
-        {
-          src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-3.svg",
-          alt: "Mercury",
-        },
-        {
-          src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-4.svg",
-          alt: "Ramp",
-        },
-        {
-          src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-5.svg",
-          alt: "Retool",
-        },
-        {
-          src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-6.svg",
-          alt: "Watershed",
-        },
-      ]}
+      companiesTitle="הבחירה של הספרים הכי חדים בשוק"
       achievementsTitle="המספרים שלנו מדברים בעצמם"
       achievementsDescription="כל מה שצריך בשביל לנהל מספרה חכם – תורים, לקוחות, הכל בלחיצת כפתור."
       achievements={[
