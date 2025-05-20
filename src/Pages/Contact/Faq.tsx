@@ -3,10 +3,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { description, faqItems, heading, supportButtonText, supportButtonUrl, supportDescription, supportHeading } from "./faqItems";
 
-const Faq3 = () => {
+const Faq = () => {
   return (
-    <section className="py-32">
-      <div className="container space-y-16">
+    <section className="w-full py-32">
+      <div className="space-y-16">
         <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
           <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">{heading}</h2>
           <p className="text-muted-foreground lg:text-lg">{description}</p>
@@ -53,4 +53,4 @@ const Faq3 = () => {
   );
 };
 
-export { Faq3 };
+export default Faq;
