@@ -1,37 +1,49 @@
+export const heading = "שאלות נפוצות";
+
+export const description = "מתלבטים אם להצטרף למערכת לניהול תורים? הנה כל התשובות שתצטרכו כדי להתחיל בקלות ובמהירות. לא מצאתם מענה? אנחנו זמינים לעזור.";
+
+export const supportHeading = "עדיין יש לכם שאלות? אנחנו כאן בשבילכם";
+
+export const supportDescription = "צוות התמיכה שלנו ישמח לעזור בכל שאלה – טכנית, עסקית או תפעולית.";
+
+export const supportButtonText = "דברו איתנו";
+
+export const supportButtonUrl = "https://www.shadcnblocks.com";
+
 export const faqItems = [
   {
     id: "faq-1",
-    question: "What is the return policy?",
-    answer: "You can return any item within 30 days of purchase for a full refund, provided it is in its original condition.",
+    question: "איך מצטרפים למערכת?",
+    answer: "התהליך פשוט ומהיר – נכנסים לעמוד ההרשמה, ממלאים פרטים בסיסיים, והחשבון שלכם מוכן תוך פחות מדקה. אין צורך ליצור קשר עם נציג.",
   },
   {
     id: "faq-2",
-    question: "How do I track my order?",
-    answer: "Once your order is shipped, you will receive an email with a tracking number. You can use this number on our website to track your order.",
+    question: "האם יש תקופת ניסיון בחינם?",
+    answer: "כן. כל עסק מקבל שבועיים התנסות חינם ללא צורך בפרטי אשראי. תוכלו לבדוק את המערכת ולהתחיל לעבוד בלי להתחייב.",
   },
   {
     id: "faq-3",
-    question: "Do you offer international shipping?",
-    answer: "Yes, we ship to most countries worldwide. Shipping costs and delivery times vary depending on the destination.",
+    question: "איך לקוחות מקבלים תזכורות על התור?",
+    answer: 'המערכת שולחת תזכורות אוטומטיות דרך WhatsApp, SMS ודוא"ל – ניתן לבחור מה להפעיל בהתאם לצורך שלכם.',
   },
   {
     id: "faq-4",
-    question: "Can I change my order after it has been placed?",
-    answer: "You can change your order within 24 hours of placing it by contacting our customer service team.",
+    question: "האם אפשר להגדיר שעות עבודה, הפסקות וחופשים?",
+    answer: "בוודאי. לאחר פתיחת החשבון תמצאו מערכת הגדרות מלאה וגמישה שמאפשרת לכם להתאים את לוח הזמנים בדיוק לסגנון העבודה שלכם.",
   },
   {
     id: "faq-5",
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, PayPal, and Apple Pay.",
+    question: "אני עצמאי בלי מזכירה – זה מתאים לי?",
+    answer: "בהחלט. המערכת נועדה לחסוך זמן ולמנוע כאב ראש. לקוחות קובעים תורים בעצמם ואתם מקבלים התראה מסודרת, בלי צורך בניהול ידני.",
   },
   {
     id: "faq-6",
-    question: "How can I contact customer support?",
-    answer: "You can reach our customer support team via email at support@example.com or by calling 1-800-123-4567.",
+    question: "האם צריך ידע טכני בשביל להשתמש במערכת?",
+    answer: "ממש לא. הממשק שלנו אינטואיטיבי ופשוט לתפעול – גם לספרים שלא רגילים לעבוד עם מערכות דיגיטליות.",
   },
   {
     id: "faq-7",
-    question: "Are there any discounts for bulk purchases?",
-    answer: "Yes, we offer discounts for bulk purchases. Please contact our sales team for more information.",
+    question: "האם ניתן לשלב את המערכת באתר שלי או בדף אינסטגרם?",
+    answer: "כן. תקבלו קישור אישי להזמנת תורים שתוכלו להוסיף לכל פלטפורמה – אתר, אינסטגרם, וואטסאפ עסקי ועוד.",
   },
 ];

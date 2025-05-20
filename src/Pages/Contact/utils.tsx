@@ -1,33 +1,9 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { faqItems } from "./faqItems";
+import { description, faqItems, heading, supportButtonText, supportButtonUrl, supportDescription, supportHeading } from "./faqItems";
 
-interface FaqItem {
-  id: string;
-  question: string;
-  answer: string;
-}
-
-interface Faq3Props {
-  heading: string;
-  description: string;
-  items?: FaqItem[];
-  supportHeading: string;
-  supportDescription: string;
-  supportButtonText: string;
-  supportButtonUrl: string;
-}
-
-const Faq3 = ({
-  heading = "Frequently asked questions",
-  description = "Find answers to common questions about our products. Can't find what you're looking for? Contact our support team.",
-  items = faqItems,
-  supportHeading = "Need more support?",
-  supportDescription = "Our dedicated support team is here to help you with any questions or concerns. Get in touch with us for personalized assistance.",
-  supportButtonText = "Contact Support",
-  supportButtonUrl = "https://www.shadcnblocks.com",
-}: Faq3Props) => {
+const Faq3 = () => {
   return (
     <section className="py-32">
       <div className="container space-y-16">
@@ -36,7 +12,7 @@ const Faq3 = ({
           <p className="text-muted-foreground lg:text-lg">{description}</p>
         </div>
         <Accordion type="single" collapsible className="mx-auto w-full lg:max-w-3xl">
-          {items.map((item) => (
+          {faqItems.map((item) => (
             <AccordionItem key={item.id} value={item.id}>
               <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60">
                 <div className="font-medium sm:py-1 lg:py-2 lg:text-lg">{item.question}</div>
