@@ -1,4 +1,4 @@
-import { About3 } from "./about-3";
+import { About3 } from "./Info";
 
 const About = () => {
   return (
@@ -51,10 +51,9 @@ const About = () => {
       achievementsTitle="Our Achievements in Numbers"
       achievementsDescription="Providing businesses with effective tools to improve workflows, boost efficiency, and encourage growth."
       achievements={[
-        { label: "Companies Supported", value: "300+" },
-        { label: "Projects Finalized", value: "800+" },
-        { label: "Happy Customers", value: "99%" },
-        { label: "Recognized Awards", value: "10+" },
+        { label: "מספרות פעילות", value: "300+" },
+        { label: "לקוחות מרוצים", value: "99%" },
+        { label: "דירוג ממוצע", value: "10+" },
       ]}
     />
   );

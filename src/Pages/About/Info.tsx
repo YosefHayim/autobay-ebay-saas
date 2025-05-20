@@ -60,14 +60,12 @@ const defaultCompanies = [
 ];
 
 const defaultAchievements = [
-  { label: "Companies Supported", value: "300+" },
-  { label: "Projects Finalized", value: "800+" },
-  { label: "Happy Customers", value: "99%" },
-  { label: "Recognized Awards", value: "10+" },
+  { label: "מספרות פעילות", value: "300+" },
+  { label: "לקוחות מרוצים", value: "99%" },
+  { label: "דירוג ממוצע", value: "10+" },
 ];
 
 export const About3 = ({
-  title = "About Us",
   description = "Shadcnblocks is a passionate team dedicated to creating innovative solutions that empower businesses to thrive in the digital age.",
   mainImage = {
     src: "https://shadcnblocks.com/images/block/placeholder-1.svg",
@@ -93,9 +91,8 @@ export const About3 = ({
 }: About3Props = {}) => {
   return (
     <section className="py-32">
-      <div className="container mx-auto">
+      <div className="mx-auto w-full">
         <div className="mb-14 grid gap-5 text-center md:grid-cols-2 md:text-left">
-          <h1 className="text-5xl font-semibold">{title}</h1>
           <p className="text-muted-foreground">{description}</p>
         </div>
         <div className="grid gap-7 lg:grid-cols-3">
