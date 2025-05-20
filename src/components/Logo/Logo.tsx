@@ -1,5 +1,11 @@
+import { Link } from "react-router";
+
 const Logo = () => {
-  return <bdi>Bropify.com</bdi>;
+  return (
+    <Link to="/" className="cursor-pointer">
+      Bropify.com
+    </Link>
+  );
 };
 
 export default Logo;

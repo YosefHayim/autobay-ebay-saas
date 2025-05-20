@@ -13,11 +13,8 @@ const ToggleBtn = () => {
         variant="outline"
         className="group data-[state=on]:hover:bg-muted size-9 p-[1.5em] data-[state=on]:bg-transparent"
         onPressedChange={(pressed) => {
-          if (pressed) {
-            setTheme("light");
-          } else {
-            setTheme("dark");
-          }
+          if (pressed && theme === "light") setTheme("dark");
+          else setTheme("light");
         }}
         aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       >
