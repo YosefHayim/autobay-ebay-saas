@@ -5,6 +5,19 @@ import { Label } from "@radix-ui/react-label";
 import Faq from "./Faq";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 
+const howManyEmployeesYouHave = [
+  { value: "אני עובד לבד" },
+  { value: "2" },
+  { value: "3" },
+  { value: "4" },
+  { value: "5" },
+  { value: "6" },
+  { value: "7" },
+  { value: "8" },
+  { value: "9" },
+  { value: "10" },
+];
+
 const Contact = () => {
   return (
     <div>
@@ -36,31 +49,31 @@ const Contact = () => {
                 <h2>העסקים המובלים בישראל התקדמו ליומן של Bropify</h2>
               </div>
             </div>
-            <div className="mx-auto flex max-w-screen-md flex-col gap-6 rounded-lg border p-10">
+            <form className="mx-auto flex w-full max-w-screen-md flex-col gap-6 rounded-lg border p-10">
               <div className="flex gap-4">
                 <div className="grid w-full items-center gap-1.5">
-                  <Label htmlFor="firstname">First Name</Label>
-                  <Input type="text" id="firstname" placeholder="First Name" />
-                </div>
-                <div className="grid w-full items-center gap-1.5">
-                  <Label htmlFor="lastname">Last Name</Label>
-                  <Input type="text" id="lastname" placeholder="Last Name" />
+                  <Input type="text" name="fullname" placeholder="שם מלא" />
                 </div>
               </div>
               <div className="grid w-full items-center gap-1.5">
-                <Label htmlFor="email">Email</Label>
-                <Input type="email" id="email" placeholder="Email" />
+                <Input type="email" name="phone-number" placeholder="מספר נייד" />
               </div>
-              <div className="grid w-full items-center gap-1.5">
-                <Label htmlFor="subject">Subject</Label>
-                <Input type="text" id="subject" placeholder="Subject" />
+              <div>
+                <select name="number-of-employees" className="w-full rounded-sm border border-gray-300 p-1" defaultValue={"כמה עובדים יש לך ?"}>
+                  <option value="" disabled hidden>
+                    כמה עובדים יש לך ?
+                  </option>
+                  {howManyEmployeesYouHave.map((optionOfUser) => (
+                    <option value={optionOfUser.value}>{optionOfUser.value}</option>
+                  ))}
+                </select>
               </div>
               <div className="grid w-full gap-1.5">
-                <Label htmlFor="message">Message</Label>
-                <Textarea placeholder="Type your message here." id="message" />
+                <Label htmlFor="message">ההודעה שלך</Label>
+                <Textarea name="message" rows={5} />
               </div>
-              <Button className="w-full">Send Message</Button>
-            </div>
+              <Button className="w-full">שלח</Button>
+            </form>
           </div>
         </div>
       </section>
