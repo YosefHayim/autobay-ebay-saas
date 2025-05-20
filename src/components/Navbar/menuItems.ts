@@ -1,6 +1,6 @@
 export const menuItems = [
   { name: "דף הבית", href: "/" },
-  { name: "מידע ותמיכה", href: "/support" },
+  { name: "הסיפור שלנו", href: "/about" },
   { name: "צרו קשר", href: "/contact" },
   { name: "מחירון", href: "/pricing" },
 ];
