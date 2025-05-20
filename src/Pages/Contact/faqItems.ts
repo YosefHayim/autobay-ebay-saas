@@ -8,8 +8,6 @@ export const supportDescription = "צוות התמיכה שלנו ישמח לע�
 
 export const supportButtonText = "דברו איתנו";
 
-export const supportButtonUrl = "https://www.shadcnblocks.com";
-
 export const faqItems = [
   {
     id: "faq-1",

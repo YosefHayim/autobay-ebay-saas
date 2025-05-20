@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
 import Faq from "./Faq";
 import { IoMdCheckmarkCircle } from "react-icons/io";
+import Brands from "./Brands";
 
 const howManyEmployeesYouHave = [
   { value: "אני עובד לבד" },
@@ -47,6 +48,7 @@ const Contact = () => {
               </div>
               <div>
                 <h2>העסקים המובלים בישראל התקדמו ליומן של Bropify</h2>
+                <Brands />
               </div>
             </div>
             <form className="mx-auto flex w-full max-w-screen-md flex-col gap-6 rounded-lg border p-10">

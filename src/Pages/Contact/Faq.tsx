@@ -1,9 +1,12 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { description, faqItems, heading, supportButtonText, supportButtonUrl, supportDescription, supportHeading } from "./faqItems";
+import { description, faqItems, heading, supportDescription, supportHeading } from "./faqItems";
+import { useRef } from "react";
 
 const Faq = () => {
+  const topRef = useRef(null);
+
   return (
     <section className="w-full py-32">
       <div className="space-y-16">
@@ -41,10 +44,8 @@ const Faq = () => {
           <h3 className="mb-2 max-w-3xl font-semibold lg:text-lg">{supportHeading}</h3>
           <p className="text-muted-foreground mb-8 max-w-3xl lg:text-lg">{supportDescription}</p>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row">
-            <Button className="w-full sm:w-auto" asChild>
-              <a href={supportButtonUrl} target="_blank">
-                {supportButtonText}
-              </a>
+            <Button className="w-full sm:w-auto" onClick={() => topRef.current?.scrollIntoView({ behavior: "smooth" })}>
+              דברו איתנו
             </Button>
           </div>
         </div>
