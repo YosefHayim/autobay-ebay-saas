@@ -6,7 +6,6 @@ import { Login } from "./Pages/Login";
 import { About } from "./Pages/About";
 import { Dashboard } from "./Pages/Dashboard";
 import { Layout } from "./components/Layout/Layout";
-import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router";
 
 function App() {
@@ -26,7 +25,6 @@ function App() {
         {/* Standalone route (no navbar) */}
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-      <Footer />
     </>
   );
 }
