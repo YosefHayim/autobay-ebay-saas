@@ -90,10 +90,10 @@ export const About3 = ({
   achievements = defaultAchievements,
 }: About3Props = {}) => {
   return (
-    <section className="py-32">
-      <div className="mx-auto w-full">
+    <section className="w-full py-32">
+      <div className="mx-auto">
         <div className="mb-14 grid gap-5 text-center md:grid-cols-2 md:text-left">
-          <p className="text-muted-foreground">{description}</p>
+          <p className="text-muted-foreground w-full">{description}</p>
         </div>
         <div className="grid gap-7 lg:grid-cols-3">
           <img src={mainImage.src} alt={mainImage.alt} className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2" />
@@ -124,9 +124,9 @@ export const About3 = ({
           </div>
         </div>
         <div className="bg-muted relative overflow-hidden rounded-xl p-10 md:p-16">
-          <div className="flex flex-col gap-4 text-center md:text-left">
+          <div className="flex flex-col items-center justify-center gap-4">
             <h2 className="text-4xl font-semibold">{achievementsTitle}</h2>
-            <p className="text-muted-foreground max-w-screen-sm">{achievementsDescription}</p>
+            <p className="text-muted-foreground max-w-screen-sm text-center">{achievementsDescription}</p>
           </div>
           <div className="mt-10 flex flex-wrap justify-between gap-10 text-center">
             {achievements.map((item, idx) => (
