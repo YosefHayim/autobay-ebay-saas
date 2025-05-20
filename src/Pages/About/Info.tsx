@@ -85,8 +85,8 @@ export const About3 = ({
   },
   companiesTitle = "Valued by clients worldwide",
   companies = defaultCompanies,
-  achievementsTitle = "Our Achievements in Numbers",
-  achievementsDescription = "Providing businesses with effective tools to improve workflows, boost efficiency, and encourage growth.",
+  achievementsTitle = "המספרים שלנו מדברים בעצמם",
+  achievementsDescription = "כל מה שצריך בשביל לנהל מספרה חכם – תורים, לקוחות, הכל בלחיצת כפתור.",
   achievements = defaultAchievements,
 }: About3Props = {}) => {
   return (

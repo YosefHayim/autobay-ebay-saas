@@ -1,11 +1,5 @@
-import { Link } from "react-router";
-
 const Logo = () => {
-  return (
-    <Link to="/" className="cursor-pointer">
-      Bropify.com
-    </Link>
-  );
+  return <p className="cursor-pointer">Bropify.com</p>;
 };
 
 export default Logo;

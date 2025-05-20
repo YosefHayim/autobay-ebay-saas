@@ -3,7 +3,6 @@ import { About3 } from "./Info";
 const About = () => {
   return (
     <About3
-      title="About Us"
       description="Shadcnblocks is a passionate team dedicated to creating innovative solutions that empower businesses to thrive in the digital age."
       mainImage={{
         src: "https://shadcnblocks.com/images/block/placeholder-1.svg",
@@ -48,12 +47,12 @@ const About = () => {
           alt: "Watershed",
         },
       ]}
-      achievementsTitle="Our Achievements in Numbers"
-      achievementsDescription="Providing businesses with effective tools to improve workflows, boost efficiency, and encourage growth."
+      achievementsTitle="המספרים שלנו מדברים בעצמם"
+      achievementsDescription="כל מה שצריך בשביל לנהל מספרה חכם – תורים, לקוחות, הכל בלחיצת כפתור."
       achievements={[
         { label: "ספרים על הקווים", value: "300+" },
         { label: "תספורות באפליקציה", value: "800+" },
-        { label: "ברוז מרוצים", value: "99%" },
+        { label: "אחים מרוצים", value: "99%" },
         { label: "שבחים מהברנז'ה", value: "10+" },
       ]}
     />
