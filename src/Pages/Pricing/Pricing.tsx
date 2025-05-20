@@ -18,10 +18,7 @@ interface PricingProps {
   description?: string;
 }
 
-const Pricing = ({
-  title = "Simple, Transparent Pricing",
-  description = "Choose the plan that works for you\nAll plans include access to our platform, lead generation tools, and dedicated support.",
-}: PricingProps) => {
+const Pricing = ({ title = "נסו עכשיו בחינם את היומן של קלמארק", description = "אם אתם עסק מתחיל או רשת ארצית, קלמארק תדאג לכם בכל שלב" }: PricingProps) => {
   const [isMonthly, setIsMonthly] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const switchRef = useRef<HTMLButtonElement | null>(null);

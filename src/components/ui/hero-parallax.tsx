@@ -65,7 +65,7 @@ export const Header = () => {
     <div className="relative top-0 left-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
       <h1 className="text-center text-2xl font-bold md:text-7xl dark:text-white">
         העסקים המובילים בישראל
-        <br /> התקדמו ליומן של קוויקלי
+        <br /> התקדמו ליומן של Bropify-
       </h1>
     </div>
   );
