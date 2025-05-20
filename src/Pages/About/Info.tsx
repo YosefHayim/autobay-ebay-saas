@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { companies } from "./companies";
+import Brands from "../Contact/Brands";
 
 interface About3Props {
   title?: string;
@@ -60,7 +60,7 @@ export const About3 = ({
     <section className="py-32">
       <div>
         <div className="mb-14 flex gap-5 text-center">
-          <p className="text-muted-foreground w-full">{description}</p>
+          <p className="text-muted-foreground w-full text-2xl">{description}</p>
         </div>
         <div className="grid gap-7 lg:grid-cols-3">
           <img src={mainImage.src} alt={mainImage.alt} className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2" />
@@ -81,14 +81,8 @@ export const About3 = ({
           </div>
         </div>
         <div className="py-32">
-          <p className="text-center">{companiesTitle} </p>
-          <div className="bg-muted mt-8 flex flex-wrap justify-center gap-8 p-3">
-            {companies.map((company, idx) => (
-              <div className="flex items-center gap-3" key={company.src + idx}>
-                <img src={company.src} alt={company.alt} className="h-6 w-auto md:h-8" />
-              </div>
-            ))}
-          </div>
+          <h2 className="text-center text-3xl">{companiesTitle} </h2>
+          <Brands />
         </div>
         <div className="bg-muted relative overflow-hidden rounded-xl p-10 md:p-16">
           <div className="flex flex-col items-center justify-center gap-4">

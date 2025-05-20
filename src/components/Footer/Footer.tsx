@@ -1,10 +1,10 @@
 "use client";
 import type { ComponentProps, ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { FrameIcon } from "lucide-react";
 import { footerLinks } from "./footerLinks";
 import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router";
+import { Logo } from "../Logo";
 
 const sociaLinks = [
   { title: "Facebook", to: "https://facebook.com", icon: <FaFacebookF size={30} className="rounded-full bg-black p-2 text-white" /> },
@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="bg-foreground/20 absolute top-0 right-1/2 left-1/2 h-px w-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur" />
       <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
-          <FrameIcon className="size-8" />
+          <Logo />
           <div className="mt-8 text-sm md:mt-0">
             <div className="mb-4 flex gap-2">
               {sociaLinks.map((socialPlatform) => (

@@ -17,7 +17,7 @@ const About = () => {
         alt: "לוגו Bropify",
         title: "עשרות ספרים כבר עלו על זה",
         description: "Bropify נותנת לך שליטה על הלו״ז, חוסכת לך זמן ומתאמת תורים בלי כאב ראש. תתעסק במספרים – אנחנו נדאג לשאר.",
-        buttonText: "תראה איך זה עובד",
+        buttonText: "תתחיל עכשיו",
         buttonUrl: "/how-it-works",
       }}
       companiesTitle="הבחירה של הספרים הכי חדים בשוק"
