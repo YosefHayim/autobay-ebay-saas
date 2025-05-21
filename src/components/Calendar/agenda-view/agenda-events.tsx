@@ -12,7 +12,7 @@ export const AgendaEvents: FC = () => {
   const { events, use24HourFormat, badgeVariant, agendaModeGroupBy } = useCalendar();
 
   const eventsByMode = Object.groupBy(useGetEventsByMode(events), (event) => {
-    return agendaModeGroupBy === "date" ? format(parseISO(event.startDate), "yyyy-MM-dd") : event.color;
+    return agendaModeGroupBy === "date" ? format(parseISO(event.startDate), "dd-MM-yyyy") : event.color;
   });
 
   const groupedAndSortedEvents = Object.entries(eventsByMode).sort((a, b) => new Date(a[0]).getTime() - new Date(b[0]).getTime());
