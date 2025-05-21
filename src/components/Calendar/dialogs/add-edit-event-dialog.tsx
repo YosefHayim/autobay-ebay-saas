@@ -120,7 +120,7 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
               render={({ field, fieldState }) => (
                 <FormItem>
                   <FormLabel htmlFor="title" className="required">
-                    Title
+                    כותרת
                   </FormLabel>
                   <FormControl>
                     <Input id="title" placeholder="כתוב כותרת" {...field} className={fieldState.invalid ? "border-red-500" : ""} />
@@ -136,7 +136,7 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
               name="color"
               render={({ field, fieldState }) => (
                 <FormItem>
-                  <FormLabel className="required">Variant</FormLabel>
+                  <FormLabel className="required">צבע</FormLabel>
                   <FormControl>
                     <Select value={field.value} onValueChange={field.onChange}>
                       <SelectTrigger className={`w-full ${fieldState.invalid ? "border-red-500" : ""}`}>
@@ -176,7 +176,7 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
         <DialogFooter>
           <DialogClose asChild>
             <Button type="button" variant="outline">
-              Cancel
+              בטל
             </Button>
           </DialogClose>
           <Button form="event-form" type="submit">
