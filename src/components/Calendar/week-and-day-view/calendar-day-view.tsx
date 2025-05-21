@@ -7,15 +7,14 @@ import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
 import { DayPicker } from "@/components/ui/day-picker";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-import { AddEditEventDialog } from "@/modules/calendar/components/dialogs/add-edit-event-dialog";
-import { CalendarTimeline } from "@/modules/calendar/components/week-and-day-view/calendar-time-line";
-import { DayViewMultiDayEventsRow } from "@/modules/calendar/components/week-and-day-view/day-view-multi-day-events-row";
+import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
+import { CalendarTimeline } from "../week-and-day-view/calendar-time-line";
+import { DayViewMultiDayEventsRow } from "../week-and-day-view/day-view-multi-day-events-row";
 
-import { groupEvents } from "@/modules/calendar/helpers";
-
-import type { IEvent } from "@/modules/calendar/interfaces";
-import { RenderGroupedEvents } from "@/modules/calendar/components/week-and-day-view/render-grouped-events";
-import { DroppableArea } from "@/modules/calendar/components/dnd/droppable-area";
+import { RenderGroupedEvents } from "../week-and-day-view/render-grouped-events";
+import { DroppableArea } from "../dnd/droppable-area";
+import { groupEvents } from "../helpers";
+import type { IEvent } from "../interfaces";
 
 interface IProps {
   singleDayEvents: IEvent[];
