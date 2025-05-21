@@ -1,2 +1,2 @@
-export type TCalendarView = "יום" | "שבוע" | "חודש" | "שנה" | "אגנדה";
-export type TEventColor = "כחול" | "ירוק" | "אדום" | "צהוב" | "סגול" | "כתום";
+export type TCalendarView = "day" | "week" | "month" | "year" | "agenda";
+export type TEventColor = "blue" | "green" | "red" | "yellow" | "purple" | "orange";
