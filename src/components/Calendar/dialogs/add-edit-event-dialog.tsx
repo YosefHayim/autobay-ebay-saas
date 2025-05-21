@@ -99,7 +99,7 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
       form.reset();
     } catch (error) {
       console.error(`Error ${isEditing ? "editing" : "adding"} event:`, error);
-      toast.error(`Failed to ${isEditing ? "edit" : "add"} event`);
+      toast.error(`נכשל ${isEditing ? "לערוך" : "להוסיף"} אירוע`);
     }
   };
 

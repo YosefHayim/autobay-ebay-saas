@@ -46,22 +46,21 @@ export function DateNavigator({ view, events }: IProps) {
             exit={{ scale: 0.8, opacity: 0 }}
             transition={transition}
           >
-            {eventCount} events
+            {eventCount} אירועים
           </MotionBadge>
         </AnimatePresence>
       </div>
 
       <div className="flex items-center gap-2">
-        <MotionButton variant="outline" size="icon" className="h-6 w-6" onClick={handlePrevious} variants={buttonHover} whileHover="hover" whileTap="tap">
-          <ChevronLeft className="h-4 w-4" />
+        <MotionButton variant="outline" size="icon" className="h-6 w-6" onClick={handleNext} variants={buttonHover} whileHover="hover" whileTap="tap">
+          <ChevronRight className="h-4 w-4" />
         </MotionButton>
-
         <motion.p className="text-muted-foreground text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={transition}>
           {rangeText(view, selectedDate)}
         </motion.p>
 
-        <MotionButton variant="outline" size="icon" className="h-6 w-6" onClick={handleNext} variants={buttonHover} whileHover="hover" whileTap="tap">
-          <ChevronRight className="h-4 w-4" />
+        <MotionButton variant="outline" size="icon" className="h-6 w-6" onClick={handlePrevious} variants={buttonHover} whileHover="hover" whileTap="tap">
+          <ChevronLeft className="h-4 w-4" />
         </MotionButton>
       </div>
     </div>
