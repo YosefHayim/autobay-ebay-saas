@@ -1,22 +1,19 @@
 "use client";
 
-import { CalendarRange, Columns, Grid2X2, Grid3X3, LayoutList, List, Plus } from "lucide-react";
+import { CalendarRange, Columns, Grid2X2, Grid3X3, LayoutList, List, Plus, Settings } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
-import { buttonHover, slideFromLeft, slideFromRight, transition } from "@/modules/calendar/animations";
-
-import { UserSelect } from "@/modules/calendar/components/header/user-select";
-import { TodayButton } from "@/modules/calendar/components/header/today-button";
-import { DateNavigator } from "@/modules/calendar/components/header/date-navigator";
-import { AddEditEventDialog } from "@/modules/calendar/components/dialogs/add-edit-event-dialog";
-import FilterEvents from "@/modules/calendar/components/header/filter";
-
-import { ButtonGroup } from "@/components/ui/button-group";
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
-import { Toggle } from "@/components/ui/toggle";
-import { useFilteredEvents } from "@/modules/calendar/hooks";
-import { Settings } from "@/modules/calendar/components/settings/settings";
+import type { ButtonGroup } from "@/components/ui/button-group";
+import type { Toggle } from "@radix-ui/react-toggle";
+import { slideFromLeft, transition, slideFromRight, buttonHover } from "../animations";
+import { useCalendar } from "../contexts/calendar-context";
+import type { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
+import { useFilteredEvents } from "../hooks";
+import { DateNavigator } from "./date-navigator";
+import FilterEvents from "./filter";
+import { TodayButton } from "./today-button";
+import { UserSelect } from "./user-select";
 
 export const MotionButton = motion.create(Button);
 

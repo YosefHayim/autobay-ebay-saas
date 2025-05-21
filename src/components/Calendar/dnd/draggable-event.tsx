@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { useDragDrop } from "@/modules/calendar/contexts/drag-drop-context";
-import { IEvent } from "@/modules/calendar/interfaces";
-import { EventDetailsDialog } from "@/modules/calendar/components/dialogs/event-details-dialog";
+import { useDragDrop } from "../contexts/drag-drop-context";
+import { EventDetailsDialog } from "../dialogs/event-details-dialog";
+import type { IEvent } from "../interfaces";
+import type { ReactNode } from "react";
 
 interface DraggableEventProps {
   event: IEvent;

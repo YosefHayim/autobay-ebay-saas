@@ -1,8 +1,8 @@
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
+import { useCalendar } from "../contexts/calendar-context";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Select, SelectItem, SelectContent, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { AvatarGroup } from "@/components/ui/avatar-group";
+import { Select, SelectItem, SelectContent, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export function UserSelect() {
   const { users, selectedUserId, filterEventsBySelectedUser } = useCalendar();
