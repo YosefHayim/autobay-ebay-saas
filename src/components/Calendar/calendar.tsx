@@ -13,10 +13,9 @@ async function getCalendarData() {
     users: await getUsers(),
   };
 }
+const { events, users } = await getCalendarData();
 
-export async function Calendar() {
-  const { events, users } = await getCalendarData();
-
+const Calendar = () => {
   return (
     <DragDropProvider>
       <CalendarProvider events={events} users={users} view="month">
@@ -28,4 +27,6 @@ export async function Calendar() {
       </CalendarProvider>
     </DragDropProvider>
   );
-}
+};
+
+export default Calendar;
