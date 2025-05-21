@@ -81,35 +81,36 @@ const HeroSection = () => {
                 <AnimatedGroup variants={transitionVariants}>
                   <ForthHeroSection
                     words={[
-                      "בלי טלפונים מיותרים",
-                      "פחות ביטולים, יותר הכנסות",
-                      "היומן שמתזמן לבד",
-                      "שקט נפשי לעסק שלך",
-                      "בלי רדיפה אחרי לקוחות",
-                      "שליטה מלאה בתורים",
-                      "יומן חכם שחוסך לך זמן",
-                      "היומן שמזכיר ללקוח לבד",
-                      "ניהול העסק בלי כאב ראש",
-                      "בלי לרדוף אחרי תשלומים",
-                      "פחות ניהול – יותר עבודה",
-                      "היומן שמזיז את העסק קדימה",
-                      "היומן שמוריד את הלחץ",
-                      "יומן שעובד גם כשאתה לא",
-                      "יומן שלא צריך אותך",
-                      "מערכת שתומכת בך באמת",
-                      "בלי שיחות, בלי הודעות, רק תורים",
-                      "היומן שמבין את השגרה שלך",
-                      "יומן עם תזכורות אוטומטיות",
-                      "תורים מסודרים בלחיצת כפתור",
-                      "סוף לסרבול – היומן הדיגיטלי שלך",
-                      "ניהול עסק כמו שצריך",
-                      "יומן שגם ההורים שלך יבינו",
-                      "היומן ששולח תזכורות לבד",
-                      "היומן שמפנה לך זמן",
+                      "No unnecessary phone calls",
+                      "Fewer cancellations, more income",
+                      "A calendar that schedules automatically",
+                      "Peace of mind for your business",
+                      "No chasing after customers",
+                      "Full control over your appointments",
+                      "A smart calendar that saves you time",
+                      "A calendar that reminds customers automatically",
+                      "Run your business without headaches",
+                      "No chasing after payments",
+                      "Less managing – more doing",
+                      "The calendar that pushes your business forward",
+                      "The calendar that reduces stress",
+                      "A calendar that works even when you don’t",
+                      "A calendar that doesn’t need you",
+                      "A system that truly supports you",
+                      "No calls, no messages – just appointments",
+                      "A calendar that understands your routine",
+                      "A calendar with automatic reminders",
+                      "Organized scheduling at the click of a button",
+                      "No more complications – your digital calendar",
+                      "Manage your business properly",
+                      "A calendar even your parents can use",
+                      "The calendar that sends reminders by itself",
+                      "The calendar that frees up your time",
                     ]}
                   />
                   <p className="mx-auto mt-8 max-w-2xl text-lg text-balance">
-                    Bropify- תוריד ממך את העומס בניהול העסק. לקוחות יקבעו תורים לבד, אישורי הגעה ישלחו אוטומטית ב WhatsApp והתשלום יתקבל בקליק.
+                    Bropify – takes the load off managing your business. Customers will book appointments on their own, confirmations will be sent automatically
+                    via WhatsApp, and payments will be received with one click.
                   </p>
                 </AnimatedGroup>
 
@@ -130,10 +131,10 @@ const HeroSection = () => {
                   <div key={1} className="flex flex-col">
                     <Button size="lg" className="rounded-xl px-5 text-base">
                       <Link to="#link">
-                        <span className="text-nowrap">התחילו עכשיו</span>
+                        <span className="text-nowrap">Get Started</span>
                       </Link>
                     </Button>
-                    <span className="text-nowrap">אין צורך בפרטי אשראי</span>
+                    <span className="text-nowrap">No credit card required</span>
                   </div>
                 </AnimatedGroup>
               </div>

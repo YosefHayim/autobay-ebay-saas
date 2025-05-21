@@ -1,47 +1,51 @@
-export const heading = "שאלות נפוצות";
+export const heading = "Frequently Asked Questions";
 
-export const description = "מתלבטים אם להצטרף למערכת לניהול תורים? הנה כל התשובות שתצטרכו כדי להתחיל בקלות ובמהירות. לא מצאתם מענה? אנחנו זמינים לעזור.";
+export const description =
+  "Not sure if you should join the appointment management system? Here are all the answers you need to get started easily and quickly. Didn't find what you were looking for? We're here to help.";
 
-export const supportHeading = "עדיין יש לכם שאלות? אנחנו כאן בשבילכם";
+export const supportHeading = "Still have questions? We're here for you";
 
-export const supportDescription = "צוות התמיכה שלנו ישמח לעזור בכל שאלה – טכנית, עסקית או תפעולית.";
+export const supportDescription = "Our support team will be happy to help with any question – technical, business-related, or operational.";
 
-export const supportButtonText = "דברו איתנו";
+export const supportButtonText = "Contact us";
 
 export const faqItems = [
   {
     id: "faq-1",
-    question: "איך מצטרפים למערכת?",
-    answer: "התהליך פשוט ומהיר – נכנסים לעמוד ההרשמה, ממלאים פרטים בסיסיים, והחשבון שלכם מוכן תוך פחות מדקה. אין צורך ליצור קשר עם נציג.",
+    question: "How do I join the system?",
+    answer:
+      "The process is simple and quick – go to the registration page, fill in basic details, and your account will be ready in under a minute. No need to contact a representative.",
   },
   {
     id: "faq-2",
-    question: "האם יש תקופת ניסיון בחינם?",
-    answer: "כן. כל עסק מקבל שבועיים התנסות חינם ללא צורך בפרטי אשראי. תוכלו לבדוק את המערכת ולהתחיל לעבוד בלי להתחייב.",
+    question: "Is there a free trial period?",
+    answer: "Yes. Every business gets a two-week free trial with no credit card required. You can test the system and start working without commitment.",
   },
   {
     id: "faq-3",
-    question: "איך לקוחות מקבלים תזכורות על התור?",
-    answer: 'המערכת שולחת תזכורות אוטומטיות דרך WhatsApp, SMS ודוא"ל – ניתן לבחור מה להפעיל בהתאם לצורך שלכם.',
+    question: "How do customers receive appointment reminders?",
+    answer: "The system sends automatic reminders via WhatsApp, SMS, and email – you can choose what to activate based on your needs.",
   },
   {
     id: "faq-4",
-    question: "האם אפשר להגדיר שעות עבודה, הפסקות וחופשים?",
-    answer: "בוודאי. לאחר פתיחת החשבון תמצאו מערכת הגדרות מלאה וגמישה שמאפשרת לכם להתאים את לוח הזמנים בדיוק לסגנון העבודה שלכם.",
+    question: "Can I set working hours, breaks, and holidays?",
+    answer:
+      "Absolutely. Once your account is set up, you’ll find a full and flexible settings system that lets you tailor your schedule to your exact workflow.",
   },
   {
     id: "faq-5",
-    question: "אני עצמאי בלי מזכירה – זה מתאים לי?",
-    answer: "בהחלט. המערכת נועדה לחסוך זמן ולמנוע כאב ראש. לקוחות קובעים תורים בעצמם ואתם מקבלים התראה מסודרת, בלי צורך בניהול ידני.",
+    question: "I'm self-employed without a secretary – is this right for me?",
+    answer:
+      "Definitely. The system is designed to save time and reduce hassle. Clients book appointments themselves, and you get organized notifications without manual handling.",
   },
   {
     id: "faq-6",
-    question: "האם צריך ידע טכני בשביל להשתמש במערכת?",
-    answer: "ממש לא. הממשק שלנו אינטואיטיבי ופשוט לתפעול – גם לספרים שלא רגילים לעבוד עם מערכות דיגיטליות.",
+    question: "Do I need technical knowledge to use the system?",
+    answer: "Not at all. Our interface is intuitive and easy to use – even for professionals not used to working with digital tools.",
   },
   {
     id: "faq-7",
-    question: "האם ניתן לשלב את המערכת באתר שלי או בדף אינסטגרם?",
-    answer: "כן. תקבלו קישור אישי להזמנת תורים שתוכלו להוסיף לכל פלטפורמה – אתר, אינסטגרם, וואטסאפ עסקי ועוד.",
+    question: "Can I integrate the system into my website or Instagram page?",
+    answer: "Yes. You’ll receive a personal booking link you can add to any platform – website, Instagram, business WhatsApp, and more.",
   },
 ];

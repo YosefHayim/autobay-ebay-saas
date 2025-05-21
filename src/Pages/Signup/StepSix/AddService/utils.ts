@@ -1,1 +1,1 @@
-export const serviceTime = ["בחר זמן שירות", "10 דק", "15 דק", "30 דק", "60 דק", "90 דק", "120 דק", "150 דק", "180 דק"];
+export const serviceTime = ["Select service time", "10 min", "15 min", "30 min", "60 min", "90 min", "120 min", "150 min", "180 min"];

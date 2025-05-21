@@ -1,17 +1,17 @@
 export const whichCalendarYouHadOptions = [
-  { value: "", text: "בחר יומן" },
-  { value: "physical-calendar", text: "יומן פיזי" },
-  { value: "google-calendar", text: "יומן גוגל" },
-  { value: "other-calendar", text: "מערכת אחרת" },
-  { value: "none", text: "אין לי יומן" },
+  { value: "", text: "Select a calendar" },
+  { value: "physical-calendar", text: "Physical calendar" },
+  { value: "google-calendar", text: "Google calendar" },
+  { value: "other-calendar", text: "Other system" },
+  { value: "none", text: "I don't have a calendar" },
 ];
 
 export const howDidYouHearAboutUsOptions = [
-  { value: "internet-commercial", text: "פרסומת באינטרנט" },
-  { value: "google-commercial", text: "פרסומת בגוגל" },
-  { value: "facebook-commercial", text: "פרסומת בפייסבוק" },
-  { value: "google-search", text: "חיפוש בגוגל" },
-  { value: "recommendation-receive", text: "קיבלתי המלצה" },
-  { value: "appstore-search", text: "חיפוש בחנות אפליקציות" },
-  { value: "other business", text: "ראיתי בעסק אחר" },
+  { value: "internet-commercial", text: "Internet advertisement" },
+  { value: "google-commercial", text: "Google advertisement" },
+  { value: "facebook-commercial", text: "Facebook advertisement" },
+  { value: "google-search", text: "Google search" },
+  { value: "recommendation-receive", text: "Received a recommendation" },
+  { value: "appstore-search", text: "App store search" },
+  { value: "other business", text: "Saw it at another business" },
 ];

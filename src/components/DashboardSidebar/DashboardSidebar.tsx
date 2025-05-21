@@ -8,7 +8,6 @@ import { Link } from "react-router";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { IoIosLogOut } from "react-icons/io";
-import { Calendar } from "../Calendar";
 
 const DashboardSidebar = () => {
   const links = [
@@ -45,7 +44,7 @@ const DashboardSidebar = () => {
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto">
             {open && (
-              <Link to="/dashboard" dir="ltr">
+              <Link to="/dashboard">
                 <Logo />
               </Link>
             )}

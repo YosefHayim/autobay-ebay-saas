@@ -11,29 +11,29 @@ interface FooterSection {
 
 export const footerLinks: FooterSection[] = [
   {
-    label: "אודות",
+    label: "About",
     links: [
-      { title: "הורדת האפליקציה", href: "#features" },
-      { title: "מחירון", href: "#pricing" },
-      { title: "צרו קשר", href: "#testimonials" },
-      { title: "התחלת התנסות", href: "/" },
+      { title: "Download the app", href: "#features" },
+      { title: "Pricing", href: "#pricing" },
+      { title: "Contact us", href: "#testimonials" },
+      { title: "Start free trial", href: "/" },
     ],
   },
   {
-    label: "מוצר",
+    label: "Product",
     links: [
-      { title: "אישורי הגעה", href: "/faqs" },
-      { title: "ניהול יומן", href: "/about" },
-      { title: "קבלת תשלום", href: "/privacy" },
-      { title: "דוחות", href: "/terms" },
+      { title: "Appointment confirmations", href: "/faqs" },
+      { title: "Calendar management", href: "/about" },
+      { title: "Payments", href: "/privacy" },
+      { title: "Reports", href: "/terms" },
     ],
   },
   {
-    label: "שירות לקוחות",
+    label: "Customer Service",
     links: [
-      { title: "חייגו אלינו", href: "/blog" },
-      { title: "שליחת הודעה", href: "/changelog" },
-      { title: "שירות לקוחות", href: "/brand" },
+      { title: "Call us", href: "/blog" },
+      { title: "Send a message", href: "/changelog" },
+      { title: "Customer support", href: "/brand" },
     ],
   },
 ];
