@@ -73,12 +73,12 @@ const Navbar = () => {
                 <LoginDialog />
                 <Button asChild size="sm" className={cn(isScrolled && "lg:hidden")}>
                   <Link to="/signup">
-                    <span>הרשמה</span>
+                    <span>Sign up</span>
                   </Link>
                 </Button>
                 <Button asChild size="sm" className={cn(isScrolled ? "lg:inline-flex" : "hidden")}>
                   <Link to="/signup">
-                    <span>התחילו עכשיו</span>
+                    <span>Start now</span>
                   </Link>
                 </Button>
                 <ToggleBtn />

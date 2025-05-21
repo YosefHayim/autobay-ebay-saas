@@ -1,7 +1,7 @@
 "use client";
 
-import { createContext, useContext, useState, type ReactNode } from "react";
-import type { IEvent } from "../interfaces";
+import React, { createContext, useContext, useState, ReactNode } from "react";
+import { IEvent } from "@/modules/calendar/interfaces";
 
 interface DragDropContextType {
   draggedEvent: IEvent | null;

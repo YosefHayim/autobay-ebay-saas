@@ -64,10 +64,10 @@ const SignUp = () => {
         <div className="flex w-full flex-col items-center justify-center">{stepSignUpProccess()}</div>
         <div className="mt-4 flex justify-center space-x-4">
           <Button variant="outline" className="w-32" onClick={() => setCurrentStep((prev) => prev - 1)} disabled={currentStep === 1}>
-            חזור
+            Back
           </Button>
           <Button variant="outline" className="w-32" onClick={handleNextStep} disabled={currentStep > steps.length}>
-            המשך
+            Continue
           </Button>
         </div>
       </div>

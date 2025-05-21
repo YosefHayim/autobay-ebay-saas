@@ -9,11 +9,11 @@ const LoginDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">התחברות</Button>
+        <Button variant="outline">Login</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogDescription>היי, כדי להמשיך צריך להתחבר הזן את הפרטים הבאים:</DialogDescription>
+          <DialogDescription>Hello, in order to connect please enter email and password:</DialogDescription>
         </DialogHeader>
         <form className="grid gap-4">
           <div className="grid gap-2">
@@ -24,13 +24,13 @@ const LoginDialog = () => {
             <Label htmlFor="password">סיסמה</Label>
             <Input required id="password" type="password" placeholder="••••••••••" autoComplete="current-password" />
             <Link to="/forget-password" className="text-sm text-gray-300 hover:text-black">
-              שכחת סיסמה?
+              Forget password?
             </Link>
           </div>
 
           <div>
             <Button>
-              התחבר עם גוגל
+              Login with google
               <span className="pointer-events-none me-2 flex-1">
                 <FcGoogle className="mr-1" size={16} aria-hidden="true" />
               </span>
@@ -40,10 +40,10 @@ const LoginDialog = () => {
         <DialogFooter>
           <DialogClose asChild>
             <Button type="button" variant="outline">
-              בטל
+              Cancel
             </Button>
           </DialogClose>
-          <Button type="submit">התחבר</Button>
+          <Button type="submit">Login</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -45,7 +45,7 @@ const Faq = () => {
           <p className="text-muted-foreground mb-8 max-w-3xl lg:text-lg">{supportDescription}</p>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row">
             <Button className="w-full sm:w-auto" onClick={() => topRef.current?.scrollIntoView({ behavior: "smooth" })}>
-              דברו איתנו
+              Talk with us
             </Button>
           </div>
         </div>

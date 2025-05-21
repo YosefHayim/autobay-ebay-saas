@@ -26,7 +26,7 @@ const AddService = () => {
           </DialogDescription>
         </DialogHeader>
         <Button type="submit" className="float-right rounded-lg hover:bg-gray-200 hover:text-black">
-          הוסף שירות
+          Add Service
         </Button>
       </DialogContent>
     </Dialog>
