@@ -3,18 +3,15 @@
 import { useMemo } from "react";
 import { isToday, startOfDay } from "date-fns";
 import { motion } from "framer-motion";
-
-import { EventBullet } from "@/modules/calendar/components/month-view/event-bullet";
-import { MonthEventBadge } from "@/modules/calendar/components/month-view/month-event-badge";
-
-import { getMonthCellEvents } from "@/modules/calendar/helpers";
-import { staggerContainer, transition } from "@/modules/calendar/animations";
-
-import type { ICalendarCell, IEvent } from "@/modules/calendar/interfaces";
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
-import { DroppableArea } from "@/modules/calendar/components/dnd/droppable-area";
-import { EventListDialog } from "@/modules/calendar/components/dialogs/events-list-dialog";
+import { transition, staggerContainer } from "../animations";
+import { EventListDialog } from "../dialogs/events-list-dialog";
+import { DroppableArea } from "../dnd/droppable-area";
+import { getMonthCellEvents } from "../helpers";
+import type { ICalendarCell, IEvent } from "../interfaces";
+import { EventBullet } from "./event-bullet";
+import { MonthEventBadge } from "./month-event-badge";
 
 interface IProps {
   cell: ICalendarCell;

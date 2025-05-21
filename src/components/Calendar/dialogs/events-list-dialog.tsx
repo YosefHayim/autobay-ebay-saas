@@ -1,13 +1,13 @@
-import { formatTime } from "@/modules/calendar/helpers";
-import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogHeader } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-
-import { ReactNode } from "react";
-import { IEvent } from "@/modules/calendar/interfaces";
-import { dayCellVariants } from "@/modules/calendar/components/month-view/day-cell";
-import { EventBullet } from "@/modules/calendar/components/month-view/event-bullet";
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
-import { format } from "date-fns";
+import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@radix-ui/react-dialog";
+import { format } from "path";
+import type { ReactNode } from "react";
+import { useCalendar } from "../contexts/calendar-context";
+import { formatTime } from "../helpers";
+import type { IEvent } from "../interfaces";
+import { dayCellVariants } from "../month-view/day-cell";
+import { EventBullet } from "../month-view/event-bullet";
 
 interface EventListDialogProps {
   date: Date;

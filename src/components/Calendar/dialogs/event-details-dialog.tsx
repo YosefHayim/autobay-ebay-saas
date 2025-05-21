@@ -6,13 +6,13 @@ import { Calendar, Clock, Text, User } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogClose } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-import type { IEvent } from "@/modules/calendar/interfaces";
-import { ReactNode } from "react";
 import { useCalendar } from "../contexts/calendar-context";
 import { formatTime } from "../helpers";
-import { AddEditEventDialog } from "@/modules/calendar/components/dialogs/add-edit-event-dialog";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import type { IEvent } from "../interfaces";
+import type { ReactNode } from "react";
+import { AddEditEventDialog } from "./add-edit-event-dialog";
 
 interface IProps {
   event: IEvent;

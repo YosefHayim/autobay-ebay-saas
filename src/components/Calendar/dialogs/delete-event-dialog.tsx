@@ -1,4 +1,4 @@
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
+import { useCalendar } from "../contexts/calendar-context";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { TrashIcon } from "lucide-react";

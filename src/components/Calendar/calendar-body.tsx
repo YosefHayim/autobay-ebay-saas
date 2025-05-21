@@ -1,7 +1,15 @@
 "use client";
 
+import { isSameDay, parseISO } from "date-fns";
 import { useCalendar } from "./contexts/calendar-context";
 import { useFilteredEvents } from "./hooks";
+import { motion } from "framer-motion";
+import { AgendaEvents } from "./agenda-view/agenda-events";
+import { fadeIn, transition } from "./animations";
+import { CalendarMonthView } from "./month-view/calendar-month-view";
+import { CalendarDayView } from "./week-and-day-view/calendar-day-view";
+import { CalendarWeekView } from "./week-and-day-view/calendar-week-view";
+import { CalendarYearView } from "./year-view/calendar-year-view";
 
 export function CalendarBody() {
   const { view } = useCalendar();
