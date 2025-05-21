@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
+import { useCalendar } from "../contexts/calendar-context";
 
 export function useDisclosure({ defaultIsOpen = false }: { defaultIsOpen?: boolean } = {}) {
   const [isOpen, setIsOpen] = useState(defaultIsOpen);

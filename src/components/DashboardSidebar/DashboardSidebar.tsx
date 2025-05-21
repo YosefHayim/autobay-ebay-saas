@@ -8,6 +8,7 @@ import { Link } from "react-router";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { IoIosLogOut } from "react-icons/io";
+import { Calendar } from "../Calendar/calendar";
 
 const DashboardSidebar = () => {
   const links = [
