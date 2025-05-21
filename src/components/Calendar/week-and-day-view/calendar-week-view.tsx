@@ -31,8 +31,8 @@ export function CalendarWeekView({ singleDayEvents, multiDayEvents }: IProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={transition}
       >
-        <p>Weekly view is not available on smaller devices.</p>
-        <p>Please switch to daily or monthly view.</p>
+        <p>תצוגה שבועית אינה זמינה במכשירים קטנים.</p>
+        <p>אנא עבור לתצוגה יומית או חודשית.</p>
       </motion.div>
 
       <motion.div className="hidden flex-col sm:flex" variants={staggerContainer}>
