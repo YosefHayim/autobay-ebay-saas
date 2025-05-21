@@ -18,156 +18,156 @@ import otherIcon from "/svgs/other-icon.svg";
 
 export const businessTypes = [
   {
-    value: "ברבר / מספרת גברים",
+    value: "Mens Barber",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={barberIcon} alt="barber chair icon" />
-        <p>מספרת גברים / ברבר</p>
+        <p>Mens Barber</p>
       </div>
     ),
   },
   {
-    value: "ציפורניים",
+    value: "Nails",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={nailGelIcon} alt="nail gel icon" />
-        <p>ציפורניים</p>
+        <p>Nails</p>
       </div>
     ),
   },
   {
-    value: "גבות",
+    value: "Eyebrowns",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={eyebrowIcon} alt="eyebrowns icon" />
-        <p>גבות</p>
+        <p>Eyebrowns</p>
       </div>
     ),
   },
   {
-    value: "ריסים",
+    value: "Eyelashes",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={eyelashesIcon} alt="eyelashes icon" />
-        <p>ריסים</p>
+        <p>Eyelashes</p>
       </div>
     ),
   },
   {
-    value: "טיפוח עור",
+    value: "Skincare",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={skincareIcon} alt="skincare icon" />
-        <p>טיפוח עור</p>
+        <p>Skincare</p>
       </div>
     ),
   },
   {
-    value: "מעצבי שיער",
+    value: "Hair designers",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={hairDesignIcon} alt="hair design icon" />
-        <p>מעצבי שיער</p>
+        <p>Hair designers</p>
       </div>
     ),
   },
   {
-    value: "הסרת שיער",
+    value: "Hair removal",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={hairRemovalIcon} alt="hair removal icon" />
-        <p>הסרת שיער</p>
+        <p>Hair removal</p>
       </div>
     ),
   },
   {
-    value: "איפור",
+    value: "Makeup",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={makeupIcon} alt="makeup icon" />
-        <p>איפור</p>
+        <p>Makeup</p>
       </div>
     ),
   },
   {
-    value: "קעקועים ופירסינג",
+    value: "earring and tatto",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={tattoIcon} alt="barber chair icon" />
-        <p>קעקועים ופירסינג</p>
+        <p>earring and tatto</p>
       </div>
     ),
   },
   {
-    value: "עיסוי",
+    value: "Massage",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={massgeIon} alt="massage icon" />
-        <p>עיסוי</p>
+        <p>Massage</p>
       </div>
     ),
   },
   {
-    value: "הזרקות ומילויים",
+    value: "Botox and fillings",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={botoxIcon} alt="lips icon" />
-        <p>הזרקות ומילויים</p>
+        <p>Botox and fillings</p>
       </div>
     ),
   },
   {
-    value: "רפואה ורופאי שיניים",
+    value: "Doctors and dentists",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={dentistIcon} alt="teeth icon" />
-        <p>רפואה ורופאי שיניים</p>
+        <p>Doctors and dentists</p>
       </div>
     ),
   },
   {
-    value: "מספרה לכלבים",
+    value: "Barber dog",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={dogIcon} alt="dog icon" />
-        <p>מספרה לכלבים</p>
+        <p>Barber dog</p>
       </div>
     ),
   },
   {
-    value: "ייעוץ וטיפול הוליסטי",
+    value: "Consulating and threapy hollistic",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={hollisticIcon} alt="hollistic threapy icon" />
-        <p>ייעוץ וטיפול הוליסטי</p>
+        <p>Consulating and threapy hollistic</p>
       </div>
     ),
   },
   {
-    value: "פיטנס",
+    value: "Fitness",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={fitnessIcon} alt="fitness icon" />
-        <p>פיטנס</p>
+        <p>Fitness</p>
       </div>
     ),
   },
   {
-    value: "אופטיקה",
+    value: "Optics",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={glassesIcon} alt="glasses icon" />
-        <p>אופטיקה</p>
+        <p>Optics</p>
       </div>
     ),
   },
   {
-    value: "אחר",
+    value: "Other",
     children: (
       <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
         <img src={otherIcon} alt="other icon" />
 
-        <p>אחר</p>
+        <p>Other</p>
       </div>
     ),
   },

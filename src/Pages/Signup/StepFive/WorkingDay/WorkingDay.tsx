@@ -1,21 +1,21 @@
 import WorkingHours from "../WorkingHours/WorkingHours";
 
-const hebrewDayMap: Record<string, string> = {
-  Sunday: "יום א׳",
-  Monday: "יום ב׳",
-  Tuesday: "יום ג׳",
-  Wednesday: "יום ד׳",
-  Thursday: "יום ה׳",
-  Friday: "יום ו׳",
-  Saturday: "שבת",
+const NameOfDay: Record<string, string> = {
+  Sunday: "Sunday",
+  Monday: "Monday",
+  Tuesday: "Tuesday",
+  Wednesday: "Wednesday",
+  Thursday: "Thursday",
+  Friday: "Friday",
+  Saturday: "Saturday",
 };
 
 const WorkingDay: React.FC<{ day: string }> = ({ day }) => {
-  const hebrewDay = hebrewDayMap[day];
+  const DayStr = NameOfDay[day];
 
   return (
     <div className="flex w-full items-center justify-between py-2">
-      <p>{hebrewDay}</p>
+      <p>{DayStr}</p>
       <WorkingHours day={day} isOpen="open" />
       <WorkingHours day={day} isOpen="close" />
     </div>

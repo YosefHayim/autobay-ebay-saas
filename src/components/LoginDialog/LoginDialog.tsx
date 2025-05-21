@@ -17,11 +17,11 @@ const LoginDialog = () => {
         </DialogHeader>
         <form className="grid gap-4">
           <div className="grid gap-2">
-            <Label htmlFor="email">אימייל</Label>
+            <Label htmlFor="email">Email</Label>
             <Input required id="email" type="email" autoComplete="username" placeholder="example@gmail.com" />
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="password">סיסמה</Label>
+            <Label htmlFor="password">Password</Label>
             <Input required id="password" type="password" placeholder="••••••••••" autoComplete="current-password" />
             <Link to="/forget-password" className="text-sm text-gray-300 hover:text-black">
               Forget password?

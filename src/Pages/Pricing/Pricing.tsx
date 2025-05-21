@@ -13,12 +13,7 @@ import NumberFlow from "@number-flow/react";
 import { Link } from "react-router";
 import { plans } from "./plans";
 
-interface PricingProps {
-  title?: string;
-  description?: string;
-}
-
-const Pricing = ({ title = "נסו עכשיו בחינם את היומן של קלמארק", description = "אם אתם עסק מתחיל או רשת ארצית, קלמארק תדאג לכם בכל שלב" }: PricingProps) => {
+const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const switchRef = useRef<HTMLButtonElement | null>(null);
@@ -50,8 +45,10 @@ const Pricing = ({ title = "נסו עכשיו בחינם את היומן של ק
   return (
     <div className="w-full p-20">
       <div className="mb-12 space-y-4 text-center">
-        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">{title}</h2>
-        <p className="text-muted-foreground text-lg whitespace-pre-line">{description}</p>
+        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Try now for free Bropify</h2>
+        <p className="text-muted-foreground text-lg whitespace-pre-line">
+          Wheter you are a starting business or international, Bropify will take care you at any stage
+        </p>
       </div>
 
       <div className="mb-10 flex justify-center">
