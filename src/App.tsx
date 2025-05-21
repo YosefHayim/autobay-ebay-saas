@@ -6,7 +6,7 @@ import { Login } from "./Pages/Login";
 import { About } from "./Pages/About";
 import { Dashboard } from "./Pages/Dashboard";
 import { Routes, Route } from "react-router";
-import { PageLayout } from "./components/Layout";
+import { PageLayout } from "./components/PageLayout";
 
 function App() {
   return (
