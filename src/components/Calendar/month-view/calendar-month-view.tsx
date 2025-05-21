@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
-import { staggerContainer, transition } from "@/modules/calendar/animations";
+import { useCalendar } from "../contexts/calendar-context";
+import { staggerContainer, transition } from "../animations";
 
-import { DayCell } from "@/modules/calendar/components/month-view/day-cell";
+import { getCalendarCells, calculateMonthEventPositions } from "../helpers";
 
-import { getCalendarCells, calculateMonthEventPositions } from "@/modules/calendar/helpers";
-
-import type { IEvent } from "@/modules/calendar/interfaces";
+import type { IEvent } from "../interfaces";
+import { DayCell } from "./day-cell";
 
 interface IProps {
   singleDayEvents: IEvent[];

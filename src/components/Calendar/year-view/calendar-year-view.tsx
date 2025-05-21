@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import { getYear, isSameDay, isSameMonth } from "date-fns";
 import { useCalendar } from "../contexts/calendar-context";
-import { getCalendarCells, getEventsForYear } from "../helpers";
-import type { IEvent } from "../interfaces";
-import { EventListDialog } from "../dialogs/events-list-dialog";
+import { staggerContainer, transition } from "../animations";
+import { getCalendarCells } from "../helpers";
 import { cn } from "@/lib/utils";
 import { EventBullet } from "../month-view/event-bullet";
-import { staggerContainer } from "../animations";
+import { EventListDialog } from "../dialogs/events-list-dialog";
+import type { IEvent } from "../interfaces";
 
 interface IProps {
   singleDayEvents: IEvent[];
@@ -18,7 +19,7 @@ const WEEKDAYS = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
 export function CalendarYearView({ singleDayEvents, multiDayEvents }: IProps) {
   const { selectedDate, setSelectedDate } = useCalendar();
-  const currentYear = getEventsForYear(selectedDate);
+  const currentYear = getYear(selectedDate);
   const allEvents = [...multiDayEvents, ...singleDayEvents];
 
   return (

@@ -1,8 +1,6 @@
 import { differenceInDays, endOfDay, isWithinInterval, parseISO, startOfDay } from "date-fns";
-
-import { MonthEventBadge } from "@/modules/calendar/components/month-view/month-event-badge";
-
-import type { IEvent } from "@/modules/calendar/interfaces";
+import { MonthEventBadge } from "../month-view/month-event-badge";
+import type { IEvent } from "../interfaces";
 
 interface IProps {
   selectedDate: Date;

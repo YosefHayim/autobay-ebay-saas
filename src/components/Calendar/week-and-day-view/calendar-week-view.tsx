@@ -1,17 +1,15 @@
 import { startOfWeek, addDays, format, parseISO, isSameDay } from "date-fns";
 import { motion } from "framer-motion";
-
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
-import { fadeIn, staggerContainer, transition } from "@/modules/calendar/animations";
-
+import { useCalendar } from "../contexts/calendar-context";
+import { fadeIn, staggerContainer, transition } from "../animations";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { AddEditEventDialog } from "@/modules/calendar/components/dialogs/add-edit-event-dialog";
-import { CalendarTimeline } from "@/modules/calendar/components/week-and-day-view/calendar-time-line";
-import { WeekViewMultiDayEventsRow } from "@/modules/calendar/components/week-and-day-view/week-view-multi-day-events-row";
-import { groupEvents } from "@/modules/calendar/helpers";
-import type { IEvent } from "@/modules/calendar/interfaces";
-import { RenderGroupedEvents } from "@/modules/calendar/components/week-and-day-view/render-grouped-events";
-import { DroppableArea } from "@/modules/calendar/components/dnd/droppable-area";
+import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
+import { CalendarTimeline } from "../week-and-day-view/calendar-time-line";
+import { WeekViewMultiDayEventsRow } from "../week-and-day-view/week-view-multi-day-events-row";
+import { groupEvents } from "../helpers";
+import type { IEvent } from "../interfaces";
+import { RenderGroupedEvents } from "../week-and-day-view/render-grouped-events";
+import { DroppableArea } from "../dnd/droppable-area";
 
 interface IProps {
   singleDayEvents: IEvent[];

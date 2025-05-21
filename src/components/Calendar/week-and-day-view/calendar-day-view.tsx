@@ -1,20 +1,16 @@
 import { Calendar, Clock, User } from "lucide-react";
 import { parseISO, format, isWithinInterval } from "date-fns";
 import { useRef, useEffect } from "react";
-
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
-
 import { DayPicker } from "@/components/ui/day-picker";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
 import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
 import { CalendarTimeline } from "../week-and-day-view/calendar-time-line";
 import { DayViewMultiDayEventsRow } from "../week-and-day-view/day-view-multi-day-events-row";
-
 import { RenderGroupedEvents } from "../week-and-day-view/render-grouped-events";
 import { DroppableArea } from "../dnd/droppable-area";
 import { groupEvents } from "../helpers";
 import type { IEvent } from "../interfaces";
+import { useCalendar } from "../contexts/calendar-context";
 
 interface IProps {
   singleDayEvents: IEvent[];

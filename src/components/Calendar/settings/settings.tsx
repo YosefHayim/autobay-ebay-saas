@@ -13,9 +13,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { DotIcon, MoonIcon, PaletteIcon, SettingsIcon, SunMediumIcon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
-import { useTheme } from "next-themes";
-import { TCalendarView } from "@/modules/calendar/types";
+import { useCalendar } from "../contexts/calendar-context";
+import type { TCalendarView } from "../types";
+import { useTheme } from "@/components/ThemeProvider/ThemeProvider";
 
 export function Settings() {
   const { badgeVariant, setBadgeVariant, use24HourFormat, toggleTimeFormat, view, setView, agendaModeGroupBy, setAgendaModeGroupBy } = useCalendar();

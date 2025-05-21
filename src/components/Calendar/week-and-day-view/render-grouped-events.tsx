@@ -1,7 +1,7 @@
-import { IEvent } from "@/modules/calendar/interfaces";
-import { getEventBlockStyle } from "@/modules/calendar/helpers";
+import { getEventBlockStyle } from "../helpers";
 import { areIntervalsOverlapping, parseISO } from "date-fns";
-import { EventBlock } from "@/modules/calendar/components/week-and-day-view/event-block";
+import { EventBlock } from "../week-and-day-view/event-block";
+import type { IEvent } from "../interfaces";
 
 interface RenderGroupedEventsProps {
   groupedEvents: IEvent[][];
