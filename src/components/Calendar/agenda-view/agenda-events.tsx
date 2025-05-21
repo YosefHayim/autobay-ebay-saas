@@ -1,12 +1,12 @@
-import { FC } from "react";
+import type { FC } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { format, parseISO } from "date-fns";
 import { cn } from "@/lib/utils";
-import { formatTime, getBgColor, getColorClass, getFirstLetters, toCapitalize, useGetEventsByMode } from "./helpers";
-import { EventDetailsDialog } from "./components/dialogs/event-details-dialog";
-import { useCalendar } from "./contexts/calendar-context";
-import { EventBullet } from "./components/month-view/event-bullet";
+import { useCalendar } from "../contexts/calendar-context";
+import { EventDetailsDialog } from "../dialogs/event-details-dialog";
+import { useGetEventsByMode, toCapitalize, getColorClass, getBgColor, getFirstLetters, formatTime } from "../helpers";
+import { EventBullet } from "../month-view/event-bullet";
 
 export const AgendaEvents: FC = () => {
   const { events, use24HourFormat, badgeVariant, agendaModeGroupBy } = useCalendar();

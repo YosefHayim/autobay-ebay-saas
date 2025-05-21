@@ -1,17 +1,15 @@
+import type { ScrollArea } from "@radix-ui/react-scroll-area";
 import { startOfWeek, addDays, format, parseISO, isSameDay } from "date-fns";
 import { motion } from "framer-motion";
-
-import { useCalendar } from "./contexts/calendar-context";
-import { fadeIn, staggerContainer, transition } from "./animations";
-
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { AddEditEventDialog } from "./components/dialogs/add-edit-event-dialog";
-import { CalendarTimeline } from "./components/week-and-day-view/calendar-time-line";
-import { WeekViewMultiDayEventsRow } from "./components/week-and-day-view/week-view-multi-day-events-row";
-import { groupEvents } from "./helpers";
-import type { IEvent } from "./interfaces";
-import { RenderGroupedEvents } from "./components/week-and-day-view/render-grouped-events";
-import { DroppableArea } from "./components/dnd/droppable-area";
+import { fadeIn, transition, staggerContainer } from "../animations";
+import { useCalendar } from "../contexts/calendar-context";
+import type { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
+import type { DroppableArea } from "../dnd/droppable-area";
+import { groupEvents } from "../helpers";
+import type { IEvent } from "../interfaces";
+import { CalendarTimeline } from "./calendar-time-line";
+import { RenderGroupedEvents } from "./render-grouped-events";
+import { WeekViewMultiDayEventsRow } from "./week-view-multi-day-events-row";
 
 interface IProps {
   singleDayEvents: IEvent[];
