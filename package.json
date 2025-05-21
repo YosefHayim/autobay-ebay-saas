@@ -20,7 +20,9 @@
     "@radix-ui/react-label": "^2.1.6",
     "@radix-ui/react-slot": "^1.2.2",
     "@radix-ui/react-switch": "^1.2.4",
+    "@radix-ui/react-toast": "^1.2.14",
     "@radix-ui/react-toggle": "^1.1.8",
+    "@radix-ui/react-tooltip": "^1.2.7",
     "@supabase/supabase-js": "^2.49.4",
     "@tabler/icons-react": "^3.33.0",
     "@tailwindcss/vite": "^4.1.7",
@@ -41,7 +43,8 @@
     "react-use-measure": "^2.1.7",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.7",
-    "usehooks-ts": "^3.1.1"
+    "usehooks-ts": "^3.1.1",
+    "zod": "^3.25.13"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

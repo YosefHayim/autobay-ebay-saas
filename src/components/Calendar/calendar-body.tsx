@@ -1,16 +1,7 @@
 "use client";
 
-import React from "react";
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
-import { motion } from "framer-motion";
-import { fadeIn, transition } from "@/modules/calendar/animations";
-import { AgendaEvents } from "@/modules/calendar/components/agenda-view/agenda-events";
-import { CalendarMonthView } from "@/modules/calendar/components/month-view/calendar-month-view";
-import { CalendarWeekView } from "@/modules/calendar/components/week-and-day-view/calendar-week-view";
-import { CalendarDayView } from "@/modules/calendar/components/week-and-day-view/calendar-day-view";
-import { CalendarYearView } from "@/modules/calendar/components/year-view/calendar-year-view";
-import { isSameDay, parseISO } from "date-fns";
-import { useFilteredEvents } from "@/modules/calendar/hooks";
+import { useCalendar } from "./contexts/calendar-context";
+import { useFilteredEvents } from "./hooks";
 
 export function CalendarBody() {
   const { view } = useCalendar();

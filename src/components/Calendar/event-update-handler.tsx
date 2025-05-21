@@ -8,6 +8,7 @@ import type { IEvent } from "./interfaces";
 export function EventUpdateHandler() {
   const { setOnEventDropped } = useDragDrop();
   const { updateEvent } = useCalendar();
+  const { toast } = useToast();
 
   const handleEventUpdate = useCallback(
     (event: IEvent, newStartDate: Date, newEndDate: Date) => {

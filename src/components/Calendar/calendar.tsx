@@ -1,11 +1,9 @@
-import React from "react";
-import { CalendarProvider } from "@/modules/calendar/contexts/calendar-context";
-import { CalendarHeader } from "@/modules/calendar/components/header/calendar-header";
-import { CalendarBody } from "@/modules/calendar/components/calendar-body";
-
-import { EventUpdateHandler } from "@/modules/calendar/components/event-update-handler";
-import { DragDropProvider } from "@/modules/calendar/contexts/drag-drop-context";
-import { getEvents, getUsers } from "@/modules/calendar/requests";
+import { CalendarBody } from "./calendar-body";
+import { CalendarProvider } from "./contexts/calendar-context";
+import { DragDropProvider } from "./contexts/drag-drop-context";
+import { EventUpdateHandler } from "./event-update-handler";
+import { CalendarHeader } from "./header/calendar-header";
+import { getEvents, getUsers } from "./requests";
 
 async function getCalendarData() {
   await new Promise((resolve) => setTimeout(resolve, 5000));

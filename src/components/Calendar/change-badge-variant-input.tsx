@@ -1,10 +1,10 @@
 "use client";
 
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
+import { useCalendar } from "./contexts/calendar-context";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { DotIcon, PaletteIcon } from "lucide-react";
-import { MotionButton } from "@/modules/calendar/components/header/calendar-header";
-import { buttonHover } from "@/modules/calendar/animations";
+import { MotionButton } from "./header/calendar-header";
+import { buttonHover } from "./animations";
 
 export function ChangeBadgeVariantInput() {
   const { badgeVariant, setBadgeVariant } = useCalendar();
