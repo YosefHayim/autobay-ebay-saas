@@ -5,15 +5,15 @@ import { SignUp } from "./Pages/SignUp";
 import { Login } from "./Pages/Login";
 import { About } from "./Pages/About";
 import { Dashboard } from "./Pages/Dashboard";
-import { Layout } from "./components/Layout/Layout";
 import { Routes, Route } from "react-router";
+import { PageLayout } from "./components/Layout";
 
 function App() {
   return (
     <>
       <Routes>
         {/* Public routes with layout */}
-        <Route element={<Layout />}>
+        <Route element={<PageLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
