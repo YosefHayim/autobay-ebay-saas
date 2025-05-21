@@ -1,7 +1,7 @@
 import { DialogHeader } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@radix-ui/react-dialog";
-import { format } from "path";
+import { format } from "date-fns";
 import type { ReactNode } from "react";
 import { useCalendar } from "../contexts/calendar-context";
 import { formatTime } from "../helpers";
