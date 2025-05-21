@@ -111,7 +111,7 @@ export const MobileSidebar = ({ className, children, ...props }: React.Component
               }}
               className={cn("fixed inset-0 z-[100] flex h-full w-full flex-col justify-between bg-white p-10 dark:bg-neutral-900", className)}
             >
-              <div className="absolute top-10 right-10 z-50 text-neutral-800 dark:text-neutral-200" onClick={() => setOpen(!open)}>
+              <div className="absolute top-10 right-10 z-50 cursor-pointer text-neutral-800 dark:text-neutral-200" onClick={() => setOpen(!open)}>
                 <IconX />
               </div>
               {children}
