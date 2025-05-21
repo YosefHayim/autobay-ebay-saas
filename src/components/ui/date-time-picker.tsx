@@ -51,7 +51,7 @@ export function DateTimePicker({ form, field }: DatePickerProps) {
         <PopoverTrigger asChild>
           <FormControl>
             <Button variant={"outline"} className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}>
-              {field.value ? format(field.value, use24HourFormat ? "MM/dd/yyyy HH:mm" : "MM/dd/yyyy hh:mm aa") : <span>MM/DD/YYYY hh:mm aa</span>}
+              {field.value ? format(field.value, use24HourFormat ? "dd/MM/yyyy HH:mm" : "dd/MM/yyyy hh:mm aa") : <span>dd/MM/yyyy hh:mm aa</span>}
               <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
             </Button>
           </FormControl>

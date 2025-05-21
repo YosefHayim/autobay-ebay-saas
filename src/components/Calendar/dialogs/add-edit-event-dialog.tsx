@@ -74,8 +74,8 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
       // Format event data for API
       const formattedEvent: IEvent = {
         ...values,
-        startDate: format(values.startDate, "yyyy-MM-dd'T'HH:mm:ss"),
-        endDate: format(values.endDate, "yyyy-MM-dd'T'HH:mm:ss"),
+        startDate: format(values.startDate, "dd-MM-yyyy'T'HH:mm:ss"),
+        endDate: format(values.endDate, "dd-MM-yyyy'T'HH:mm:ss"),
         id: isEditing ? event.id : Math.floor(Math.random() * 1000000),
         user: isEditing
           ? event.user
@@ -89,10 +89,10 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
 
       if (isEditing) {
         updateEvent(formattedEvent);
-        toast.success("Event updated successfully");
+        toast.success("אירוע עודכן בהצלחה");
       } else {
         addEvent(formattedEvent);
-        toast.success("Event created successfully");
+        toast.success("אירוע נוצר בהצלחה");
       }
 
       onClose();
@@ -108,8 +108,8 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{isEditing ? "Edit Event" : "Add New Event"}</DialogTitle>
-          <DialogDescription>{isEditing ? "Modify your existing event." : "Create a new event for your calendar."}</DialogDescription>
+          <DialogTitle>{isEditing ? "ערוך אירוע" : "הוסף אירוע חדש"}</DialogTitle>
+          <DialogDescription>{isEditing ? "ערוך את האירוע הנוכחי." : "צור אירוע חדש עבור היומן שלך."}</DialogDescription>
         </DialogHeader>
 
         <Form {...form}>
@@ -123,7 +123,7 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
                     Title
                   </FormLabel>
                   <FormControl>
-                    <Input id="title" placeholder="Enter a title" {...field} className={fieldState.invalid ? "border-red-500" : ""} />
+                    <Input id="title" placeholder="כתוב כותרת" {...field} className={fieldState.invalid ? "border-red-500" : ""} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -140,7 +140,7 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
                   <FormControl>
                     <Select value={field.value} onValueChange={field.onChange}>
                       <SelectTrigger className={`w-full ${fieldState.invalid ? "border-red-500" : ""}`}>
-                        <SelectValue placeholder="Select a variant" />
+                        <SelectValue placeholder="בחר צבע" />
                       </SelectTrigger>
                       <SelectContent>
                         {COLORS.map((color) => (
@@ -163,9 +163,9 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
               name="description"
               render={({ field, fieldState }) => (
                 <FormItem>
-                  <FormLabel className="required">Description</FormLabel>
+                  <FormLabel className="required">תיאור</FormLabel>
                   <FormControl>
-                    <Textarea {...field} placeholder="Enter a description" className={fieldState.invalid ? "border-red-500" : ""} />
+                    <Textarea {...field} placeholder="כתוב תיאור" className={fieldState.invalid ? "border-red-500" : ""} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -180,7 +180,7 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
             </Button>
           </DialogClose>
           <Button form="event-form" type="submit">
-            {isEditing ? "Save Changes" : "Create Event"}
+            {isEditing ? "שמור שיניים" : "צור אירוע"}
           </Button>
         </DialogFooter>
       </DialogContent>

@@ -147,10 +147,10 @@ export function CalendarDayView({ singleDayEvents, multiDayEvents }: IProps) {
                 <span className="bg-success-600 relative inline-flex size-2.5 rounded-full"></span>
               </span>
 
-              <p className="text-t-secondary text-sm font-semibold">Happening now</p>
+              <p className="text-t-secondary text-sm font-semibold">קורה עכשיו</p>
             </div>
           ) : (
-            <p className="text-t-tertiary p-4 text-center text-sm italic">No appointments or consultations at the moment</p>
+            <p className="text-t-tertiary p-4 text-center text-sm italic">אין תורים כרגע</p>
           )}
 
           {currentEvents.length > 0 && (
@@ -172,7 +172,7 @@ export function CalendarDayView({ singleDayEvents, multiDayEvents }: IProps) {
 
                       <div className="flex items-center gap-1.5">
                         <Calendar className="text-t-quinary size-4" />
-                        <span className="text-t-tertiary text-sm">{format(new Date(event.startDate), "MMM d, yyyy")}</span>
+                        <span className="text-t-tertiary text-sm">{format(new Date(event.startDate), "d MMM, yyyy")}</span>
                       </div>
 
                       <div className="flex items-center gap-1.5">

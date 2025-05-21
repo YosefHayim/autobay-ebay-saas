@@ -24,10 +24,7 @@ export const AgendaEvents: FC = () => {
       </div>
       <CommandList className="max-h-max border-t px-3">
         {groupedAndSortedEvents.map(([date, groupedEvents]) => (
-          <CommandGroup
-            key={date}
-            heading={agendaModeGroupBy === "date" ? format(parseISO(date), "EEEE, MMMM d, yyyy") : toCapitalize(groupedEvents![0].color)}
-          >
+          <CommandGroup key={date} heading={agendaModeGroupBy === "date" ? format(parseISO(date), "EEEE,d MMMM, yyyy") : toCapitalize(groupedEvents![0].color)}>
             {groupedEvents!.map((event) => (
               <CommandItem
                 key={event.id}
@@ -69,7 +66,7 @@ export const AgendaEvents: FC = () => {
                         </>
                       ) : (
                         <>
-                          <p className="text-sm">{format(event.startDate, "MM/dd/yyyy")}</p>
+                          <p className="text-sm">{format(event.startDate, "/dd/MM/yyyy")}</p>
                           <span className="text-sm">at</span>
                           <p className="text-sm">{formatTime(event.startDate, use24HourFormat)}</p>
                         </>

@@ -27,9 +27,9 @@ export function EventDetailsDialog({ event, children }: IProps) {
   const deleteEvent = (eventId: number) => {
     try {
       removeEvent(eventId);
-      toast.success("Event deleted successfully.");
+      toast.success("אירוע נמחק בהצלחה");
     } catch {
-      toast.error("Error deleting event.");
+      toast.error("שגיאה במחיקת אירוע");
     }
   };
 
@@ -46,7 +46,7 @@ export function EventDetailsDialog({ event, children }: IProps) {
             <div className="flex items-start gap-2">
               <User className="text-muted-foreground mt-1 size-4 shrink-0" />
               <div>
-                <p className="text-sm font-medium">Responsible</p>
+                <p className="text-sm font-medium">אחראי</p>
                 <p className="text-muted-foreground text-sm">{event.user.name}</p>
               </div>
             </div>
@@ -54,10 +54,10 @@ export function EventDetailsDialog({ event, children }: IProps) {
             <div className="flex items-start gap-2">
               <Calendar className="text-muted-foreground mt-1 size-4 shrink-0" />
               <div>
-                <p className="text-sm font-medium">Start Date</p>
+                <p className="text-sm font-medium">תאריך התחלה</p>
                 <p className="text-muted-foreground text-sm">
-                  {format(startDate, "EEEE dd MMMM")}
-                  <span className="mx-1">at</span>
+                  {format(startDate, "dd EEEE MMMM")}
+                  <span className="mx-1">ב-</span>
                   {formatTime(parseISO(event.startDate), use24HourFormat)}
                 </p>
               </div>
@@ -66,10 +66,10 @@ export function EventDetailsDialog({ event, children }: IProps) {
             <div className="flex items-start gap-2">
               <Clock className="text-muted-foreground mt-1 size-4 shrink-0" />
               <div>
-                <p className="text-sm font-medium">End Date</p>
+                <p className="text-sm font-medium">תאריך סיום</p>
                 <p className="text-muted-foreground text-sm">
-                  {format(endDate, "EEEE dd MMMM")}
-                  <span className="mx-1">at</span>
+                  {format(endDate, "dd EEEE MMMM")}
+                  <span className="mx-1">ב-</span>
                   {formatTime(parseISO(event.endDate), use24HourFormat)}
                 </p>
               </div>
@@ -78,7 +78,7 @@ export function EventDetailsDialog({ event, children }: IProps) {
             <div className="flex items-start gap-2">
               <Text className="text-muted-foreground mt-1 size-4 shrink-0" />
               <div>
-                <p className="text-sm font-medium">Description</p>
+                <p className="text-sm font-medium">תיאור</p>
                 <p className="text-muted-foreground text-sm">{event.description}</p>
               </div>
             </div>
@@ -86,7 +86,7 @@ export function EventDetailsDialog({ event, children }: IProps) {
         </ScrollArea>
         <div className="flex justify-end gap-2">
           <AddEditEventDialog event={event}>
-            <Button variant="outline">Edit</Button>
+            <Button variant="outline">ערוך</Button>
           </AddEditEventDialog>
           <Button
             variant="destructive"
@@ -94,7 +94,7 @@ export function EventDetailsDialog({ event, children }: IProps) {
               deleteEvent(event.id);
             }}
           >
-            Delete
+            מחק
           </Button>
         </div>
         <DialogClose />

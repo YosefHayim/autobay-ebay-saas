@@ -26,7 +26,7 @@ export function EventListDialog({ date, events, maxVisibleEvents = 3, children }
       <span className="sm:hidden">+{hiddenEventsCount}</span>
       <span className="my-1 hidden rounded-xl border px-2 py-0.5 sm:inline">
         {hiddenEventsCount}
-        <span className="mx-1">more...</span>
+        <span className="mx-1">עוד...</span>
       </span>
     </span>
   );
@@ -39,7 +39,7 @@ export function EventListDialog({ date, events, maxVisibleEvents = 3, children }
           <DialogTitle>
             <div className="flex items-center gap-2">
               <EventBullet color={cellEvents[0]?.color} className="" />
-              <p className="text-sm font-medium">Events on {format(date, "EEEE, MMMM d, yyyy")}</p>
+              <p className="text-sm font-medium">אירועים ב- {format(date, "EEEE, MMMM d, yyyy")}</p>
             </div>
           </DialogTitle>
         </DialogHeader>
