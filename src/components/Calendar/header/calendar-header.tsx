@@ -4,11 +4,11 @@ import { CalendarRange, Columns, Grid2X2, Grid3X3, LayoutList, List, Plus, Setti
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
-import type { ButtonGroup } from "@/components/ui/button-group";
-import type { Toggle } from "@radix-ui/react-toggle";
+import { ButtonGroup } from "@/components/ui/button-group";
+import { Toggle } from "@radix-ui/react-toggle";
 import { slideFromLeft, transition, slideFromRight, buttonHover } from "../animations";
 import { useCalendar } from "../contexts/calendar-context";
-import type { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
+import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
 import { useFilteredEvents } from "../hooks";
 import { DateNavigator } from "./date-navigator";
 import FilterEvents from "./filter";

@@ -1,14 +1,13 @@
 import { useForm } from "react-hook-form";
 import { format, addMinutes, set } from "date-fns";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { toast } from "sonner";
 
-import { useDisclosure } from "@/modules/calendar/hooks";
-import { useCalendar } from "@/modules/calendar/contexts/calendar-context";
-import { eventSchema, TEventFormData } from "@/modules/calendar/schemas";
-import { COLORS } from "@/modules/calendar/constants";
-import { IEvent } from "@/modules/calendar/interfaces";
+import { useDisclosure } from "../hooks";
+import { useCalendar } from "../contexts/calendar-context";
+import { eventSchema, type TEventFormData } from "../schemas";
+import { COLORS } from "../constants";
 
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -17,6 +16,7 @@ import { Dialog, DialogClose, DialogContent, DialogTrigger, DialogDescription, D
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
+import type { IEvent } from "../interfaces";
 
 interface IProps {
   children: ReactNode;
