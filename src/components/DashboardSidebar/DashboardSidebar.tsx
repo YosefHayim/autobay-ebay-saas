@@ -1,23 +1,25 @@
 "use client";
 import { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "../ui/sidebar";
-import { IconArrowLeft, IconBrandTabler, IconSettings, IconUserBolt } from "@tabler/icons-react";
-import { motion } from "motion/react";
+import { IconSettings } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "../Logo";
 import { Link } from "react-router";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+import { IoIosLogOut } from "react-icons/io";
 
 const DashboardSidebar = () => {
   const links = [
     {
       label: "יומן",
       href: "#",
-      icon: <IconBrandTabler className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
+      icon: <FaRegCalendarAlt className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
     },
     {
       label: "פרופיל העסק",
       href: "#",
-      icon: <IconUserBolt className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
+      icon: <CgProfile className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
     },
     {
       label: "הגדרות",
@@ -27,7 +29,7 @@ const DashboardSidebar = () => {
     {
       label: "התנתק",
       href: "#",
-      icon: <IconArrowLeft className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
+      icon: <IoIosLogOut className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
     },
   ];
   const [open, setOpen] = useState(false);
