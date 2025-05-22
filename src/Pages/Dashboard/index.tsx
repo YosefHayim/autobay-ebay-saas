@@ -1,1 +1,5 @@
-export { default as Dashboard } from "./Dashboard";
+import { lazy } from "react";
+
+const Dashboard = lazy(() => import("./Dashboard"));
+
+export default Dashboard;

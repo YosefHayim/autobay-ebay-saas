@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 import { Logo } from "../../../components/Logo";
 import { Link } from "react-router";
 import { NavigationSidebarMenu } from "./NavigationSidebarMenu";
-import { Calendar } from "../Calendar";
-import { Profile } from "@/Pages/Profile";
 import { ToggleTheme } from "@/components/ToggleTheme";
+import Profile from "@/Pages/Profile";
+import { Calendar } from "../Calendar";
 
 const DashboardLayoutSidebar = () => {
   const [open, setOpen] = useState(false);
@@ -76,10 +76,11 @@ const DashboardLayoutSidebar = () => {
             </div>
           </div>
           <div>
+            <ToggleTheme />
+
             {/* 
 Add here icon of business of the customer
             */}
-            <ToggleTheme />
           </div>
         </SidebarBody>
       </Sidebar>

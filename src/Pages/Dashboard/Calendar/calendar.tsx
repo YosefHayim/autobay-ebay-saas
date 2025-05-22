@@ -5,6 +5,7 @@ import { EventUpdateHandler } from "./event-update-handler";
 import { DragDropProvider } from "./contexts/drag-drop-context";
 import { getEvents, getUsers } from "./requests";
 import { CalendarHeader } from "./header/calendar-header";
+import Loader from "@/components/Loader/Loader";
 
 async function getCalendarData() {
   await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -31,7 +32,7 @@ const Calendar = () => {
   }, []);
 
   // Render nothing until data is loaded
-  if (!events || !users) return <div>Loading...</div>;
+  if (!events || !users) return <Loader />;
 
   return (
     <DragDropProvider>

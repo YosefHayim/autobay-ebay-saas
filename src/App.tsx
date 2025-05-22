@@ -1,12 +1,11 @@
-import { Home } from "./Pages/Home";
-import { Pricing } from "./Pages/Pricing";
-import { Contact } from "./Pages/Contact";
-import { SignUp } from "./Pages/SignUp";
-import { Login } from "./Pages/Login";
-import { About } from "./Pages/About";
-import { Dashboard } from "./Pages/Dashboard";
 import { Routes, Route } from "react-router";
 import { PageLayout } from "./components/PageLayout";
+import { Home, Contact } from "lucide-react";
+import About from "./Pages/About";
+import Dashboard from "./Pages/Dashboard";
+import Login from "./Pages/Login";
+import Pricing from "./Pages/Pricing";
+import SignUp from "./Pages/SignUp";
 
 function App() {
   return (

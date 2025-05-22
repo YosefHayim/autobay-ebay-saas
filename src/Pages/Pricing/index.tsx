@@ -1,1 +1,5 @@
-export { default as Pricing } from "./Pricing";
+import { lazy } from "react";
+
+const Pricing = lazy(() => import("./Pricing"));
+
+export default Pricing;

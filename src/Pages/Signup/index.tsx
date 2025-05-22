@@ -1,1 +1,5 @@
-export { default as SignUp } from "./SignUp";
+import { lazy } from "react";
+
+const SignUp = lazy(() => import("./SignUp"));
+
+export default SignUp;
