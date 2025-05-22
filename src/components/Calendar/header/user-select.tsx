@@ -1,4 +1,4 @@
-import { useCalendar } from "./contexts/calendar-context";
+import { useCalendar } from "../contexts/calendar-context";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Select, SelectItem, SelectContent, SelectTrigger, SelectValue } from "@/components/ui/select";

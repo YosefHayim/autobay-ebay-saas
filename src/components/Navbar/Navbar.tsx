@@ -4,7 +4,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "../Logo";
 import { Link } from "react-router";
-import ToggleBtn from "../ToggleBtn/ToggleBtn";
+import ToggleBtn from "../ToggleTheme/ToggleTheme";
 import { menuItems } from "./menuItems";
 import LoginDialog from "../LoginDialog/LoginDialog";
 

@@ -4,7 +4,7 @@ import { Toggle } from "@/components/ui/toggle";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
 
-const ToggleBtn = () => {
+const ToggleTheme = () => {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -35,4 +35,4 @@ const ToggleBtn = () => {
   );
 };
 
-export default ToggleBtn;
+export default ToggleTheme;

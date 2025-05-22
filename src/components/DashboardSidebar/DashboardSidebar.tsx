@@ -1,38 +1,13 @@
 "use client";
 import { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "../ui/sidebar";
-import { IconSettings } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "../Logo";
 import { Link } from "react-router";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
-import { IoIosLogOut } from "react-icons/io";
-import { Calendar } from "../Calendar/calendar";
+import { links } from "./NavigationSidebarMenu";
+import Dashboard from "../Dashboard/Dashboard";
 
 const DashboardSidebar = () => {
-  const links = [
-    {
-      label: "Calendar",
-      href: "#",
-      icon: <FaRegCalendarAlt className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
-    },
-    {
-      label: "Profile",
-      href: "#",
-      icon: <CgProfile className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
-    },
-    {
-      label: "Settings",
-      href: "#",
-      icon: <IconSettings className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
-    },
-    {
-      label: "Logout",
-      href: "#",
-      icon: <IoIosLogOut className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />,
-    },
-  ];
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -67,14 +42,6 @@ const DashboardSidebar = () => {
         </SidebarBody>
       </Sidebar>
       <Dashboard />
-    </div>
-  );
-};
-
-const Dashboard = () => {
-  return (
-    <div className="flex w-full flex-1">
-      <Calendar />
     </div>
   );
 };

@@ -3,16 +3,16 @@ import { formatDate } from "date-fns";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { useCalendar } from "./contexts/calendar-context";
-import { buttonHover, transition } from "./animations";
+import { useCalendar } from "../contexts/calendar-context";
+import { buttonHover, transition } from "../animations";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-import { getEventsCount, navigateDate, rangeText } from "./helpers";
+import { getEventsCount, navigateDate, rangeText } from "../helpers";
 
-import type { IEvent } from "./interfaces";
-import type { TCalendarView } from "./types";
+import type { IEvent } from "../interfaces";
+import type { TCalendarView } from "../types";
 
 interface IProps {
   view: TCalendarView;

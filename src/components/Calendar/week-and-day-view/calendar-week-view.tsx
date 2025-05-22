@@ -1,10 +1,10 @@
-import type { ScrollArea } from "@radix-ui/react-scroll-area";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { startOfWeek, addDays, format, parseISO, isSameDay } from "date-fns";
 import { motion } from "framer-motion";
 import { fadeIn, transition, staggerContainer } from "../animations";
 import { useCalendar } from "../contexts/calendar-context";
-import type { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
-import type { DroppableArea } from "../dnd/droppable-area";
+import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
+import { DroppableArea } from "../dnd/droppable-area";
 import { groupEvents } from "../helpers";
 import type { IEvent } from "../interfaces";
 import { CalendarTimeline } from "./calendar-time-line";

@@ -1,8 +1,8 @@
 import { formatDate } from "date-fns";
 import { motion } from "framer-motion";
 
-import { useCalendar } from "./contexts/calendar-context";
-import { buttonHover, transition } from "./animations";
+import { useCalendar } from "../contexts/calendar-context";
+import { buttonHover, transition } from "../animations";
 
 import { Button } from "@/components/ui/button";
 
