@@ -1,4 +1,4 @@
-import { DashboardSidebar } from "./DashboardSidebar";
+import { DashboardSidebar } from "./DashboardLayoutSidebar";
 
 const Dashboard = () => {
   return (

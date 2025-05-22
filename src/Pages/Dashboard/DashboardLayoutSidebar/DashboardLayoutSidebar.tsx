@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sidebar, SidebarBody, SidebarButton } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { Logo } from "../../../components/Logo";
@@ -8,23 +8,49 @@ import { NavigationSidebarMenu } from "./NavigationSidebarMenu";
 import { Calendar } from "../Calendar";
 import { Profile } from "@/Pages/Profile";
 
-const DashboardSidebar = () => {
+const DashboardLayoutSidebar = () => {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
+  const [activeView, setActiveView] = useState("calendar");
 
-  const handleClick = () => {};
+  const handleSidebarButtonClick = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
+    const btn = target.closest("button");
+    if (btn instanceof HTMLButtonElement) {
+      const activeView = btn.dataset.activeView;
 
-  const chosenUi = (value: string) => {
-    switch (value) {
+      switch (activeView) {
+        case "calendar":
+          setActiveView("calendar");
+          break;
+
+        case "profile":
+          setActiveView("profile");
+          break;
+
+        case "settings":
+          setActiveView("settings");
+          break;
+
+        default:
+          break;
+      }
+    }
+  };
+
+  const renderActiveView = (activeView: string) => {
+    switch (activeView) {
       case "calendar":
         return <Calendar />;
       case "profile":
         return <Profile />;
-
       default:
         return <Calendar />;
     }
   };
+
+  useEffect(() => {
+    return () => {};
+  }, [activeView]);
 
   return (
     <div
@@ -41,7 +67,7 @@ const DashboardSidebar = () => {
                 <Logo />
               </Link>
             )}
-            <div className="mt-8 flex flex-col gap-2" onClick={handleClick}>
+            <div className="mt-8 flex flex-col gap-2" onClick={handleSidebarButtonClick}>
               {NavigationSidebarMenu.map((btn) => (
                 <SidebarButton key={btn.label} btn={btn} />
               ))}
@@ -54,9 +80,9 @@ Add here icon of business of the customer
           </div>
         </SidebarBody>
       </Sidebar>
-      {chosenUi()}
+      {renderActiveView(activeView)}
     </div>
   );
 };
 
-export default DashboardSidebar;
+export default DashboardLayoutSidebar;

@@ -27,7 +27,7 @@ export function CalendarBody() {
   });
 
   return (
-    <div className="relative] h-[80vh] w-full overflow-scroll">
+    <div className="relative] w-full overflow-scroll">
       <motion.div key={view} initial="initial" animate="animate" exit="exit" variants={fadeIn} transition={transition}>
         {view === "month" && <CalendarMonthView singleDayEvents={singleDayEvents} multiDayEvents={multiDayEvents} />}
         {view === "week" && <CalendarWeekView singleDayEvents={singleDayEvents} multiDayEvents={multiDayEvents} />}
