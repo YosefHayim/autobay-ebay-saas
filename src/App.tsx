@@ -6,6 +6,7 @@ import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Pricing from "./Pages/Pricing";
 import SignUp from "./Pages/SignUp";
+import { Loader } from "./components/Loader";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </Route>
 
         {/* Standalone route (no navbar) */}
+        <Route path="/loader" element={<Loader />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
