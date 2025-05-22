@@ -2,15 +2,18 @@
 import type { ComponentProps, ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { footerLinks } from "./footerLinks";
-import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router";
 import { Logo } from "../Logo";
+import facebookSvg from "/svgs/facebook.svg";
+import instagramSvg from "/svgs/instagram.svg";
+import tiktokSvg from "/svgs/tiktok.svg";
+import youtubeSvg from "/svgs/youtube.svg";
 
 const sociaLinks = [
-  { title: "Facebook", to: "https://facebook.com", icon: <FaFacebookF size={30} className="rounded-full bg-black p-2 text-white" /> },
-  { title: "Instagram", to: "https://instagram.com", icon: <FaInstagram size={30} className="rounded-full bg-black p-2 text-white" /> },
-  { title: "Tiktok", to: "https://tiktok.com", icon: <FaYoutube size={30} className="rounded-full bg-black p-2 text-white" /> },
-  { title: "Youtube", to: "https://youtube.com", icon: <FaTiktok size={30} className="rounded-full bg-black p-2 text-white" /> },
+  { title: "Facebook", to: "https://facebook.com", icon: <img src={facebookSvg} alt="Facbook" /> },
+  { title: "Instagram", to: "https://instagram.com", icon: <img src={instagramSvg} alt="Instagram" /> },
+  { title: "Tiktok", to: "https://tiktok.com", icon: <img src={tiktokSvg} alt="Tiktok" /> },
+  { title: "Youtube", to: "https://youtube.com", icon: <img src={youtubeSvg} alt="Youtube" /> },
 ];
 
 const Footer = () => {

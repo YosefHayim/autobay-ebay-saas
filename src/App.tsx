@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router";
 import { PageLayout } from "./components/PageLayout";
-import { Home, Contact } from "lucide-react";
 import About from "./Pages/About";
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Pricing from "./Pages/Pricing";
 import SignUp from "./Pages/SignUp";
-import { Loader } from "./components/Loader";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
 
-function App() {
+const App = () => {
   return (
     <>
       <Routes>
@@ -23,11 +23,10 @@ function App() {
         </Route>
 
         {/* Standalone route (no navbar) */}
-        <Route path="/loader" element={<Loader />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );
-}
+};
 
 export default App;
