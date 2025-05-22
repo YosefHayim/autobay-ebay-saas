@@ -1,7 +1,7 @@
 import { CheckIcon, Filter, RefreshCcw } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { useCalendar } from "./contexts/calendar-context";
-import type { TEventColor } from "./types";
+import { useCalendar } from "../contexts/calendar-context";
+import type { TEventColor } from "../types";
 import { Toggle } from "@/components/ui/toggle";
 
 export default function FilterEvents() {

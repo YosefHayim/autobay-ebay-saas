@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { parseISO, startOfDay, startOfWeek, endOfWeek, addDays, differenceInDays, isBefore, isAfter } from "date-fns";
 
-import { MonthEventBadge } from "./components/month-view/month-event-badge";
+import { MonthEventBadge } from "../month-view/month-event-badge";
 
-import type { IEvent } from "./interfaces";
+import type { IEvent } from "../interfaces";
 
 interface IProps {
   selectedDate: Date;
