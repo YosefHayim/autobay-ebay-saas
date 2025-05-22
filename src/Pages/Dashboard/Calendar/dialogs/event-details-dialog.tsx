@@ -10,7 +10,7 @@ import type { IEvent } from "../interfaces";
 import type { ReactNode } from "react";
 import { useCalendar } from "../contexts/calendar-context";
 import { formatTime } from "../helpers";
-import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
+import { AddEditEventDialog } from "./add-edit-event-dialog";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 

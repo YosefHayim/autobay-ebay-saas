@@ -1,9 +1,9 @@
-import { Calendar } from "../Calendar";
+import { DashboardSidebar } from "./DashboardSidebar";
 
 const Dashboard = () => {
   return (
     <div>
-      <Calendar />
+      <DashboardSidebar />
     </div>
   );
 };

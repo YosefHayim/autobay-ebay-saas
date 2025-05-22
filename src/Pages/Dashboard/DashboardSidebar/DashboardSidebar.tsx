@@ -1,14 +1,29 @@
 "use client";
 import { useState } from "react";
-import { Sidebar, SidebarBody, SidebarLink } from "../ui/sidebar";
+import { Sidebar, SidebarBody, SidebarLink } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
-import { Logo } from "../Logo";
+import { Logo } from "../../../components/Logo";
 import { Link } from "react-router";
 import { links } from "./NavigationSidebarMenu";
-import Dashboard from "../Dashboard/Dashboard";
+import { Calendar } from "../Calendar";
+import { Profile } from "@/Pages/Profile";
 
 const DashboardSidebar = () => {
   const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
+
+  const chosenUi = () => {
+    switch (value) {
+      case "calendar":
+        return <Calendar />;
+      case "profile":
+        return <Profile />;
+
+      default:
+        return <></>;
+    }
+  };
+
   return (
     <div
       className={cn(
@@ -41,7 +56,7 @@ const DashboardSidebar = () => {
           </div>
         </SidebarBody>
       </Sidebar>
-      <Dashboard />
+      {chosenUi()}
     </div>
   );
 };

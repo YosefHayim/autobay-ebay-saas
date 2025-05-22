@@ -4,7 +4,7 @@ import { Contact } from "./Pages/Contact";
 import { SignUp } from "./Pages/SignUp";
 import { Login } from "./Pages/Login";
 import { About } from "./Pages/About";
-import { Dashboard } from "./components/Dashboard";
+import { Dashboard } from "./Pages/Dashboard";
 import { Routes, Route } from "react-router";
 import { PageLayout } from "./components/PageLayout";
 

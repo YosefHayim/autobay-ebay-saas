@@ -8,13 +8,13 @@ import { DayPicker } from "@/components/ui/day-picker";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
-import { CalendarTimeline } from "../week-and-day-view/calendar-time-line";
-import { DayViewMultiDayEventsRow } from "../week-and-day-view/day-view-multi-day-events-row";
+import { CalendarTimeline } from "./calendar-time-line";
+import { DayViewMultiDayEventsRow } from "./day-view-multi-day-events-row";
 
 import { groupEvents } from "../helpers";
 
 import type { IEvent } from "../interfaces";
-import { RenderGroupedEvents } from "../week-and-day-view/render-grouped-events";
+import { RenderGroupedEvents } from "./render-grouped-events";
 import { DroppableArea } from "../dnd/droppable-area";
 
 interface IProps {

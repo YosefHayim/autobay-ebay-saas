@@ -4,8 +4,8 @@ import { useMemo } from "react";
 import { isToday, startOfDay } from "date-fns";
 import { motion } from "framer-motion";
 
-import { EventBullet } from "../month-view/event-bullet";
-import { MonthEventBadge } from "../month-view/month-event-badge";
+import { EventBullet } from "./event-bullet";
+import { MonthEventBadge } from "./month-event-badge";
 
 import { getMonthCellEvents } from "../helpers";
 import { staggerContainer, transition } from "../animations";

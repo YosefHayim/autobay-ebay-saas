@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { buttonHover, slideFromLeft, slideFromRight, transition } from "../animations";
 
-import { UserSelect } from "../header/user-select";
-import { TodayButton } from "../header/today-button";
-import { DateNavigator } from "../header/date-navigator";
+import { UserSelect } from "./user-select";
+import { TodayButton } from "./today-button";
+import { DateNavigator } from "./date-navigator";
 import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
 
 import { ButtonGroup } from "@/components/ui/button-group";
