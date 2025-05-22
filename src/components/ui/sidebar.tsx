@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import { Button } from "./button";
 
-interface Links {
+interface Btns {
   label: string;
-  href: string;
   icon: React.JSX.Element | React.ReactNode;
 }
 
@@ -123,11 +123,11 @@ export const MobileSidebar = ({ className, children, ...props }: React.Component
   );
 };
 
-export const SidebarLink = ({ link, className, ...props }: { link: Links; className?: string }) => {
+export const SidebarButton = ({ btn, className, ...props }: { btn: Btns; className?: string }) => {
   const { open, animate } = useSidebar();
   return (
-    <a href={link.href} className={cn("group/sidebar flex items-center justify-start gap-2 py-2", className)} {...props}>
-      {link.icon}
+    <Button type="button" className={cn("group/sidebar flex items-center justify-start gap-2 py-2", className)} {...props}>
+      {btn.icon}
 
       <motion.span
         animate={{
@@ -136,8 +136,8 @@ export const SidebarLink = ({ link, className, ...props }: { link: Links; classN
         }}
         className="!m-0 inline-block !p-0 text-sm whitespace-pre text-neutral-700 transition duration-150 group-hover/sidebar:translate-x-1 dark:text-neutral-200"
       >
-        {link.label}
+        {btn.label}
       </motion.span>
-    </a>
+    </Button>
   );
 };

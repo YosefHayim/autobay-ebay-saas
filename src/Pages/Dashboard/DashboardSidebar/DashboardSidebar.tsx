@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { Sidebar, SidebarBody, SidebarLink } from "../../../components/ui/sidebar";
+import { Sidebar, SidebarBody, SidebarButton } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { Logo } from "../../../components/Logo";
 import { Link } from "react-router";
-import { links } from "./NavigationSidebarMenu";
+import { NavigationSidebarMenu } from "./NavigationSidebarMenu";
 import { Calendar } from "../Calendar";
 import { Profile } from "@/Pages/Profile";
 
@@ -12,7 +12,9 @@ const DashboardSidebar = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
 
-  const chosenUi = () => {
+  const handleClick = () => {};
+
+  const chosenUi = (value: string) => {
     switch (value) {
       case "calendar":
         return <Calendar />;
@@ -20,7 +22,7 @@ const DashboardSidebar = () => {
         return <Profile />;
 
       default:
-        return <></>;
+        return <Calendar />;
     }
   };
 
@@ -39,20 +41,16 @@ const DashboardSidebar = () => {
                 <Logo />
               </Link>
             )}
-            <div className="mt-8 flex flex-col gap-2">
-              {links.map((link, idx) => (
-                <SidebarLink key={idx} link={link} />
+            <div className="mt-8 flex flex-col gap-2" onClick={handleClick}>
+              {NavigationSidebarMenu.map((btn) => (
+                <SidebarButton key={btn.label} btn={btn} />
               ))}
             </div>
           </div>
           <div>
-            <SidebarLink
-              link={{
-                label: "Manu Arora",
-                href: "#",
-                icon: <img src="https://assets.aceternity.com/manu.png" className="h-7 w-7 shrink-0 rounded-full" width={50} height={50} alt="Avatar" />,
-              }}
-            />
+            {/* 
+Add here icon of business of the customer
+            */}
           </div>
         </SidebarBody>
       </Sidebar>
