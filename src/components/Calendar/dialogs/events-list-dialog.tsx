@@ -1,12 +1,12 @@
-import { formatTime } from "./helpers";
+import { formatTime } from "../helpers";
 import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
-import { ReactNode } from "react";
-import { IEvent } from "./interfaces";
-import { dayCellVariants } from "./components/month-view/day-cell";
-import { EventBullet } from "./components/month-view/event-bullet";
-import { useCalendar } from "./contexts/calendar-context";
+import type { ReactNode } from "react";
+import type { IEvent } from "../interfaces";
+import { dayCellVariants } from "../month-view/day-cell";
+import { EventBullet } from "../month-view/event-bullet";
+import { useCalendar } from "../contexts/calendar-context";
 import { format } from "date-fns";
 
 interface EventListDialogProps {

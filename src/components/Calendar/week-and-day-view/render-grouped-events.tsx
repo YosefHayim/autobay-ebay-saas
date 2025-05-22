@@ -1,4 +1,4 @@
-import { IEvent } from "./interfaces";
+import type { IEvent } from "./interfaces";
 import { getEventBlockStyle } from "./helpers";
 import { areIntervalsOverlapping, parseISO } from "date-fns";
 import { EventBlock } from "./components/week-and-day-view/event-block";
