@@ -11,17 +11,14 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { DotIcon, MoonIcon, PaletteIcon, SettingsIcon, SunMediumIcon } from "lucide-react";
+import { DotIcon, PaletteIcon, SettingsIcon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { useCalendar } from "../contexts/calendar-context";
 import type { TCalendarView } from "../types";
-import { useTheme } from "@/components/ThemeProvider/ThemeProvider";
 
 export function Settings() {
   const { badgeVariant, setBadgeVariant, use24HourFormat, toggleTimeFormat, view, setView, agendaModeGroupBy, setAgendaModeGroupBy } = useCalendar();
-  const { theme, setTheme } = useTheme();
 
-  const isDarkMode = theme === "dark";
   const isDotVariant = badgeVariant === "dot";
 
   return (
@@ -35,16 +32,6 @@ export function Settings() {
         <DropdownMenuLabel>Calendar settings</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Use dark mode
-            <DropdownMenuShortcut>
-              <Switch
-                icon={isDarkMode ? <MoonIcon className="h-4 w-4" /> : <SunMediumIcon className="h-4 w-4" />}
-                checked={isDarkMode}
-                onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
-              />
-            </DropdownMenuShortcut>
-          </DropdownMenuItem>
           <DropdownMenuItem>
             Use dot badge
             <DropdownMenuShortcut>

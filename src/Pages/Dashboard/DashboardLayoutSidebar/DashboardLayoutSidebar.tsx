@@ -7,6 +7,7 @@ import { Link } from "react-router";
 import { NavigationSidebarMenu } from "./NavigationSidebarMenu";
 import { Calendar } from "../Calendar";
 import { Profile } from "@/Pages/Profile";
+import { ToggleTheme } from "@/components/ToggleTheme";
 
 const DashboardLayoutSidebar = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ const DashboardLayoutSidebar = () => {
     const target = e.target as HTMLElement;
     const btn = target.closest("button");
     if (btn instanceof HTMLButtonElement) {
-      const activeView = btn.dataset.activeView;
+      const activeView = btn.dataset.value;
 
       switch (activeView) {
         case "calendar":
@@ -32,6 +33,7 @@ const DashboardLayoutSidebar = () => {
           break;
 
         default:
+          setActiveView("calendar");
           break;
       }
     }
@@ -77,6 +79,7 @@ const DashboardLayoutSidebar = () => {
             {/* 
 Add here icon of business of the customer
             */}
+            <ToggleTheme />
           </div>
         </SidebarBody>
       </Sidebar>

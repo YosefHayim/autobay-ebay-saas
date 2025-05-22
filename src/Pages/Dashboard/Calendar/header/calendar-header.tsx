@@ -106,8 +106,8 @@ export function CalendarHeader() {
 
           <AddEditEventDialog>
             <MotionButton variants={buttonHover} whileHover="hover" whileTap="tap">
-              <Plus className="h-4 w-4" />
               Add Event
+              <Plus className="h-4 w-4" />
             </MotionButton>
           </AddEditEventDialog>
         </div>

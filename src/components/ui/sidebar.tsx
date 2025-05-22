@@ -78,7 +78,7 @@ export const DesktopSidebar = ({ className, children, ...props }: React.Componen
       <motion.div
         className={cn("hidden h-full w-[300px] shrink-0 bg-neutral-100 px-4 py-4 md:flex md:flex-col dark:bg-neutral-800", className)}
         animate={{
-          width: animate ? (open ? "300px" : "60px") : "300px",
+          width: animate ? (open ? "150px" : "60px") : "150px",
         }}
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
