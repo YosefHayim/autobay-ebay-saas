@@ -1,20 +1,8 @@
 "use client";
 import type { ComponentProps, ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { footerLinks } from "./footerLinks";
-import { Link } from "react-router";
+import { footerLinks, sociaLinks, svgsLinks } from "./menu-links";
 import { Logo } from "../Logo";
-import facebookSvg from "/svgs/facebook.svg";
-import instagramSvg from "/svgs/instagram.svg";
-import tiktokSvg from "/svgs/tiktok.svg";
-import youtubeSvg from "/svgs/youtube.svg";
-
-const sociaLinks = [
-  { title: "Facebook", to: "https://facebook.com", icon: <img src={facebookSvg} alt="Facbook" /> },
-  { title: "Instagram", to: "https://instagram.com", icon: <img src={instagramSvg} alt="Instagram" /> },
-  { title: "Tiktok", to: "https://tiktok.com", icon: <img src={tiktokSvg} alt="Tiktok" /> },
-  { title: "Youtube", to: "https://youtube.com", icon: <img src={youtubeSvg} alt="Youtube" /> },
-];
 
 const Footer = () => {
   return (
@@ -26,9 +14,9 @@ const Footer = () => {
           <div className="mt-8 text-sm md:mt-0">
             <div className="mb-4 flex gap-2">
               {sociaLinks.map((socialPlatform) => (
-                <Link to={socialPlatform.to} aria-valuetext={socialPlatform.title} key={socialPlatform.title}>
-                  {socialPlatform.icon}
-                </Link>
+                <a href={socialPlatform.to} aria-valuetext={socialPlatform.title} key={socialPlatform.title}>
+                  <img src={svgsLinks[socialPlatform.title]} alt={socialPlatform.title} className="h-5 w-5" />
+                </a>
               ))}
             </div>
             <p className="text-muted-foreground">© {new Date().getFullYear()} Asme. All rights reserved.</p>
