@@ -16,7 +16,7 @@ import { useCalendar } from "../contexts/calendar-context";
 import { Toggle } from "@/components/ui/toggle";
 import { Settings } from "../settings/settings";
 import FilterEvents from "./filter";
-import { useFilteredEvents } from "../hooks";
+import { useFilteredEvents } from "@/hooks/useFilteredEvents";
 
 export const MotionButton = motion.create(Button);
 

@@ -9,7 +9,7 @@ import { CalendarWeekView } from "./week-and-day-view/calendar-week-view";
 import { CalendarDayView } from "./week-and-day-view/calendar-day-view";
 import { CalendarYearView } from "./year-view/calendar-year-view";
 import { isSameDay, parseISO } from "date-fns";
-import { useFilteredEvents } from "./hooks";
+import { useFilteredEvents } from "@/hooks/useFilteredEvents";
 
 export function CalendarBody() {
   const { view } = useCalendar();

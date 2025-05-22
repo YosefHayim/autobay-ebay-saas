@@ -3,7 +3,6 @@ import { format, addMinutes, set } from "date-fns";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type { ReactNode } from "react";
 import { toast } from "sonner";
-
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -12,10 +11,10 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 import type { IEvent } from "../interfaces";
-import { useDisclosure } from "../hooks";
 import { useCalendar } from "../contexts/calendar-context";
 import { eventSchema, type TEventFormData } from "../schemas";
 import { COLORS } from "../constants";
+import { useDisclosure } from "@/hooks/useDisclosure";
 
 interface IProps {
   children: ReactNode;
