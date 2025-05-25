@@ -1,7 +1,11 @@
 // faker-data.js
 import { faker } from "@faker-js/faker";
-import { supabase } from "./init";
+import { createClient } from "@supabase/supabase-js";
 
+// Initialize Supabase client
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
 // Configuration
 const NUM_BARBERS = 10;
 const NUM_CLIENTS = 50;
