@@ -2,10 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
 
 const LoginDialog = () => {
+  const mutation = useMutation({
+    mutationFn: (newTodo) => {
+      return axios.post("/todos", newTodo);
+    },
+  });
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -13,28 +17,12 @@ const LoginDialog = () => {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogDescription>Hello, in order to connect please enter email and password:</DialogDescription>
+          <DialogDescription>Login</DialogDescription>
         </DialogHeader>
         <form className="grid gap-4">
           <div className="grid gap-2">
-            <Label htmlFor="email">Email</Label>
-            <Input required id="email" type="email" autoComplete="username" placeholder="example@gmail.com" />
-          </div>
-          <div className="grid gap-2">
-            <Label htmlFor="password">Password</Label>
-            <Input required id="password" type="password" placeholder="••••••••••" autoComplete="current-password" />
-            <Link to="/forget-password" className="text-sm text-gray-300 hover:text-black">
-              Forget password?
-            </Link>
-          </div>
-
-          <div>
-            <Button>
-              Login with google
-              <span className="pointer-events-none me-2 flex-1">
-                <FcGoogle className="mr-1" size={16} aria-hidden="true" />
-              </span>
-            </Button>
+            <Label htmlFor="phone-number">Phone</Label>
+            <Input required id="phone" type="tel" autoComplete="tel" />
           </div>
         </form>
         <DialogFooter>
