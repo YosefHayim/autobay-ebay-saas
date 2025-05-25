@@ -5,15 +5,20 @@ import App from "./App.tsx";
 import { BrowserRouter } from "react-router";
 import ThemeProvider from "./components/ThemeProvider/ThemeProvider.tsx";
 import Loader from "./components/Loader/Loader.tsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
     <BrowserRouter>
-      <Suspense fallback={<Loader />}>
-        <StrictMode>
-          <App />
-        </StrictMode>
-      </Suspense>
+      <QueryClientProvider client={queryClient}>
+        <Suspense fallback={<Loader />}>
+          <StrictMode>
+            <App />
+          </StrictMode>
+        </Suspense>
+      </QueryClientProvider>
     </BrowserRouter>
   </ThemeProvider>,
 );

@@ -1,9 +1,10 @@
 import { supabase } from "./init";
 
-const signUpWithOtp = async (phone: string) => {
+const signUpWithPhone = async (phone: string) => {
   try {
-    const { data, error } = await supabase.auth.signInWithOtp({
+    const { data, error } = await supabase.auth.signUp({
       phone,
+      password: "example-password",
       options: {
         channel: "sms",
       },
@@ -17,4 +18,4 @@ const signUpWithOtp = async (phone: string) => {
   }
 };
 
-export default signUpWithOtp;
+export default signUpWithPhone;
