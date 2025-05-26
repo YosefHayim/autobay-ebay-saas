@@ -1,6 +1,6 @@
 import signUpWithPhone from "@/Api/signUpWMobile";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -9,12 +9,13 @@ const LoginDialog = () => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const phone = formData.get("phone");
-    if (!phone) return;
+    console.log(phone);
     await signUpWithPhone(phone);
   };
 
   return (
     <Dialog>
+      <DialogTitle className="hidden"></DialogTitle>
       <DialogTrigger asChild>
         <Button variant="outline">Login</Button>
       </DialogTrigger>
