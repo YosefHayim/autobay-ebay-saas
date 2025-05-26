@@ -1,4 +1,4 @@
-import { supabase } from "./init";
+import { supabase } from "../configuration/init";
 
 const loginWMobile = async (phone: string) => {
   try {

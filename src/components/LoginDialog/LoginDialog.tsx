@@ -1,4 +1,4 @@
-import signUpWithPhone from "@/Api/signUpWMobile";
+import signUpWithPhone from "@/Api/auth/signUpWMobile";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";

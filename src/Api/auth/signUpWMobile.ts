@@ -1,4 +1,4 @@
-import { supabase } from "./init";
+import { supabase } from "../configuration/init";
 
 const signUpWithPhone = async (phone: string) => {
   try {

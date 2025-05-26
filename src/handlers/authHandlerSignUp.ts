@@ -1,4 +1,4 @@
-import signUpWithPhone from "@/Api/signUpWMobile";
+import signUpWithPhone from "@/Api/auth/signUpWMobile";
 
 export const handleMobileSignUpSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();

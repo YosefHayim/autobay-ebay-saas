@@ -1,4 +1,4 @@
-import loginWMobile from "@/Api/loginWMobile";
+import loginWMobile from "@/Api/auth/loginWMobile";
 
 export const handleMobileLoginSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
