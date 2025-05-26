@@ -1,6 +1,6 @@
 import loginWMobile from "@/Api/loginWMobile";
 
-export const useHandleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+export const handleMobileLoginSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   const formData = new FormData(e.currentTarget);
   const phone = formData.get("phone");

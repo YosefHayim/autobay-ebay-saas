@@ -1,27 +1,18 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Stepper, StepperIndicator, StepperItem, StepperSeparator, StepperTrigger } from "@/components/ui/stepper";
-import { useState } from "react";
 import { StepOne } from "./StepOne";
 import { StepTwo } from "./StepTwo";
 import { StepThree } from "./StepThree";
 import { StepFour } from "./StepFour";
 import { StepFive } from "./StepFive";
 import { StepSix } from "./StepSix";
+import { useStepperSignUp } from "@/hooks/useStepperSignUp";
 
 const steps = [1, 2, 3, 4, 5, 6];
 
 const SignUp = () => {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleNextStep = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setCurrentStep((prev) => prev + 1);
-      setIsLoading(false);
-    }, 1000);
-  };
+  const { currentStep, setCurrentStep, isLoading, handleNextStep, handlePreviousStep } = useStepperSignUp(1, steps.length);
 
   const stepSignUpProccess = () => {
     switch (currentStep) {
@@ -63,7 +54,7 @@ const SignUp = () => {
         </Stepper>
         <div className="flex w-full flex-col items-center justify-center">{stepSignUpProccess()}</div>
         <div className="mt-4 flex justify-center space-x-4">
-          <Button variant="outline" className="w-32" onClick={() => setCurrentStep((prev) => prev - 1)} disabled={currentStep === 1}>
+          <Button variant="outline" className="w-32" onClick={handlePreviousStep}>
             Back
           </Button>
           <Button variant="outline" className="w-32" onClick={handleNextStep} disabled={currentStep > steps.length}>
