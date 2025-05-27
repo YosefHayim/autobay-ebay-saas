@@ -1,13 +1,13 @@
 import WorkingHours from "../WorkingHours/WorkingHours";
 
 const NameOfDay: Record<string, string> = {
-  Sunday: "Sunday",
-  Monday: "Monday",
-  Tuesday: "Tuesday",
-  Wednesday: "Wednesday",
-  Thursday: "Thursday",
-  Friday: "Friday",
-  Saturday: "Saturday",
+  sunday: "Sunday",
+  monday: "Monday",
+  tuesday: "Tuesday",
+  wednesday: "Wednesday",
+  thursday: "Thursday",
+  friday: "Friday",
+  saturday: "Saturday",
 };
 
 const WorkingDay: React.FC<{ day: string }> = ({ day }) => {
