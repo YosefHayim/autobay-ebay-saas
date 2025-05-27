@@ -7,6 +7,7 @@ import Pricing from "./Pages/Pricing";
 import SignUp from "./Pages/SignUp";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
+import Profile from "./Pages/Profile";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
 
         {/* Standalone route (no navbar) */}
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/barber" element={<Profile />} />
       </Routes>
     </>
   );

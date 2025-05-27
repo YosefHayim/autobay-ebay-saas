@@ -22,10 +22,7 @@ export const svgsLinks = {
 };
 
 export const sociaLinks = [
-  {
-    title: "Facebook",
-    to: "https://facebook.com",
-  },
+  { title: "Facebook", to: "https://facebook.com" },
   { title: "Instagram", to: "https://instagram.com" },
   { title: "Tiktok", to: "https://tiktok.com" },
   { title: "Youtube", to: "https://youtube.com" },

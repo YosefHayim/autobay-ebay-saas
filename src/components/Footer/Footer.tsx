@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="mb-4 flex gap-2">
               {sociaLinks.map((socialPlatform) => (
                 <a href={socialPlatform.to} aria-valuetext={socialPlatform.title} key={socialPlatform.title}>
-                  <img src={svgsLinks[socialPlatform.title]} alt={socialPlatform.title} className="h-5 w-5" />
+                  <img src={svgsLinks[socialPlatform.title]} alt={socialPlatform.title} className={`h-5 w-5`} />
                 </a>
               ))}
             </div>
