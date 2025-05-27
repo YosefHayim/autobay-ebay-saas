@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 
 import type { ReactNode } from "react";
 import type { IEvent } from "../interfaces";
-import { dayCellVariants } from "../month-view/day-cell";
 import { EventBullet } from "../month-view/event-bullet";
 import { useCalendar } from "../contexts/calendar-context";
 import { format } from "date-fns";
+import { dayCellVariants } from "../month-view/dayCellVariants";
 
 interface EventListDialogProps {
   date: Date;
