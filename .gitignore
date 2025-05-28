@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 .env
-seed.js
+seed
 *.local
 
 # Editor directories and files
