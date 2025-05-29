@@ -7,7 +7,7 @@ import { FormControl, FormItem, FormLabel, FormMessage } from "@/components/ui/f
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { ScrollArea, ScrollBar } from "./scroll-area";
 import { CalendarIcon } from "lucide-react";
-import type { TEventFormData } from "@/Pages/Dashboard/Calendar/schemas";
+import type { TEventFormData } from "@/Pages/Dashboard/Appointments/schemas";
 import { useCalendar } from "@/contexts/calendar/calendar-context";
 
 interface DatePickerProps {

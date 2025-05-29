@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import type { IEvent } from "../../Pages/Dashboard/Calendar/interfaces";
+import type { IEvent } from "../../Pages/Dashboard/Appointments/interfaces";
 import { DragDropContext } from "@/hooks/use-drag-drop";
 
 export interface DragDropContextType {

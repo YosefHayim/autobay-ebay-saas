@@ -10,7 +10,7 @@ async function getCalendarData() {
   // placeholder for getting data for specific user
 }
 
-const Calendar = () => {
+const Appointments = () => {
   const [events, setEvents] = useState(null);
   const [users, setUsers] = useState(null);
 
@@ -42,4 +42,4 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+export default Appointments;
