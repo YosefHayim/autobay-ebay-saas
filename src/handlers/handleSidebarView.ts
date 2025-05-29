@@ -6,31 +6,13 @@ export const handleSidebarButtonClick = (e: React.MouseEvent<HTMLElement>, setAc
 
     switch (activeView) {
       case "calendar":
-        setActiveView("calendar");
-        break;
-
       case "profile":
-        setActiveView("profile");
-        break;
-
       case "services":
-        setActiveView("services");
-        break;
-
       case "payments":
-        setActiveView("payments");
-        break;
-
       case "customers":
-        setActiveView("customers");
-        break;
-
       case "integrations":
-        setActiveView("integrations");
-        break;
-
       case "settings":
-        setActiveView("settings");
+        setActiveView(activeView);
         break;
 
       default:

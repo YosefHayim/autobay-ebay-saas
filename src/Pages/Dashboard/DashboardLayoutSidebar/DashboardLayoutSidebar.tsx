@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sidebar, SidebarBody, SidebarButton } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { Logo } from "../../../components/Logo";
@@ -12,6 +12,11 @@ import { useRenderActiveViewDashboard } from "@/hooks/useRenderActiveViewDashboa
 const DashboardLayoutSidebar = () => {
   const [open, setOpen] = useState(false);
   const [activeView, setActiveView] = useState("calendar");
+
+  useEffect(() => {
+    setOpen(false);
+    return () => {};
+  }, [activeView]);
 
   return (
     <div
