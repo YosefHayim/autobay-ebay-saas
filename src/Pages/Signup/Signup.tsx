@@ -1,14 +1,13 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Stepper, StepperIndicator, StepperItem, StepperSeparator, StepperTrigger } from "@/components/ui/stepper";
-
 import { useStepperSignUp } from "@/hooks/use-stepper-signup";
-import { BusinessHours } from "./BusinessHours";
-import { StepFour } from "./BusinessTypes";
-import { StepOne } from "./PhoneNumberInput";
-import { StepSix } from "./StepSix";
-import { StepThree } from "./StepThree";
-import { StepTwo } from "./StepTwo";
+import PhoneNumberInput from "./PhoneNumberInput";
+import CodeReceivedFromOtp from "./CodeReceivedFromOtp";
+import BasicInfoAboutBusiness from "./BasicInfoAboutBusiness";
+import ChooseBusinessTypes from "./ChooseBusinessTypes";
+import ChooseBusinessHours from "./ChooseBusinessHours";
+import ChooseServices from "./ChooseServices";
 
 const steps = [1, 2, 3, 4, 5, 6];
 
@@ -18,22 +17,22 @@ const Signup = () => {
   const stepSignUpProccess = () => {
     switch (currentStep) {
       case 1:
-        return <StepOne />;
+        return <PhoneNumberInput />;
 
       case 2:
-        return <StepTwo />;
+        return <CodeReceivedFromOtp />;
 
       case 3:
-        return <StepThree />;
+        return <BasicInfoAboutBusiness />;
 
       case 4:
-        return <StepFour />;
+        return <ChooseBusinessTypes />;
 
       case 5:
-        return <BusinessHours />;
+        return <ChooseBusinessHours />;
 
       case 6:
-        return <StepSix />;
+        return <ChooseServices />;
 
       default:
         return <></>;

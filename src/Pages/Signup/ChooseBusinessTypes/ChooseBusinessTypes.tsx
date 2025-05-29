@@ -1,6 +1,6 @@
 import { businessTypes } from "./businessArray";
 
-const BusinessTypes = () => {
+const ChooseBusinessTypes = () => {
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
       <form className="w-2/3">
@@ -14,4 +14,4 @@ const BusinessTypes = () => {
   );
 };
 
-export default BusinessTypes;
+export default ChooseBusinessTypes;

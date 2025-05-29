@@ -2,7 +2,7 @@ import { Input } from "@/components/ui/input";
 import { SparklesText } from "@/components/ui/sparkles-text";
 import { howDidYouHearAboutUsOptions, whichCalendarYouHadOptions } from "./customerOptions";
 
-const StepThree = () => {
+const BasicInfoAboutBusiness = () => {
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
       <h1 className="text-center text-2xl">A little bit about your business</h1>
@@ -52,4 +52,4 @@ const StepThree = () => {
   );
 };
 
-export default StepThree;
+export default BasicInfoAboutBusiness;

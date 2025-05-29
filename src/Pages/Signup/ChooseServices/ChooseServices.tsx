@@ -1,6 +1,6 @@
 import AddService from "./AddService/AddService";
 
-const StepSix = () => {
+const ChooseServices = () => {
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
       <h1 className="text-center text-2xl">Let׳s start add services</h1>
@@ -12,4 +12,4 @@ const StepSix = () => {
   );
 };
 
-export default StepSix;
+export default ChooseServices;
