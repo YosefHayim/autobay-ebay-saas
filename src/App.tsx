@@ -4,7 +4,7 @@ import About from "./Pages/About";
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Pricing from "./Pages/Pricing";
-import SignUp from "./Pages/SignUp";
+import SignUp from "./Pages/Signup";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Profile from "./Pages/Profile";

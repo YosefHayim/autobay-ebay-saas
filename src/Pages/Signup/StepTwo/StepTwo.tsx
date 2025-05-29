@@ -1,4 +1,4 @@
-import InputOTPAuth from "../InputOTPAuth/InputOTPAuth";
+import OtpConfirmation from "../OtpConfirmation/OtpConfirmation";
 
 const StepTwo = () => {
   return (
@@ -6,7 +6,7 @@ const StepTwo = () => {
       <h1 className="text-center text-2xl">We have send you a verification code</h1>
       <p>Enter the code you received</p>
       <form>
-        <InputOTPAuth />
+        <OtpConfirmation />
       </form>
     </section>
   );

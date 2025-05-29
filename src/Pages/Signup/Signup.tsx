@@ -1,17 +1,18 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Stepper, StepperIndicator, StepperItem, StepperSeparator, StepperTrigger } from "@/components/ui/stepper";
-import { StepOne } from "./StepOne";
-import { StepTwo } from "./StepTwo";
-import { StepThree } from "./StepThree";
-import { StepFour } from "./StepFour";
-import { StepFive } from "./StepFive";
-import { StepSix } from "./StepSix";
+
 import { useStepperSignUp } from "@/hooks/use-stepper-signup";
+import { BusinessHours } from "./BusinessHours";
+import { StepFour } from "./BusinessTypes";
+import { StepOne } from "./PhoneNumberInput";
+import { StepSix } from "./StepSix";
+import { StepThree } from "./StepThree";
+import { StepTwo } from "./StepTwo";
 
 const steps = [1, 2, 3, 4, 5, 6];
 
-const SignUp = () => {
+const Signup = () => {
   const { currentStep, setCurrentStep, isLoading, handleNextStep, handlePreviousStep } = useStepperSignUp(1, steps.length);
 
   const stepSignUpProccess = () => {
@@ -29,7 +30,7 @@ const SignUp = () => {
         return <StepFour />;
 
       case 5:
-        return <StepFive />;
+        return <BusinessHours />;
 
       case 6:
         return <StepSix />;
@@ -66,4 +67,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;

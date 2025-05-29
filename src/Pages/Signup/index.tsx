@@ -1,5 +1,5 @@
 import { lazy } from "react";
 
-const SignUp = lazy(() => import("./SignUp"));
+const Signup = lazy(() => import("./Signup"));
 
-export default SignUp;
+export default Signup;

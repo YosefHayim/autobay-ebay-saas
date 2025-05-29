@@ -1,6 +1,6 @@
 import WorkingDay from "./WorkingDay/WorkingDay";
 
-const StepFive = () => {
+const BusinessHours = () => {
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
       <h1 className="text-center text-2xl">When can customers schedule appointments?</h1>
@@ -24,4 +24,4 @@ const StepFive = () => {
   );
 };
 
-export default StepFive;
+export default BusinessHours;

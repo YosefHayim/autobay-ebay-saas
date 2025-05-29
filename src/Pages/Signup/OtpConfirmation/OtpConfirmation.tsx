@@ -1,6 +1,6 @@
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@/components/ui/input-otp";
 
-const InputOTPAuth = () => {
+const OtpConfirmation = () => {
   return (
     <InputOTP maxLength={6}>
       <InputOTPGroup>
@@ -18,4 +18,4 @@ const InputOTPAuth = () => {
   );
 };
 
-export default InputOTPAuth;
+export default OtpConfirmation;

@@ -37,10 +37,10 @@ export const useRenderActiveViewDashboard = (activeView: string) => {
     case "General":
       return <General />;
 
-    case "Social Links":
+    case "Social links":
       return <SocialLinks />;
 
-    case "Business Hours":
+    case "Business hours":
       return <BusinessHours />;
 
     case "Contact details":
