@@ -1,5 +1,7 @@
 import Calendar from "@/Pages/Dashboard/Calendar";
+import ContactDetails from "@/Pages/Dashboard/ContactDetails";
 import Customers from "@/Pages/Dashboard/Customers";
+import General from "@/Pages/Dashboard/General";
 import Integrations from "@/Pages/Dashboard/Integrations";
 import Payments from "@/Pages/Dashboard/Payments";
 import Services from "@/Pages/Dashboard/Services";
@@ -27,6 +29,21 @@ export const useRenderActiveViewDashboard = (activeView: string) => {
       return <Integrations />;
 
     case "Settings":
+      return <Settings />;
+
+    case "General":
+      return <General />;
+
+    case "Social Links":
+      return <Settings />;
+
+    case "Business Hours":
+      return <Settings />;
+
+    case "Contact details":
+      return <ContactDetails />;
+
+    case "Location":
       return <Settings />;
 
     default:

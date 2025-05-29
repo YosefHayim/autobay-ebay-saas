@@ -9,7 +9,6 @@ export function NavMain({
 }: {
   items: {
     title: string;
-    url: string;
     icon?: LucideIcon;
     isActive?: boolean;
     items?: {
@@ -33,13 +32,7 @@ export function NavMain({
                 </SidebarMenuButton>
               </CollapsibleTrigger>
               <CollapsibleContent>
-                <SidebarMenuSub>
-                  {item.items?.map((subItem) => (
-                    <SidebarMenuSubItem key={subItem.title}>
-                      <SidebarMenuButton>{subItem.title}</SidebarMenuButton>
-                    </SidebarMenuSubItem>
-                  ))}
-                </SidebarMenuSub>
+                <SidebarMenuSub>{item.items?.map((subItem) => <SidebarMenuButton key={subItem.title}>{subItem.title}</SidebarMenuButton>)}</SidebarMenuSub>
               </CollapsibleContent>
             </SidebarMenuItem>
           </Collapsible>

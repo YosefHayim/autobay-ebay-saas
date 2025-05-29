@@ -6,7 +6,7 @@ import { AppSidebar } from "@/components/ui/app-sidebar";
 import { useActiveView } from "@/hooks/use-active-view";
 
 const DashboardLayoutSidebar = () => {
-  const { activeView, setActiveView } = useActiveView();
+  const { activeView } = useActiveView();
 
   return (
     <div

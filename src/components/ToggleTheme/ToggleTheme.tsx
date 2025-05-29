@@ -10,7 +10,7 @@ const ToggleTheme = ({ withoutClass = false }) => {
   return (
     <Toggle
       variant="outline"
-      className={withoutClass ? "" : `group data-[state=on]:hover:bg-muted data-[state=on]:bg-transparent" size-9 p-[1.5em]`}
+      className={withoutClass ? "w-min" : `group data-[state=on]:hover:bg-muted data-[state=on]:bg-transparent" size-9 w-min p-[1.5em]`}
       onPressedChange={(pressed) => {
         if (pressed && theme === "light") setTheme("dark");
         else setTheme("light");
