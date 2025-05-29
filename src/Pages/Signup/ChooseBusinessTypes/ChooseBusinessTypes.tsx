@@ -1,12 +1,16 @@
 import { businessTypes } from "./businessArray";
 
 const ChooseBusinessTypes = () => {
+  const handleBusinessTypesSelection = (e) => {
+    const el = e.currentTarget;
+    console.log(el);
+  };
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
       <form className="w-2/3">
         <h1 className="text-center text-2xl">What is your business type?</h1>
         <p>You can choose up to 3 types.</p>
-        <div className="grid h-64 grid-cols-2 gap-2 overflow-y-scroll p-2">
+        <div className="grid h-64 grid-cols-2 gap-2 overflow-y-scroll p-2" onClick={handleBusinessTypesSelection}>
           {businessTypes?.map((typeOfB) => <div key={typeOfB.value}>{typeOfB.children}</div>)}
         </div>
       </form>

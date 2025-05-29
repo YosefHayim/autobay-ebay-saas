@@ -6,7 +6,7 @@ const BasicInfoAboutBusiness = () => {
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
       <h1 className="text-center text-2xl">A little bit about your business</h1>
-      <div className="flex gap-1">
+      <div className="flex w-max gap-1">
         <p>So we can built you a</p>
         <SparklesText text="amazing website" />
         <p>to your business we need few more details</p>

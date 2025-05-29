@@ -20,7 +20,7 @@ export const businessTypes = [
   {
     value: "Mens Barber",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="mens-barber">
         <img src={barberIcon} alt="barber chair icon" />
         <p>Mens Barber</p>
       </div>
@@ -29,7 +29,7 @@ export const businessTypes = [
   {
     value: "Nails",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="nails">
         <img src={nailGelIcon} alt="nail gel icon" />
         <p>Nails</p>
       </div>
@@ -38,7 +38,7 @@ export const businessTypes = [
   {
     value: "Eyebrowns",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="eye-browns">
         <img src={eyebrowIcon} alt="eyebrowns icon" />
         <p>Eyebrowns</p>
       </div>
@@ -47,7 +47,7 @@ export const businessTypes = [
   {
     value: "Eyelashes",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="eyelashes">
         <img src={eyelashesIcon} alt="eyelashes icon" />
         <p>Eyelashes</p>
       </div>
@@ -56,7 +56,7 @@ export const businessTypes = [
   {
     value: "Skincare",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="skincare">
         <img src={skincareIcon} alt="skincare icon" />
         <p>Skincare</p>
       </div>
@@ -65,7 +65,7 @@ export const businessTypes = [
   {
     value: "Hair designers",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="hair-designers">
         <img src={hairDesignIcon} alt="hair design icon" />
         <p>Hair designers</p>
       </div>
@@ -74,7 +74,7 @@ export const businessTypes = [
   {
     value: "Hair removal",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="hair-removal">
         <img src={hairRemovalIcon} alt="hair removal icon" />
         <p>Hair removal</p>
       </div>
@@ -83,7 +83,7 @@ export const businessTypes = [
   {
     value: "Makeup",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="makeup">
         <img src={makeupIcon} alt="makeup icon" />
         <p>Makeup</p>
       </div>
@@ -92,7 +92,7 @@ export const businessTypes = [
   {
     value: "earring and tatto",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="earring-and-tatto">
         <img src={tattoIcon} alt="barber chair icon" />
         <p>earring and tatto</p>
       </div>
@@ -101,7 +101,7 @@ export const businessTypes = [
   {
     value: "Massage",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="massage">
         <img src={massgeIon} alt="massage icon" />
         <p>Massage</p>
       </div>
@@ -110,7 +110,7 @@ export const businessTypes = [
   {
     value: "Botox and fillings",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="botox-and-fillings">
         <img src={botoxIcon} alt="lips icon" />
         <p>Botox and fillings</p>
       </div>
@@ -119,7 +119,7 @@ export const businessTypes = [
   {
     value: "Doctors and dentists",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="dentist">
         <img src={dentistIcon} alt="teeth icon" />
         <p>Doctors and dentists</p>
       </div>
@@ -128,7 +128,7 @@ export const businessTypes = [
   {
     value: "Barber dog",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="barber-dog">
         <img src={dogIcon} alt="dog icon" />
         <p>Barber dog</p>
       </div>
@@ -137,7 +137,7 @@ export const businessTypes = [
   {
     value: "Consulating and threapy hollistic",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value=" threapy-hollistic">
         <img src={hollisticIcon} alt="hollistic threapy icon" />
         <p>Consulating and threapy hollistic</p>
       </div>

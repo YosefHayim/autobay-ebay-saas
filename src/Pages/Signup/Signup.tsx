@@ -2,42 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { Stepper, StepperIndicator, StepperItem, StepperSeparator, StepperTrigger } from "@/components/ui/stepper";
 import { useStepperSignUp } from "@/hooks/use-stepper-signup";
-import PhoneNumberInput from "./PhoneNumberInput";
-import CodeReceivedFromOtp from "./CodeReceivedFromOtp";
-import BasicInfoAboutBusiness from "./BasicInfoAboutBusiness";
-import ChooseBusinessTypes from "./ChooseBusinessTypes";
-import ChooseBusinessHours from "./ChooseBusinessHours";
-import ChooseServices from "./ChooseServices";
+import { stepSignUpProccess } from "@/hooks/use-signup-proccess";
 
 const steps = [1, 2, 3, 4, 5, 6];
 
 const Signup = () => {
   const { currentStep, setCurrentStep, isLoading, handleNextStep, handlePreviousStep } = useStepperSignUp(1, steps.length);
-
-  const stepSignUpProccess = () => {
-    switch (currentStep) {
-      case 1:
-        return <PhoneNumberInput />;
-
-      case 2:
-        return <CodeReceivedFromOtp />;
-
-      case 3:
-        return <BasicInfoAboutBusiness />;
-
-      case 4:
-        return <ChooseBusinessTypes />;
-
-      case 5:
-        return <ChooseBusinessHours />;
-
-      case 6:
-        return <ChooseServices />;
-
-      default:
-        return <></>;
-    }
-  };
 
   return (
     <div className="mx-auto my-8 max-w-xl min-w-[300px] space-y-8">
@@ -52,7 +22,7 @@ const Signup = () => {
             </StepperItem>
           ))}
         </Stepper>
-        <div className="flex w-full flex-col items-center justify-center">{stepSignUpProccess()}</div>
+        <div className="flex w-full flex-col items-center justify-center">{stepSignUpProccess(currentStep)}</div>
         <div className="mt-4 flex justify-center space-x-4">
           <Button variant="outline" className="w-32" onClick={handlePreviousStep}>
             Back
