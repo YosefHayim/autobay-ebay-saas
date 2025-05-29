@@ -1,1 +1,5 @@
-export { default as DashboardSidebar } from "./DashboardLayoutSidebar";
+import { lazy } from "react";
+
+const DashboardLayoutSidebar = lazy(() => import("./DashboardLayoutSidebar"));
+
+export default DashboardLayoutSidebar;

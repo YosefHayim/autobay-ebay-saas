@@ -1,9 +1,9 @@
-import { DashboardSidebar } from "./DashboardLayoutSidebar";
+import DashboardLayoutSidebar from "./DashboardLayoutSidebar";
 
 const Dashboard = () => {
   return (
     <div>
-      <DashboardSidebar />
+      <DashboardLayoutSidebar />
     </div>
   );
 };

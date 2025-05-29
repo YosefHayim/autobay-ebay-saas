@@ -8,6 +8,8 @@ import { NavigationSidebarMenu } from "./NavigationSidebarMenu";
 import { ToggleTheme } from "@/components/ToggleTheme";
 import Profile from "@/Pages/Profile";
 import { Calendar } from "../Calendar";
+import Services from "../Services";
+import Payments from "../Payments";
 
 const DashboardLayoutSidebar = () => {
   const [open, setOpen] = useState(false);
@@ -47,6 +49,11 @@ const DashboardLayoutSidebar = () => {
         return <Profile />;
       default:
         return <Calendar />;
+      case "services":
+        return <Services />;
+
+      case "payments":
+        return <Payments />;
     }
   };
 
