@@ -17,7 +17,7 @@ export default function FilterEvents() {
         </Toggle>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[150px]">
-        {colors.map((color, index) => (
+        {colors?.map((color, index) => (
           <DropdownMenuItem
             key={index}
             className="flex cursor-pointer items-center gap-2"

@@ -65,7 +65,7 @@ const Contact = () => {
                   <option value="" disabled hidden>
                     How many employees do you have?
                   </option>
-                  {howManyEmployeesYouHave.map((optionOfUser) => (
+                  {howManyEmployeesYouHave?.map((optionOfUser) => (
                     <option key={optionOfUser.value} value={optionOfUser.value}>
                       {optionOfUser.value}
                     </option>

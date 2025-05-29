@@ -63,7 +63,7 @@ const Pricing = () => {
       </div>
 
       <div className="sm:2 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
-        {plans.map((plan, index) => (
+        {plans?.map((plan, index) => (
           <motion.div
             key={index}
             initial={{ y: 50, opacity: 1 }}
@@ -131,7 +131,7 @@ const Pricing = () => {
               <p className="text-muted-foreground text-xs leading-5">{isMonthly ? "billed monthly" : "billed annually"}</p>
 
               <ul className="mt-5 flex flex-col gap-2">
-                {plan.features.map((feature, idx) => (
+                {plan.features?.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <Check className="text-primary mt-1 h-4 w-4 flex-shrink-0" />
                     <span className="text-left">{feature}</span>

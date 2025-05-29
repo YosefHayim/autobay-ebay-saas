@@ -43,7 +43,7 @@ export function CalendarWeekView({ singleDayEvents, multiDayEvents }: IProps) {
           <motion.div className="relative z-20 flex border-b" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={transition}>
             <div className="w-18"></div>
             <div className="grid flex-1 grid-cols-7 border-l">
-              {weekDays.map((day, index) => (
+              {weekDays?.map((day, index) => (
                 <motion.span
                   key={index}
                   className="text-t-quaternary py-2 text-center text-xs font-medium"
@@ -62,7 +62,7 @@ export function CalendarWeekView({ singleDayEvents, multiDayEvents }: IProps) {
           <div className="flex">
             {/* Hours column */}
             <motion.div className="relative w-18" variants={staggerContainer}>
-              {hours.map((hour, index) => (
+              {hours?.map((hour, index) => (
                 <motion.div
                   key={hour}
                   className="relative"
@@ -83,7 +83,7 @@ export function CalendarWeekView({ singleDayEvents, multiDayEvents }: IProps) {
             {/* Week grid */}
             <motion.div className="relative flex-1 border-l" variants={staggerContainer}>
               <div className="grid grid-cols-7 divide-x">
-                {weekDays.map((day, dayIndex) => {
+                {weekDays?.map((day, dayIndex) => {
                   const dayEvents = singleDayEvents.filter((event) => isSameDay(parseISO(event.startDate), day) || isSameDay(parseISO(event.endDate), day));
                   const groupedEvents = groupEvents(dayEvents);
 
@@ -95,7 +95,7 @@ export function CalendarWeekView({ singleDayEvents, multiDayEvents }: IProps) {
                       animate={{ opacity: 1 }}
                       transition={{ delay: dayIndex * 0.1, ...transition }}
                     >
-                      {hours.map((hour, index) => (
+                      {hours?.map((hour, index) => (
                         <motion.div
                           key={hour}
                           className="relative"

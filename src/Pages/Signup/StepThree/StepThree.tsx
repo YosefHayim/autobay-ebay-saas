@@ -26,7 +26,7 @@ const StepThree = () => {
             What calendar you had until now?
           </label>
           <select name="previous-calendar-use" className="w-full rounded-sm border border-gray-300 p-2">
-            {whichCalendarYouHadOptions.map((pickOption) => (
+            {whichCalendarYouHadOptions?.map((pickOption) => (
               <option key={pickOption.value} value={pickOption.value}>
                 {pickOption.text}
               </option>
@@ -39,7 +39,7 @@ const StepThree = () => {
             How did you hear about us?
           </label>
           <select name="previous-calendar-use" className="w-full rounded-sm border border-gray-300 p-2">
-            {howDidYouHearAboutUsOptions.map((pickOption) => (
+            {howDidYouHearAboutUsOptions?.map((pickOption) => (
               <option key={pickOption.value} value={pickOption.value}>
                 {pickOption.text}
               </option>

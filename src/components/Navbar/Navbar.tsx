@@ -46,7 +46,7 @@ const Navbar = () => {
 
             <div className="absolute inset-0 m-auto hidden size-fit lg:flex">
               <ul className="flex gap-8 text-sm">
-                {menuItems.map((item, index) => (
+                {menuItems?.map((item, index) => (
                   <li key={index}>
                     <Link to={item.href} className="text-muted-foreground hover:text-accent-foreground block duration-150">
                       <span>{item.name}</span>
@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="bg-background mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 group-data-[state=active]:block md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none lg:group-data-[state=active]:flex dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
-                  {menuItems.map((item, index) => (
+                  {menuItems?.map((item, index) => (
                     <li key={index}>
                       <Link to={item.href} className="text-muted-foreground hover:text-accent-foreground block duration-150">
                         <span>{item.name}</span>

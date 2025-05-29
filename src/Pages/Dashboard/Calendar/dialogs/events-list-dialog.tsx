@@ -44,7 +44,7 @@ export function EventListDialog({ date, events, maxVisibleEvents = 3, children }
           </DialogTitle>
         </DialogHeader>
         <div className="max-h-[60vh] space-y-2 overflow-y-auto">
-          {cellEvents.map((event) => (
+          {cellEvents?.map((event) => (
             <div
               key={event.id}
               className={cn("hover:bg-muted flex items-center gap-2 rounded-md border p-2", {

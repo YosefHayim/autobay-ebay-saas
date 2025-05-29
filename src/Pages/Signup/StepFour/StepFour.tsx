@@ -7,9 +7,7 @@ const StepFour = () => {
         <h1 className="text-center text-2xl">What is your business type?</h1>
         <p>You can choose up to 3 types.</p>
         <div className="grid h-64 grid-cols-2 gap-2 overflow-y-scroll p-2">
-          {businessTypes.map((typeOfB) => (
-            <div key={typeOfB.value}>{typeOfB.children}</div>
-          ))}
+          {businessTypes?.map((typeOfB) => <div key={typeOfB.value}>{typeOfB.children}</div>)}
         </div>
       </form>
     </section>

@@ -13,7 +13,7 @@ const Footer = () => {
           <Logo />
           <div className="mt-8 text-sm md:mt-0">
             <div className="mb-4 flex gap-2">
-              {sociaLinks.map((socialPlatform) => (
+              {sociaLinks?.map((socialPlatform) => (
                 <a href={socialPlatform.to} aria-valuetext={socialPlatform.title} key={socialPlatform.title}>
                   <img src={svgsLinks[socialPlatform.title]} alt={socialPlatform.title} className={`h-5 w-5`} />
                 </a>
@@ -24,12 +24,12 @@ const Footer = () => {
         </AnimatedContainer>
 
         <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
-          {footerLinks.map((section, index) => (
+          {footerLinks?.map((section, index) => (
             <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
               <div className="mb-10 md:mb-0">
                 <h3 className="text-xs">{section.label}</h3>
                 <ul className="text-muted-foreground mt-4 space-y-2 text-sm">
-                  {section.links.map((link) => (
+                  {section.links?.map((link) => (
                     <li key={link.title}>
                       <a href={link.href} className="hover:text-foreground inline-flex items-center transition-all duration-300">
                         {link.icon && <link.icon className="me-1 size-4" />}

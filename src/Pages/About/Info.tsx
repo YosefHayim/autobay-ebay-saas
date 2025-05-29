@@ -90,7 +90,7 @@ export const About3 = ({
             <p className="text-muted-foreground max-w-screen-sm text-center">{achievementsDescription}</p>
           </div>
           <div className="mt-10 flex flex-wrap justify-between gap-10 text-center">
-            {achievements.map((item, idx) => (
+            {achievements?.map((item, idx) => (
               <div className="flex flex-col gap-4" key={item.label + idx}>
                 <p>{item.label}</p>
                 <span className="text-4xl font-semibold md:text-5xl">{item.value}</span>

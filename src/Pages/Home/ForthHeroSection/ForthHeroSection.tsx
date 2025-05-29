@@ -51,7 +51,7 @@ const ForthHeroSection = ({ words, duration = 1500, className }: { words: string
         className={cn("relative z-10 inline-block px-2 text-left text-5xl font-extrabold text-neutral-900 dark:text-neutral-100", className)}
         key={currentWord}
       >
-        {currentWord.split(" ").map((word, wordIndex) => (
+        {currentWord.split(" ")?.map((word, wordIndex) => (
           <motion.span
             key={word + wordIndex}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
@@ -62,7 +62,7 @@ const ForthHeroSection = ({ words, duration = 1500, className }: { words: string
             }}
             className="inline-block whitespace-nowrap"
           >
-            {word.split("").map((letter, letterIndex) => (
+            {word.split("")?.map((letter, letterIndex) => (
               <motion.span
                 key={word + letterIndex}
                 initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}

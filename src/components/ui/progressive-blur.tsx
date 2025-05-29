@@ -22,9 +22,9 @@ export function ProgressiveBlur({ direction = "bottom", blurLayers = 8, classNam
 
   return (
     <div className={cn("relative", className)}>
-      {Array.from({ length: layers }).map((_, index) => {
+      {Array.from({ length: layers })?.map((_, index) => {
         const angle = GRADIENT_ANGLES[direction];
-        const gradientStops = [index * segmentSize, (index + 1) * segmentSize, (index + 2) * segmentSize, (index + 3) * segmentSize].map(
+        const gradientStops = [index * segmentSize, (index + 1) * segmentSize, (index + 2) * segmentSize, (index + 3) * segmentSize]?.map(
           (pos, posIndex) => `rgba(255, 255, 255, ${posIndex === 1 || posIndex === 2 ? 1 : 0}) ${pos * 100}%`,
         );
 

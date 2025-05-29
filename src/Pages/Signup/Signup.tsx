@@ -43,7 +43,7 @@ const SignUp = () => {
     <div className="mx-auto my-8 max-w-xl min-w-[300px] space-y-8">
       <div>
         <Stepper value={currentStep} onValueChange={setCurrentStep}>
-          {steps.map((step) => (
+          {steps?.map((step) => (
             <StepperItem key={step} step={step} className="[&:not(:last-child)]:flex-1" loading={isLoading}>
               <StepperTrigger asChild>
                 <StepperIndicator />

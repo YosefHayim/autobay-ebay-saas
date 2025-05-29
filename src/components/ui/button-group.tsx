@@ -31,7 +31,7 @@ export const ButtonGroup = ({ className, orientation = "horizontal", children }:
         className,
       )}
     >
-      {Children.map(children, (child, index) => {
+      {Children?.map(children, (child, index) => {
         const isFirst = index === 0;
         const isLast = index === totalButtons - 1;
 

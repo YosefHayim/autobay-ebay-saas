@@ -17,7 +17,7 @@ export function WeekViewMultiDayEventsRow({ selectedDate, multiDayEvents }: IPro
 
   const processedEvents = useMemo(() => {
     return multiDayEvents
-      .map((event) => {
+      ?.map((event) => {
         const start = parseISO(event.startDate);
         const end = parseISO(event.endDate);
         const adjustedStart = isBefore(start, weekStart) ? weekStart : start;
@@ -81,9 +81,9 @@ export function WeekViewMultiDayEventsRow({ selectedDate, multiDayEvents }: IPro
     <div className="hidden overflow-hidden sm:flex">
       <div className="w-18 border-b"></div>
       <div className="grid flex-1 grid-cols-7 divide-x border-b border-l">
-        {weekDays.map((day, dayIndex) => (
+        {weekDays?.map((day, dayIndex) => (
           <div key={day.toISOString()} className="flex h-full flex-col gap-1 py-1">
-            {eventRows.map((row, rowIndex) => {
+            {eventRows?.map((row, rowIndex) => {
               const event = row.find((e) => e.startIndex <= dayIndex && e.endIndex >= dayIndex);
 
               if (!event) {

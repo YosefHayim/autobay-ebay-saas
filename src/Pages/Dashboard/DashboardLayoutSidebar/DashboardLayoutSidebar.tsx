@@ -34,9 +34,7 @@ const DashboardLayoutSidebar = () => {
               </Link>
             )}
             <div className="mt-8 flex flex-col gap-2" onClick={(e) => handleSidebarButtonClick(e, setActiveView)}>
-              {NavigationSidebarMenu.map((btn) => (
-                <SidebarButton key={btn.label} btn={btn} />
-              ))}
+              {NavigationSidebarMenu?.map((btn) => <SidebarButton key={btn.label} btn={btn} />)}
             </div>
           </div>
           <div>

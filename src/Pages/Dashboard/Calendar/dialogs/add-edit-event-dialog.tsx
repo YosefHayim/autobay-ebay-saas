@@ -141,7 +141,7 @@ export function AddEditEventDialog({ children, startDate, startTime, event }: IP
                         <SelectValue placeholder="Select a variant" />
                       </SelectTrigger>
                       <SelectContent>
-                        {COLORS.map((color) => (
+                        {COLORS?.map((color) => (
                           <SelectItem value={color} key={color}>
                             <div className="flex items-center gap-2">
                               <div className={`size-3.5 rounded-full bg-${color}-600 dark:bg-${color}-700`} />

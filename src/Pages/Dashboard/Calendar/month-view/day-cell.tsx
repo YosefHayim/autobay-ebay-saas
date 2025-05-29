@@ -53,7 +53,7 @@ export function DayCell({ cell, events, eventPositions }: IProps) {
           className={cn("flex h-6 gap-1 px-2 lg:min-h-[94px] lg:flex-col lg:gap-2 lg:px-0", !currentMonth && "opacity-50")}
           variants={staggerContainer}
         >
-          {[0, 1, 2].map((position) => {
+          {[0, 1, 2]?.map((position) => {
             const event = cellEvents.find((e) => e.position === position);
             const eventKey = event ? `event-${event.id}-${position}` : `empty-${position}`;
 

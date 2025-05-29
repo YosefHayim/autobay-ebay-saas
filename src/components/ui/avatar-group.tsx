@@ -22,7 +22,7 @@ const AvatarGroup = ({ children, max, className, ...props }: AvatarGroupProps) =
           <AvatarFallback className="bg-muted-foreground text-white">+{remainingAvatars}</AvatarFallback>
         </Avatar>
       )}
-      {displayedAvatars.map((avatar, index) => {
+      {displayedAvatars?.map((avatar, index) => {
         if (!React.isValidElement(avatar)) return null;
 
         return (

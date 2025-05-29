@@ -9,8 +9,8 @@ interface RenderGroupedEventsProps {
 }
 
 export function RenderGroupedEvents({ groupedEvents, day }: RenderGroupedEventsProps) {
-  return groupedEvents.map((group, groupIndex) =>
-    group.map((event) => {
+  return groupedEvents?.map((group, groupIndex) =>
+    group?.map((event) => {
       let style = getEventBlockStyle(event, day, groupIndex, groupedEvents.length);
       const hasOverlap = groupedEvents.some(
         (otherGroup, otherIndex) =>

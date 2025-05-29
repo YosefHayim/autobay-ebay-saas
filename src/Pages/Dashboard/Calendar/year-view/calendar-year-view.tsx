@@ -30,7 +30,7 @@ export function CalendarYearView({ singleDayEvents, multiDayEvents }: IProps) {
         variants={staggerContainer}
         className="grid flex-grow auto-rows-fr grid-cols-3 gap-4 overflow-hidden lg:grid-cols-4"
       >
-        {MONTHS.map((month, monthIndex) => {
+        {MONTHS?.map((month, monthIndex) => {
           const monthDate = new Date(currentYear, monthIndex, 1);
           const cells = getCalendarCells(monthDate);
 
@@ -50,7 +50,7 @@ export function CalendarYearView({ singleDayEvents, multiDayEvents }: IProps) {
               </div>
 
               <div className="grid grid-cols-7 py-1 text-center text-xs">
-                {WEEKDAYS.map((day) => (
+                {WEEKDAYS?.map((day) => (
                   <div key={day} className="text-muted-foreground">
                     {day}
                   </div>
@@ -58,7 +58,7 @@ export function CalendarYearView({ singleDayEvents, multiDayEvents }: IProps) {
               </div>
 
               <div className="grid flex-grow grid-cols-7 gap-0 p-0.5">
-                {cells.map((cell) => {
+                {cells?.map((cell) => {
                   const isCurrentMonth = isSameMonth(cell.date, monthDate);
                   const isToday = isSameDay(cell.date, new Date());
                   const dayEvents = allEvents.filter((event) => isSameDay(new Date(event.startDate), cell.date));
@@ -84,7 +84,7 @@ export function CalendarYearView({ singleDayEvents, multiDayEvents }: IProps) {
                             </span>
                             <div className="flex items-center justify-center gap-0.5">
                               {dayEvents.length <= 2 ? (
-                                dayEvents.slice(0, 2).map((event) => <EventBullet key={event.id} color={event.color} className="size-1" />)
+                                dayEvents.slice(0, 2)?.map((event) => <EventBullet key={event.id} color={event.color} className="size-1" />)
                               ) : (
                                 <>
                                   <EventBullet color={dayEvents[0].color} className="size-1" />

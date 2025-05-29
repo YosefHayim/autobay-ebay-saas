@@ -65,7 +65,7 @@ const Brands = () => {
 
   return (
     <Marquee>
-      {arr.map((Logo, index) => (
+      {arr?.map((Logo, index) => (
         <div key={index} className="relative mx-[4rem] flex h-full w-fit items-center justify-start">
           <Logo />
         </div>

@@ -27,9 +27,10 @@ export function CalendarHeader() {
 
   return (
     <div className="flex flex-col gap-4 border-b p-4 lg:flex-row lg:items-center lg:justify-between">
-      <motion.div className="flex items-center gap-3" variants={slideFromLeft} initial="initial" animate="animate" transition={transition}>
+      <motion.div className="flex items-center justify-around" variants={slideFromLeft} initial="initial" animate="animate" transition={transition}>
         <TodayButton />
         <DateNavigator view={view} events={events} />
+        <Settings />
       </motion.div>
 
       <motion.div
@@ -111,7 +112,6 @@ export function CalendarHeader() {
             </MotionButton>
           </AddEditEventDialog>
         </div>
-        <Settings />
       </motion.div>
     </div>
   );

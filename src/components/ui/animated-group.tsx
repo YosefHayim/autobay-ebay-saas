@@ -130,7 +130,7 @@ function AnimatedGroup({ children, className, variants, preset }: AnimatedGroupP
 
   return (
     <motion.div initial="hidden" animate="visible" variants={containerVariants} className={cn(className)}>
-      {React.Children.map(children, (child, index) => (
+      {React.Children?.map(children, (child, index) => (
         <motion.div key={index} variants={itemVariants}>
           {child}
         </motion.div>

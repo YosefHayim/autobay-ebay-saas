@@ -82,7 +82,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({ text, colors = { first: "#9
 
     const updateStars = () => {
       setSparkles((currentSparkles) =>
-        currentSparkles.map((star) => {
+        currentSparkles?.map((star) => {
           if (star.lifespan <= 0) {
             return generateStar();
           } else {
@@ -110,9 +110,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({ text, colors = { first: "#9
       }
     >
       <span className="relative inline-block">
-        {sparkles.map((sparkle) => (
-          <Sparkle key={sparkle.id} {...sparkle} />
-        ))}
+        {sparkles?.map((sparkle) => <Sparkle key={sparkle.id} {...sparkle} />)}
         <strong>{text}</strong>
       </span>
     </div>

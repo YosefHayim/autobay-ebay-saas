@@ -15,7 +15,7 @@ const Faq = () => {
           <p className="text-muted-foreground lg:text-lg">{description}</p>
         </div>
         <Accordion type="single" collapsible className="mx-auto w-full lg:max-w-3xl">
-          {faqItems.map((item) => (
+          {faqItems?.map((item) => (
             <AccordionItem key={item.id} value={item.id}>
               <AccordionTrigger className="transition-opacity duration-200 hover:no-underline hover:opacity-60">
                 <div className="font-medium sm:py-1 lg:py-2 lg:text-lg">{item.question}</div>

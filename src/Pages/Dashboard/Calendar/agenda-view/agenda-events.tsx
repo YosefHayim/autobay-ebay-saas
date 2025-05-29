@@ -23,12 +23,12 @@ export const AgendaEvents: FC = () => {
         <CommandInput placeholder="Type a command or search..." />
       </div>
       <CommandList className="max-h-max border-t px-3">
-        {groupedAndSortedEvents.map(([date, groupedEvents]) => (
+        {groupedAndSortedEvents?.map(([date, groupedEvents]) => (
           <CommandGroup
             key={date}
             heading={agendaModeGroupBy === "date" ? format(parseISO(date), "EEEE, MMMM d, yyyy") : toCapitalize(groupedEvents![0].color)}
           >
-            {groupedEvents!.map((event) => (
+            {groupedEvents!?.map((event) => (
               <CommandItem
                 key={event.id}
                 className={cn("data-[selected=true]:bg-bg data-[selected=true]:text-none mb-2 rounded-md border p-4 transition-all hover:cursor-pointer", {

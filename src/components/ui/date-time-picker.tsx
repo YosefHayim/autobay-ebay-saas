@@ -62,7 +62,7 @@ export function DateTimePicker({ form, field }: DatePickerProps) {
             <div className="flex flex-col divide-y sm:h-[300px] sm:flex-row sm:divide-x sm:divide-y-0">
               <ScrollArea className="w-64 sm:w-auto">
                 <div className="flex p-2 sm:flex-col">
-                  {Array.from({ length: use24HourFormat ? 24 : 12 }, (_, i) => i).map((hour) => (
+                  {Array.from({ length: use24HourFormat ? 24 : 12 }, (_, i) => i)?.map((hour) => (
                     <Button
                       key={hour}
                       size="icon"
@@ -78,7 +78,7 @@ export function DateTimePicker({ form, field }: DatePickerProps) {
               </ScrollArea>
               <ScrollArea className="w-64 sm:w-auto">
                 <div className="flex p-2 sm:flex-col">
-                  {Array.from({ length: 12 }, (_, i) => i * 5).map((minute) => (
+                  {Array.from({ length: 12 }, (_, i) => i * 5)?.map((minute) => (
                     <Button
                       key={minute}
                       size="icon"

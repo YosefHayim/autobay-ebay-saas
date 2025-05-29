@@ -13,7 +13,7 @@ export function DayViewSkeleton() {
 
       <div className="flex flex-1 overflow-y-auto">
         <div className="w-18 flex-shrink-0">
-          {Array.from({ length: 12 }).map((_, i) => (
+          {Array.from({ length: 12 })?.map((_, i) => (
             <div key={i} className="relative h-12 border-b pr-2 text-right">
               <Skeleton className="absolute -top-3 right-2 h-4 w-10" />
             </div>
@@ -21,11 +21,7 @@ export function DayViewSkeleton() {
         </div>
 
         <div className="flex-1">
-          <div className="relative">
-            {Array.from({ length: 12 }).map((_, hourIndex) => (
-              <div key={hourIndex} className="h-12 border-b"></div>
-            ))}
-          </div>
+          <div className="relative">{Array.from({ length: 12 })?.map((_, hourIndex) => <div key={hourIndex} className="h-12 border-b"></div>)}</div>
         </div>
       </div>
     </div>
