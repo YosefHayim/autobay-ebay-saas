@@ -1,17 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
-import { handleSidebarButtonClick } from "@/handlers/handleSidebarView";
 import { useRenderActiveViewDashboard } from "@/hooks/use-render-active-view-dashboard";
 import { AppSidebar } from "@/components/ui/app-sidebar";
+import { useActiveView } from "@/hooks/use-active-view";
 
 const DashboardLayoutSidebar = () => {
-  const [activeView, setActiveView] = useState("calendar");
-
-  useEffect(() => {
-    return () => {};
-  }, [activeView]);
+  const { activeView, setActiveView } = useActiveView();
 
   return (
     <div
@@ -21,7 +16,7 @@ const DashboardLayoutSidebar = () => {
       )}
     >
       <SidebarProvider>
-        <AppSidebar onClick={(e) => handleSidebarButtonClick(e, setActiveView)} />
+        <AppSidebar />
         <SidebarInset>
           <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
             <div className="flex items-center gap-2 px-4">

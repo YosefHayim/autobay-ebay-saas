@@ -6,7 +6,7 @@ export const ActiveViewContext = createContext<ActiveViewContextType | undefined
 export const useActiveView = () => {
   const context = useContext(ActiveViewContext);
   if (context === undefined) {
-    throw new Error("useActiveView must be used within a ActiveViewProvider");
+    throw new Error("useActiveView must be used within an ActiveViewProvider");
   }
   return context;
 };

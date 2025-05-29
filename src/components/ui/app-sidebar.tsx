@@ -4,6 +4,8 @@ import { NavMain } from "@/components/ui/nav-main";
 import { NavUser } from "@/components/ui/nav-user";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarRail } from "@/components/ui/sidebar";
 import { ToggleTheme } from "../ToggleTheme";
+import { useActiveView } from "@/hooks/use-active-view";
+import { handleSidebarButtonClick } from "@/handlers/handleSidebarView";
 
 const data = {
   user: {
@@ -58,8 +60,14 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { activeView, setActiveView } = useActiveView();
+
+  React.useEffect(() => {
+    return () => {};
+  }, [activeView]);
+
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar collapsible="icon" {...props} onClick={(e) => handleSidebarButtonClick(e, setActiveView)}>
       <SidebarContent className="w-full">
         <NavMain items={data.navMain} />
       </SidebarContent>

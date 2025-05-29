@@ -1,9 +1,12 @@
+import { ActiveViewProvider } from "@/contexts/active-view/active-view-context";
 import DashboardLayoutSidebar from "./DashboardLayoutSidebar";
 
 const Dashboard = () => {
   return (
     <div>
-      <DashboardLayoutSidebar />
+      <ActiveViewProvider>
+        <DashboardLayoutSidebar />
+      </ActiveViewProvider>
     </div>
   );
 };

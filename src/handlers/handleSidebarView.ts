@@ -1,8 +1,8 @@
 export const handleSidebarButtonClick = (e: React.MouseEvent<HTMLElement>, setActiveView: React.Dispatch<React.SetStateAction<string>>) => {
   const target = e.target as HTMLElement;
-  const btn = target.closest("button");
-  if (btn instanceof HTMLButtonElement) {
-    const activeView = btn.dataset.value;
+  const span = target.closest("span");
+  if (span instanceof HTMLSpanElement) {
+    const activeView = span.textContent;
 
     switch (activeView) {
       case "Appointments":
@@ -10,7 +10,11 @@ export const handleSidebarButtonClick = (e: React.MouseEvent<HTMLElement>, setAc
       case "Payments":
       case "Customers":
       case "Integrations":
-      case "Settings":
+      case "General":
+      case "Contact details":
+      case "Location":
+      case "Business hours":
+      case "Social links":
         setActiveView(activeView);
         break;
 
