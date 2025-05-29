@@ -26,10 +26,13 @@ const barberServices = [
   "Nose Hair Trim",
 ];
 
-const createbusiness = async () => {
+const durationOfServices = ["45 min", "20 min", "15 min", "60 min"];
+
+const createbusiness = async (business_owner_id) => {
   const business = {
     name: faker.company.name(),
     phone: faker.phone.number({ style: "national" }),
+    business_owner_id,
     email: faker.internet.email(),
     address: faker.location.streetAddress({ useFullAddress: true }),
     is_active: true,
@@ -54,7 +57,7 @@ const createbusinessImages = async (business_id, count = 10) => {
   if (error) throw error;
 };
 
-const createbusinessOwner = async (business_id) => {
+const createbusinessOwner = async () => {
   const owner = {
     name: faker.person.fullName(),
     age: faker.number.int({ min: 18, max: 60 }),
@@ -64,7 +67,6 @@ const createbusinessOwner = async (business_id) => {
     is_free_trial_end: faker.datatype.boolean(),
     is_active: true,
     created_at: new Date().toISOString(),
-    business_id,
   };
   const { data, error } = await supabase.from("business_owners").insert([owner]).select().single();
   if (error) throw error;
@@ -73,11 +75,10 @@ const createbusinessOwner = async (business_id) => {
   return data;
 };
 
-const createEmployees = async (business_id, business_owner_id) => {
+const createEmployees = async (business_id) => {
   const employees = Array.from({ length: 3 }, () => ({
     name: faker.person.fullName(),
     business_id,
-    business_owner_id,
     age: faker.number.int({ min: 18, max: 60 }),
     phone: faker.phone.number({ style: "national" }),
     email: faker.internet.email(),
@@ -98,7 +99,7 @@ const createServices = async (employee_id, count = 5) => {
   const services = Array.from({ length: count }, () => ({
     employee_id,
     service_name: faker.helpers.arrayElement(barberServices),
-    duration_min: faker.number.int({ min: 15, max: 90 }),
+    duration_min: faker.helpers.arrayElement(durationOfServices),
     price: faker.number.int({ min: 10, max: 100 }),
     description: faker.lorem.sentence(),
     is_active: true,
@@ -111,7 +112,7 @@ const createServices = async (employee_id, count = 5) => {
   return data;
 };
 
-const createCustomers = async (business_id, count = 100) => {
+const createCustomers = async (count = 100) => {
   const customers = Array.from({ length: count }, () => ({
     name: faker.person.fullName(),
     profile_img: faker.image.avatar(),
@@ -119,7 +120,6 @@ const createCustomers = async (business_id, count = 100) => {
     email: faker.internet.email(),
     is_active: true,
     created_at: new Date().toISOString(),
-    business_id,
   }));
 
   const { data, error } = await supabase.from("customers").insert(customers).select();
@@ -129,7 +129,7 @@ const createCustomers = async (business_id, count = 100) => {
   return data;
 };
 
-const createAppointments = async (business_id, customers, services) => {
+const createAppointments = async (customers, services) => {
   const appointments = customers.map((customer) => {
     const service = faker.helpers.arrayElement(services);
     const now = new Date();
@@ -140,7 +140,6 @@ const createAppointments = async (business_id, customers, services) => {
     ]);
 
     return {
-      business_id,
       customer_id: customer.id,
       service_id: service.id,
       when_to_arrive: scenario.when_to_arrive.toISOString(),
@@ -175,11 +174,10 @@ const createCustomerReviews = async (business_id, customers) => {
 
 const generateData = async (businessCount = 5) => {
   for (let i = 0; i < businessCount; i++) {
-    const business = await createbusiness();
     await createbusinessImages(business.id);
-
-    const owner = await createbusinessOwner(business.id);
-    const employees = await createEmployees(business.id, owner.id);
+    const owner = await createbusinessOwner();
+    const business = await createbusiness(business.business_owner_id);
+    const employees = await createEmployees(business.id);
 
     const allServices = [];
     for (const employee of employees) {
@@ -187,10 +185,9 @@ const generateData = async (businessCount = 5) => {
       allServices.push(...services);
     }
 
-    const customerCount = faker.number.int({ min: 50, max: 100 });
-    const customers = await createCustomers(business.id, customerCount);
+    const customers = await createCustomers();
 
-    await createAppointments(business.id, customers, allServices);
+    await createAppointments(customers, allServices);
     await createCustomerReviews(business.id, customers);
 
     console.log(`✅ Finished seeding business ${i + 1} with ${customerCount} customers`);
