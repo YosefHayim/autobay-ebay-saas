@@ -137,7 +137,7 @@ export const businessTypes = [
   {
     value: "Consulating and threapy hollistic",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value=" threapy-hollistic">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="threapy-hollistic">
         <img src={hollisticIcon} alt="hollistic threapy icon" />
         <p>Consulating and threapy hollistic</p>
       </div>
@@ -146,7 +146,7 @@ export const businessTypes = [
   {
     value: "Fitness",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="fitness">
         <img src={fitnessIcon} alt="fitness icon" />
         <p>Fitness</p>
       </div>
@@ -155,7 +155,7 @@ export const businessTypes = [
   {
     value: "Optics",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="optics">
         <img src={glassesIcon} alt="glasses icon" />
         <p>Optics</p>
       </div>
@@ -164,7 +164,7 @@ export const businessTypes = [
   {
     value: "Other",
     children: (
-      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300">
+      <div className="flex flex-col items-center justify-center rounded-sm border border-gray-300" data-value="other">
         <img src={otherIcon} alt="other icon" />
 
         <p>Other</p>
