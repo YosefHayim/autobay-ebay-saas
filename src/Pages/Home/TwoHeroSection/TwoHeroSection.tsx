@@ -1,7 +1,7 @@
 "use client";
 
-import { HeroParallax } from "@/components/ui/hero-parallax";
 import { customers } from "./customers";
+import { HeroParallax } from "./hero-parallax";
 
 const TwoHeroSection = () => {
   return <HeroParallax products={customers} />;

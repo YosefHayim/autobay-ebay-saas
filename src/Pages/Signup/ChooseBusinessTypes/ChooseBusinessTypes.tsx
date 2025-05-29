@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { businessTypes } from "./businessArray";
 import { handleBusinessTypesSelection } from "@/handlers/handleBusinessTypeSelection";
+import "./choose-business-type.module.css";
 
 const ChooseBusinessTypes = () => {
   const [maxToSelect, setMaxToSelect] = useState(3);
