@@ -4,6 +4,7 @@ import { NavMain } from "@/components/ui/nav-main";
 import { NavUser } from "@/components/ui/nav-user";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@/components/ui/sidebar";
 import { Logo } from "../Logo";
+import { ToggleTheme } from "../ToggleTheme";
 
 const data = {
   user: {
@@ -16,54 +17,40 @@ const data = {
       title: "Appointments",
       url: "#",
       icon: CalendarClock,
-      isActive: true,
-      items: [],
     },
     {
       title: "Services",
-      url: "#",
       icon: Scissors,
-      items: [],
     },
     {
       title: "Payments",
-      url: "#",
       icon: CreditCard,
-      items: [],
     },
     {
       title: "Customers",
-      url: "#",
       icon: Users,
-      items: [],
     },
     {
       title: "Settings",
-      url: "#",
       icon: Settings,
       items: [
         {
           title: "General",
-          url: "#",
         },
         {
           title: "Contact details",
-          url: "#",
           icon: Phone,
         },
         {
           title: "Location",
-          url: "#",
           icon: MapPin,
         },
         {
           title: "Business hours",
-          url: "#",
           icon: Clock,
         },
         {
           title: "Social links",
-          url: "#",
           icon: Globe,
         },
       ],
@@ -76,6 +63,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <Logo />
+        <ToggleTheme />
       </SidebarHeader>
       <hr />
       <SidebarContent>

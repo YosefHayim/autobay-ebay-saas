@@ -8,25 +8,25 @@ import Profile from "@/Pages/Profile";
 
 export const useRenderActiveViewDashboard = (activeView: string) => {
   switch (activeView) {
-    case "calendar":
+    case "Appointments":
       return <Calendar />;
 
-    case "profile":
+    case "Profile":
       return <Profile />;
 
-    case "services":
+    case "Services":
       return <Services />;
 
-    case "payments":
+    case "Payments":
       return <Payments />;
 
-    case "customers":
+    case "Customers":
       return <Customers />;
 
-    case "integrations":
+    case "Integrations":
       return <Integrations />;
 
-    case "settings":
+    case "Settings":
       return <Settings />;
 
     default:

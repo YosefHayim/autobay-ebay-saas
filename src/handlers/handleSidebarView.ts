@@ -5,18 +5,17 @@ export const handleSidebarButtonClick = (e: React.MouseEvent<HTMLElement>, setAc
     const activeView = btn.dataset.value;
 
     switch (activeView) {
-      case "calendar":
-      case "profile":
-      case "services":
-      case "payments":
-      case "customers":
-      case "integrations":
-      case "settings":
+      case "Appointments":
+      case "Services":
+      case "Payments":
+      case "Customers":
+      case "Integrations":
+      case "Settings":
         setActiveView(activeView);
         break;
 
       default:
-        setActiveView("calendar");
+        setActiveView("Appointments");
         break;
     }
   }
