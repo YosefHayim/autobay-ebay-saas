@@ -8,9 +8,9 @@ const AddService = () => {
   return (
     <Dialog>
       <DialogTrigger>
-        <Button type="button" className="float-right rounded-full hover:bg-gray-200 hover:text-black">
+        <span className="float-right rounded-full hover:bg-gray-200 hover:text-black">
           <Plus />
-        </Button>
+        </span>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "../Logo";
 import { Link } from "react-router";
-import ToggleBtn from "../ToggleTheme/ToggleTheme";
+import ToggleBtn from "../ToggleThemeButton/ToggleThemeButton";
 import { menuItems } from "./menuItems";
 import LoginDialog from "../LoginDialog/LoginDialog";
 import { Menu, X } from "lucide-react";

@@ -1,21 +1,22 @@
 "use client";
 
-import { Toggle } from "@/components/ui/toggle";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
+import { CustomToggleButton } from "../CustomToggleButton";
 
-const ToggleTheme = ({ withoutClass = false }) => {
+const ToggleThemeButton = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <Toggle
+    <CustomToggleButton
+      ariaLabelText={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       variant="outline"
-      className={withoutClass ? "w-min" : `group data-[state=on]:hover:bg-muted data-[state=on]:bg-transparent" size-9 w-min p-[1.5em]`}
+      withoutClass={false}
+      className={`group data-[state=on]:hover:bg-muted data-[state=on]:bg-transparent" size-9 w-min p-[1.5em]`}
       onPressedChange={(pressed) => {
         if (pressed && theme === "light") setTheme("dark");
         else setTheme("light");
       }}
-      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
       <Sun
         size={16}
@@ -29,8 +30,8 @@ const ToggleTheme = ({ withoutClass = false }) => {
         className="shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100"
         aria-hidden="true"
       />
-    </Toggle>
+    </CustomToggleButton>
   );
 };
 
-export default ToggleTheme;
+export default ToggleThemeButton;

@@ -1,5 +1,5 @@
 export const workingTimes = [
-  "בחר שעה",
+  "Choose hour",
   "06:45",
   "07:00",
   "07:15",

@@ -1,11 +1,12 @@
 import * as React from "react";
-import { CalendarClock, Scissors, CreditCard, Users, Settings, Phone, MapPin, Clock, Globe } from "lucide-react";
+import { CalendarClock, Scissors, CreditCard, Users, Settings, Phone, MapPin, Clock, Globe, Sun, Moon } from "lucide-react";
 import { NavUser } from "@/components/SidebarDashboard/nav-user";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarRail } from "@/components/ui/sidebar";
-import { ToggleTheme } from "../ToggleTheme";
 import { useActiveView } from "@/hooks/use-active-view";
 import { handleSidebarButtonClick } from "@/handlers/handleSidebarView";
 import { NavMain } from "./nav-main";
+import CustomToggleButton from "../ToggleThemeButton/ToggleThemeButton";
+import ToggleTheme from "../ToggleThemeButton/ToggleThemeButton";
 
 const data = {
   user: {
@@ -72,7 +73,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
-        <ToggleTheme withoutClass={true} />
+        <ToggleTheme />
         <NavUser user={data.user} />
       </SidebarFooter>
       <SidebarRail />

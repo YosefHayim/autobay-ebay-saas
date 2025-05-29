@@ -1,5 +1,5 @@
-import CustomButton from "@/components/CustomButton/CustomButton";
-import CustomInput from "@/components/CustomInput/CustomInput";
+import { CustomButton } from "@/components/CustomButton";
+import { CustomInput } from "@/components/CustomInput";
 
 const ContactDetails = () => {
   return (

@@ -1,6 +1,6 @@
-import CustomInput from "@/components/CustomInput/CustomInput";
-import CountrySelection from "./CountrySelection/CountrySelection";
+import { CustomInput } from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton/CustomButton";
+import { CountrySelection } from "./CountrySelection";
 
 const Location = () => {
   return (
