@@ -1,6 +1,6 @@
 "use client";
 
-import { useCalendar } from "../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../contexts/calendar/calendar-context";
 import { motion } from "framer-motion";
 import { fadeIn, transition } from "./animations";
 import { AgendaEvents } from "./agenda-view/agenda-events";

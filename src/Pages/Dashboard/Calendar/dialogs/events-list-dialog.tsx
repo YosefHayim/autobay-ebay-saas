@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 import type { IEvent } from "../interfaces";
 import { EventBullet } from "../month-view/event-bullet";
-import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../../contexts/calendar/calendar-context";
 import { format } from "date-fns";
 import { dayCellVariants } from "../month-view/dayCellVariants";
 

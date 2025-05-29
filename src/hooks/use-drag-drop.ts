@@ -1,4 +1,4 @@
-import type { DragDropContextType } from "@/contexts/CalendarContext/drag-drop-context";
+import type { DragDropContextType } from "@/contexts/calendar/drag-drop-context";
 import { createContext, useContext } from "react";
 
 export const DragDropContext = createContext<DragDropContextType | undefined>(undefined);

@@ -3,7 +3,7 @@
 import type { IEvent } from "./interfaces";
 import { useEffect, useCallback } from "react";
 import { toast } from "sonner";
-import { useCalendar } from "../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../contexts/calendar/calendar-context";
 import { useDragDrop } from "@/hooks/use-drag-drop";
 
 export function EventUpdateHandler() {

@@ -1,4 +1,4 @@
-import type { SignUpContextType } from "@/contexts/SignupContext/types";
+import type { SignUpContextType } from "@/contexts/signup/types";
 import { createContext, useContext } from "react";
 
 export const SignUpContext = createContext<SignUpContextType | undefined>(undefined);

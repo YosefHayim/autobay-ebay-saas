@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { DotIcon, PaletteIcon, SettingsIcon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
-import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../../contexts/calendar/calendar-context";
 import type { TCalendarView } from "../types";
 
 export function Settings() {

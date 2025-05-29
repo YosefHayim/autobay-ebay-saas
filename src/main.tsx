@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router";
 import ThemeProvider from "./components/ThemeProvider/ThemeProvider.tsx";
 import Loader from "./components/Loader/Loader.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { SignUpProvider } from "./contexts/SignupContext/sign-up-context.tsx";
+import { SignUpProvider } from "./contexts/signup/sign-up-context.tsx";
 
 const queryClient = new QueryClient();
 

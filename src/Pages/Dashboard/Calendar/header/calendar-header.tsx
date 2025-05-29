@@ -12,7 +12,7 @@ import { DateNavigator } from "./date-navigator";
 import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
 
 import { ButtonGroup } from "@/components/ui/button-group";
-import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../../contexts/calendar/calendar-context";
 import { Toggle } from "@/components/ui/toggle";
 import { Settings } from "../settings/settings";
 import FilterEvents from "./filter";

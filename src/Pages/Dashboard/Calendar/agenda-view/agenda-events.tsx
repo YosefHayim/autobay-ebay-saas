@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { format, parseISO } from "date-fns";
 import { cn } from "@/lib/utils";
-import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../../contexts/calendar/calendar-context";
 import { EventDetailsDialog } from "../dialogs/event-details-dialog";
 import { useGetEventsByMode, toCapitalize, getColorClass, getBgColor, getFirstLetters, formatTime } from "../helpers";
 import { EventBullet } from "../month-view/event-bullet";

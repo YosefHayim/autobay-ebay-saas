@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../../contexts/calendar/calendar-context";
 import { staggerContainer, transition } from "../animations";
 
 import { DayCell } from "./day-cell";

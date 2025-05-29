@@ -8,7 +8,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 import type { IEvent } from "../interfaces";
 import type { ReactNode } from "react";
-import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../../contexts/calendar/calendar-context";
 import { formatTime } from "../helpers";
 import { AddEditEventDialog } from "./add-edit-event-dialog";
 import { Button } from "@/components/ui/button";

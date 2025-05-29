@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { CalendarProvider } from "../../../contexts/CalendarContext/calendar-context";
+import { CalendarProvider } from "../../../contexts/calendar/calendar-context";
 import { CalendarBody } from "./calendar-body";
 import { EventUpdateHandler } from "./event-update-handler";
-import { DragDropProvider } from "../../../contexts/CalendarContext/drag-drop-context";
+import { DragDropProvider } from "../../../contexts/calendar/drag-drop-context";
 import { CalendarHeader } from "./header/calendar-header";
 import Loader from "@/components/Loader/Loader";
 

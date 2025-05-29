@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 import { differenceInMinutes, parseISO } from "date-fns";
 
-import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../../contexts/calendar/calendar-context";
 
 import { EventDetailsDialog } from "../dialogs/event-details-dialog";
 import { cn } from "@/lib/utils";

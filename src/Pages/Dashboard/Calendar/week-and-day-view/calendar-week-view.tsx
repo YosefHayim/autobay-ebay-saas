@@ -2,7 +2,7 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { startOfWeek, addDays, format, parseISO, isSameDay } from "date-fns";
 import { motion } from "framer-motion";
 import { fadeIn, transition, staggerContainer } from "../animations";
-import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
+import { useCalendar } from "../../../../contexts/calendar/calendar-context";
 import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
 import { DroppableArea } from "../dnd/droppable-area";
 import { groupEvents } from "../helpers";
