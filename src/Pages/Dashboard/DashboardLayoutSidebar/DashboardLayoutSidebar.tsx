@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { handleSidebarButtonClick } from "@/handlers/handleSidebarView";
-import { useRenderActiveViewDashboard } from "@/hooks/useRenderActiveViewDashboard";
+import { useRenderActiveViewDashboard } from "@/hooks/use-render-active-view-dashboard";
 import { AppSidebar } from "@/components/ui/app-sidebar";
 
 const DashboardLayoutSidebar = () => {
@@ -28,10 +28,7 @@ const DashboardLayoutSidebar = () => {
               <SidebarTrigger className="-ml-1" />
             </div>
           </header>
-          <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-            <div className="grid auto-rows-min gap-4 md:grid-cols-3">{useRenderActiveViewDashboard(activeView)}</div>
-            <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
-          </div>
+          <div className="flex flex-1 flex-col gap-4 p-4 pt-0">{useRenderActiveViewDashboard(activeView)}</div>
         </SidebarInset>
       </SidebarProvider>
     </div>

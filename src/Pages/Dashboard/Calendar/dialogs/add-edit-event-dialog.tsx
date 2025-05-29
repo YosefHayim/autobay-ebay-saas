@@ -11,10 +11,10 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 import type { IEvent } from "../interfaces";
-import { useCalendar } from "../contexts/calendar-context";
+import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
 import { eventSchema, type TEventFormData } from "../schemas";
 import { COLORS } from "../constants";
-import { useDisclosure } from "@/hooks/useDisclosure";
+import { useDisclosure } from "@/hooks/use-disclosure";
 
 interface IProps {
   children: ReactNode;

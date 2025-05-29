@@ -1,8 +1,8 @@
 import React, { type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { useDragDrop } from "../contexts/drag-drop-context";
 import type { IEvent } from "../interfaces";
 import { EventDetailsDialog } from "../dialogs/event-details-dialog";
+import { useDragDrop } from "@/hooks/use-drag-drop";
 
 interface DraggableEventProps {
   event: IEvent;

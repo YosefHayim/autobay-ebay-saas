@@ -4,12 +4,11 @@ import { enUS } from "date-fns/locale";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker as ReactDayPicker } from "react-day-picker";
 
-import { buttonVariants } from "@/components/ui/button";
-
 import { cn } from "@/lib/utils";
 
 import type { ComponentProps } from "react";
 import type { CustomComponents } from "react-day-picker";
+import buttonVariants from "./buttonVariants";
 
 type TDayPickerProps = ComponentProps<typeof ReactDayPicker>;
 
@@ -19,13 +18,13 @@ function DayPicker({ className, classNames, showOutsideDays = true, ...props }: 
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{
-        months: "flex flex-col select-none sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
-        month: "space-y-4",
+        months: "flex flex-col select-none space-y-4 sm:space-x-4 sm:space-y-0",
+        month: "space-y-4 text-center",
 
         caption: "flex justify-center pt-1 relative items-center capitalize",
         caption_label: "text-sm font-medium",
 
-        nav: "space-x-1 flex items-center",
+        nav: "space-x-1 flex items-center w-full justify-between",
         nav_button: cn(buttonVariants({ variant: "outline" }), "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",

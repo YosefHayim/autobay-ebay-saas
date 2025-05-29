@@ -1,6 +1,6 @@
 "use client";
 
-import { useCalendar } from "./contexts/calendar-context";
+import { useCalendar } from "../../../contexts/CalendarContext/calendar-context";
 import { motion } from "framer-motion";
 import { fadeIn, transition } from "./animations";
 import { AgendaEvents } from "./agenda-view/agenda-events";
@@ -9,7 +9,7 @@ import { CalendarWeekView } from "./week-and-day-view/calendar-week-view";
 import { CalendarDayView } from "./week-and-day-view/calendar-day-view";
 import { CalendarYearView } from "./year-view/calendar-year-view";
 import { isSameDay, parseISO } from "date-fns";
-import { useFilteredEvents } from "@/hooks/useFilteredEvents";
+import { useFilteredEvents } from "@/hooks/use-filtered-events";
 
 export function CalendarBody() {
   const { view } = useCalendar();
@@ -27,7 +27,7 @@ export function CalendarBody() {
   });
 
   return (
-    <div className="relative] w-full overflow-scroll">
+    <div className="relative w-full overflow-scroll">
       <motion.div key={view} initial="initial" animate="animate" exit="exit" variants={fadeIn} transition={transition}>
         {view === "month" && <CalendarMonthView singleDayEvents={singleDayEvents} multiDayEvents={multiDayEvents} />}
         {view === "week" && <CalendarWeekView singleDayEvents={singleDayEvents} multiDayEvents={multiDayEvents} />}

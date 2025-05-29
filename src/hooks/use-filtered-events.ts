@@ -1,4 +1,4 @@
-import { useCalendar } from "@/Pages/Dashboard/Calendar/contexts/calendar-context";
+import { useCalendar } from "@/contexts/CalendarContext/calendar-context";
 
 export const useFilteredEvents = () => {
   const { events, selectedDate, selectedUserId } = useCalendar();

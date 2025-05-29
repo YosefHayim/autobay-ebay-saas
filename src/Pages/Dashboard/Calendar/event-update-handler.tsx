@@ -1,10 +1,10 @@
 "use client";
 
 import type { IEvent } from "./interfaces";
-import { useDragDrop } from "./contexts/drag-drop-context";
 import { useEffect, useCallback } from "react";
 import { toast } from "sonner";
-import { useCalendar } from "./contexts/calendar-context";
+import { useCalendar } from "../../../contexts/CalendarContext/calendar-context";
+import { useDragDrop } from "@/hooks/use-drag-drop";
 
 export function EventUpdateHandler() {
   const { setOnEventDropped } = useDragDrop();

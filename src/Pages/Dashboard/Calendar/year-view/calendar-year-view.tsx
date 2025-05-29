@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { getYear, isSameDay, isSameMonth } from "date-fns";
-import { useCalendar } from "../contexts/calendar-context";
+import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
 import { staggerContainer, transition } from "../animations";
 import { getCalendarCells } from "../helpers";
 import { cn } from "@/lib/utils";

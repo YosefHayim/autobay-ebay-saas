@@ -2,8 +2,7 @@ import * as React from "react";
 import { CalendarClock, Scissors, CreditCard, Users, Settings, Phone, MapPin, Clock, Globe } from "lucide-react";
 import { NavMain } from "@/components/ui/nav-main";
 import { NavUser } from "@/components/ui/nav-user";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@/components/ui/sidebar";
-import { Logo } from "../Logo";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarRail } from "@/components/ui/sidebar";
 import { ToggleTheme } from "../ToggleTheme";
 
 const data = {
@@ -61,15 +60,11 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader>
-        <Logo />
-        <ToggleTheme />
-      </SidebarHeader>
-      <hr />
-      <SidebarContent>
+      <SidebarContent className="w-full">
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
+        <ToggleTheme withoutClass={true} />
         <NavUser user={data.user} />
       </SidebarFooter>
       <SidebarRail />

@@ -7,7 +7,7 @@ import { StepThree } from "./StepThree";
 import { StepFour } from "./StepFour";
 import { StepFive } from "./StepFive";
 import { StepSix } from "./StepSix";
-import { useStepperSignUp } from "@/hooks/useStepperSignUp";
+import { useStepperSignUp } from "@/hooks/use-stepper-signup";
 
 const steps = [1, 2, 3, 4, 5, 6];
 

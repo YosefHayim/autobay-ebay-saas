@@ -2,7 +2,7 @@ import { Calendar, Clock, User } from "lucide-react";
 import { parseISO, format, isWithinInterval } from "date-fns";
 import { useRef, useEffect } from "react";
 
-import { useCalendar } from "../contexts/calendar-context";
+import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
 
 import { DayPicker } from "@/components/ui/day-picker";
 import { ScrollArea } from "@/components/ui/scroll-area";

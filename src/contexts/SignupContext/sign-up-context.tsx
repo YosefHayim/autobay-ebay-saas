@@ -1,5 +1,6 @@
-import { createContext, useState, type ReactNode } from "react";
-import type { SignUpDataProps, SignUpContextType } from "./types";
+import { useState, type ReactNode } from "react";
+import type { SignUpDataProps } from "./types";
+import { SignUpContext } from "@/hooks/use-signup";
 
 const initialSignUpData: SignUpDataProps = {
   phone: "",
@@ -18,8 +19,6 @@ const initialSignUpData: SignUpDataProps = {
   },
   services: [],
 };
-
-export const SignUpContext = createContext<SignUpContextType | undefined>(undefined);
 
 export const SignUpProvider = ({ children }: { children: ReactNode }) => {
   const [signUpData, setSignUpData] = useState<SignUpDataProps>(initialSignUpData);

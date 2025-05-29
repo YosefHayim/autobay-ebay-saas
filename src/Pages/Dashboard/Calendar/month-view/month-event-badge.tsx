@@ -2,7 +2,7 @@ import { cva } from "class-variance-authority";
 import { endOfDay, isSameDay, parseISO, startOfDay } from "date-fns";
 
 import type { VariantProps } from "class-variance-authority";
-import { useCalendar } from "../contexts/calendar-context";
+import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
 import type { IEvent } from "../interfaces";
 import { cn } from "@/lib/utils";
 import { EventDetailsDialog } from "../dialogs/event-details-dialog";

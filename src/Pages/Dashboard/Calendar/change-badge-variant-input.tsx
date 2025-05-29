@@ -1,6 +1,6 @@
 "use client";
 
-import { useCalendar } from "./contexts/calendar-context";
+import { useCalendar } from "../../../contexts/CalendarContext/calendar-context";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { DotIcon, PaletteIcon } from "lucide-react";
 import { MotionButton } from "./header/calendar-header";

@@ -27,7 +27,7 @@ import {
 } from "date-fns";
 import type { TCalendarView, TEventColor } from "./types";
 import type { ICalendarCell, IEvent } from "./interfaces";
-import { useCalendar } from "./contexts/calendar-context";
+import { useCalendar } from "../../../contexts/CalendarContext/calendar-context";
 
 const FORMAT_STRING = "MMM d, yyyy";
 

@@ -1,9 +1,10 @@
 "use client";
 
-import { createContext, useContext, useState, type ReactNode } from "react";
-import type { IEvent } from "../interfaces";
+import { useState, type ReactNode } from "react";
+import type { IEvent } from "../../Pages/Dashboard/Calendar/interfaces";
+import { DragDropContext } from "@/hooks/use-drag-drop";
 
-interface DragDropContextType {
+export interface DragDropContextType {
   draggedEvent: IEvent | null;
   isDragging: boolean;
   startDrag: (event: IEvent) => void;
@@ -12,8 +13,6 @@ interface DragDropContextType {
   onEventDropped?: (event: IEvent, newStartDate: Date, newEndDate: Date) => void;
   setOnEventDropped: (callback: (event: IEvent, newStartDate: Date, newEndDate: Date) => void) => void;
 }
-
-const DragDropContext = createContext<DragDropContextType | undefined>(undefined);
 
 export function DragDropProvider({ children }: { children: ReactNode }) {
   const [draggedEvent, setDraggedEvent] = useState<IEvent | null>(null);
@@ -83,12 +82,4 @@ export function DragDropProvider({ children }: { children: ReactNode }) {
       {children}
     </DragDropContext.Provider>
   );
-}
-
-export function useDragDrop() {
-  const context = useContext(DragDropContext);
-  if (context === undefined) {
-    throw new Error("useDragDrop must be used within a DragDropProvider");
-  }
-  return context;
 }

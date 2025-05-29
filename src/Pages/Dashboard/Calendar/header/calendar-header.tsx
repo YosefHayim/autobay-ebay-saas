@@ -12,11 +12,11 @@ import { DateNavigator } from "./date-navigator";
 import { AddEditEventDialog } from "../dialogs/add-edit-event-dialog";
 
 import { ButtonGroup } from "@/components/ui/button-group";
-import { useCalendar } from "../contexts/calendar-context";
+import { useCalendar } from "../../../../contexts/CalendarContext/calendar-context";
 import { Toggle } from "@/components/ui/toggle";
 import { Settings } from "../settings/settings";
 import FilterEvents from "./filter";
-import { useFilteredEvents } from "@/hooks/useFilteredEvents";
+import { useFilteredEvents } from "@/hooks/use-filtered-events";
 
 export const MotionButton = motion.create(Button);
 
@@ -27,7 +27,7 @@ export function CalendarHeader() {
 
   return (
     <div className="flex flex-col gap-4 border-b p-4 lg:flex-row lg:items-center lg:justify-between">
-      <motion.div className="flex items-center justify-around" variants={slideFromLeft} initial="initial" animate="animate" transition={transition}>
+      <motion.div className="flex items-center justify-around gap-2" variants={slideFromLeft} initial="initial" animate="animate" transition={transition}>
         <TodayButton />
         <DateNavigator view={view} events={events} />
         <Settings />

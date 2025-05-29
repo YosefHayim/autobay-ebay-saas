@@ -2,9 +2,9 @@
 
 import React, { createContext, useContext, useState } from "react";
 
-import type { IEvent, IUser } from "../interfaces";
+import type { IEvent, IUser } from "../../Pages/Dashboard/Calendar/interfaces";
 import { useLocalStorage } from "usehooks-ts";
-import type { TCalendarView, TEventColor } from "../types";
+import type { TCalendarView, TEventColor } from "../../Pages/Dashboard/Calendar/types";
 
 interface ICalendarContext {
   selectedDate: Date;
