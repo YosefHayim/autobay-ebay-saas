@@ -10,6 +10,9 @@ import Profile from "@/Pages/Profile";
 import { Calendar } from "../Calendar";
 import Services from "../Services";
 import Payments from "../Payments";
+import Customers from "../Customers";
+import Integrations from "../Integrations";
+import Settings from "../Settings/Settings";
 
 const DashboardLayoutSidebar = () => {
   const [open, setOpen] = useState(false);
@@ -30,6 +33,22 @@ const DashboardLayoutSidebar = () => {
           setActiveView("profile");
           break;
 
+        case "services":
+          setActiveView("services");
+          break;
+
+        case "payments":
+          setActiveView("payments");
+          break;
+
+        case "customers":
+          setActiveView("customers");
+          break;
+
+        case "integrations":
+          setActiveView("integrations");
+          break;
+
         case "settings":
           setActiveView("settings");
           break;
@@ -45,15 +64,27 @@ const DashboardLayoutSidebar = () => {
     switch (activeView) {
       case "calendar":
         return <Calendar />;
+
       case "profile":
         return <Profile />;
+
       default:
         return <Calendar />;
+
       case "services":
         return <Services />;
 
       case "payments":
         return <Payments />;
+
+      case "customers":
+        return <Customers />;
+
+      case "integrations":
+        return <Integrations />;
+
+      case "settings":
+        return <Settings />;
     }
   };
 

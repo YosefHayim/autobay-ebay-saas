@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-label";
 import Faq from "./Faq";
-import { IoMdCheckmarkCircle } from "react-icons/io";
+import { CheckCircle } from "lucide-react";
 import Brands from "./Brands";
 
 const howManyEmployeesYouHave = [
@@ -33,15 +33,15 @@ const Contact = () => {
               <div>
                 <ul className="flex flex-col items-start justify-start gap-2">
                   <li className="flex items-start gap-2">
-                    <IoMdCheckmarkCircle className="min-h-[20px] min-w-[20px]" />
+                    <CheckCircle className="min-h-[20px] min-w-[20px]" />
                     <p>Book a call with our sales team</p>
                   </li>
                   <li className="flex items-start gap-2">
-                    <IoMdCheckmarkCircle className="min-h-[20px] min-w-[20px]" />
+                    <CheckCircle className="min-h-[20px] min-w-[20px]" />
                     <p>Get a full demo and see how it fits your business</p>
                   </li>
                   <li className="flex items-start gap-2">
-                    <IoMdCheckmarkCircle className="min-h-[20px] min-w-[20px]" />
+                    <CheckCircle className="min-h-[20px] min-w-[20px]" />
                     <p>Learn how Bropify’s calendar helps you manage your business more efficiently</p>
                   </li>
                 </ul>

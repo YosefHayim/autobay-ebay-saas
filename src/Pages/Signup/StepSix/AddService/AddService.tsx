@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { FaPlus } from "react-icons/fa";
+import { Plus } from "lucide-react";
 import { serviceTime } from "./utils";
 
 const AddService = () => {
@@ -9,7 +9,7 @@ const AddService = () => {
     <Dialog>
       <DialogTrigger>
         <Button type="button" className="float-right rounded-full hover:bg-gray-200 hover:text-black">
-          <FaPlus />
+          <Plus />
         </Button>
       </DialogTrigger>
       <DialogContent>
