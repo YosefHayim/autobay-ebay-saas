@@ -2,7 +2,7 @@ import { Children, cloneElement } from "react";
 import { cn } from "@/lib/utils";
 import * as React from "react";
 import type { VariantProps } from "class-variance-authority";
-import type buttonVariants from "./buttonVariants";
+import type buttonVariants from "./button-variants";
 
 interface ButtonGroupProps {
   className?: string;

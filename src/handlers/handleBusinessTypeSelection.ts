@@ -10,10 +10,6 @@ export const handleBusinessTypesSelection = (
   const elValue = (el as HTMLElement).dataset.value;
   if (!elValue) return;
 
-  if (maxToSelect === 0) {
-    window.alert("You can choose up to 3 business only.");
-  }
-
   if (el?.classList.contains("selected")) {
     el.classList.remove("selected");
     setMaxToSelect((prev) => prev + 1);

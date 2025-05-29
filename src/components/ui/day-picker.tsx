@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 import type { ComponentProps } from "react";
 import type { CustomComponents } from "react-day-picker";
-import buttonVariants from "./buttonVariants";
+import buttonVariants from "./button-variants";
 
 type TDayPickerProps = ComponentProps<typeof ReactDayPicker>;
 

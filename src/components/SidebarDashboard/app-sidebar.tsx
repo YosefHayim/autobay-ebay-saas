@@ -1,11 +1,11 @@
 import * as React from "react";
 import { CalendarClock, Scissors, CreditCard, Users, Settings, Phone, MapPin, Clock, Globe } from "lucide-react";
-import { NavMain } from "@/components/ui/nav-main";
-import { NavUser } from "@/components/ui/nav-user";
+import { NavUser } from "@/components/SidebarDashboard/nav-user";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarRail } from "@/components/ui/sidebar";
 import { ToggleTheme } from "../ToggleTheme";
 import { useActiveView } from "@/hooks/use-active-view";
 import { handleSidebarButtonClick } from "@/handlers/handleSidebarView";
+import { NavMain } from "./nav-main";
 
 const data = {
   user: {

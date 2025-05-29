@@ -1,6 +1,6 @@
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
-const Notification: React.FC<{ alertTitle: string; alertDescription: string; isError: boolean }> = ({ alertTitle, alertDescription, isError }) => {
+const NotificationAlert: React.FC<{ alertTitle: string; alertDescription: string; isError: boolean }> = ({ alertTitle, alertDescription, isError }) => {
   return (
     <Alert variant={isError ? "destructive" : "default"}>
       <AlertTitle>{alertTitle}</AlertTitle>
@@ -9,4 +9,4 @@ const Notification: React.FC<{ alertTitle: string; alertDescription: string; isE
   );
 };
 
-export default Notification;
+export default NotificationAlert;

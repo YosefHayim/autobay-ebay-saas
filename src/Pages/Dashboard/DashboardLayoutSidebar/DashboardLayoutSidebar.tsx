@@ -2,7 +2,7 @@
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { useRenderActiveViewDashboard } from "@/hooks/use-render-active-view-dashboard";
-import { AppSidebar } from "@/components/ui/app-sidebar";
+import { AppSidebar } from "@/components/SidebarDashboard/app-sidebar";
 import { useActiveView } from "@/hooks/use-active-view";
 
 const DashboardLayoutSidebar = () => {
