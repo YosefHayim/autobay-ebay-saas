@@ -1,1 +1,5 @@
-export { default as Calendar } from "./calendar";
+import { lazy } from "react";
+
+const Calendar = lazy(() => import("./calendar"));
+
+export default Calendar;

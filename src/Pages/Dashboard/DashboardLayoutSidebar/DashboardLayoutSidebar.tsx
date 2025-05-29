@@ -1,96 +1,17 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Sidebar, SidebarBody, SidebarButton } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { Logo } from "../../../components/Logo";
 import { Link } from "react-router";
 import { NavigationSidebarMenu } from "./NavigationSidebarMenu";
 import { ToggleTheme } from "@/components/ToggleTheme";
-import Profile from "@/Pages/Profile";
-import { Calendar } from "../Calendar";
-import Services from "../Services";
-import Payments from "../Payments";
-import Customers from "../Customers";
-import Integrations from "../Integrations";
-import Settings from "../Settings/Settings";
+import { handleSidebarButtonClick } from "@/handlers/handleSidebarView";
+import { useRenderActiveViewDashboard } from "@/hooks/useRenderActiveViewDashboard";
 
 const DashboardLayoutSidebar = () => {
   const [open, setOpen] = useState(false);
   const [activeView, setActiveView] = useState("calendar");
-
-  const handleSidebarButtonClick = (e: React.MouseEvent<HTMLElement>) => {
-    const target = e.target as HTMLElement;
-    const btn = target.closest("button");
-    if (btn instanceof HTMLButtonElement) {
-      const activeView = btn.dataset.value;
-
-      switch (activeView) {
-        case "calendar":
-          setActiveView("calendar");
-          break;
-
-        case "profile":
-          setActiveView("profile");
-          break;
-
-        case "services":
-          setActiveView("services");
-          break;
-
-        case "payments":
-          setActiveView("payments");
-          break;
-
-        case "customers":
-          setActiveView("customers");
-          break;
-
-        case "integrations":
-          setActiveView("integrations");
-          break;
-
-        case "settings":
-          setActiveView("settings");
-          break;
-
-        default:
-          setActiveView("calendar");
-          break;
-      }
-    }
-  };
-
-  const renderActiveView = (activeView: string) => {
-    switch (activeView) {
-      case "calendar":
-        return <Calendar />;
-
-      case "profile":
-        return <Profile />;
-
-      default:
-        return <Calendar />;
-
-      case "services":
-        return <Services />;
-
-      case "payments":
-        return <Payments />;
-
-      case "customers":
-        return <Customers />;
-
-      case "integrations":
-        return <Integrations />;
-
-      case "settings":
-        return <Settings />;
-    }
-  };
-
-  useEffect(() => {
-    return () => {};
-  }, [activeView]);
 
   return (
     <div
@@ -107,7 +28,7 @@ const DashboardLayoutSidebar = () => {
                 <Logo />
               </Link>
             )}
-            <div className="mt-8 flex flex-col gap-2" onClick={handleSidebarButtonClick}>
+            <div className="mt-8 flex flex-col gap-2" onClick={(e) => handleSidebarButtonClick(e, setActiveView)}>
               {NavigationSidebarMenu.map((btn) => (
                 <SidebarButton key={btn.label} btn={btn} />
               ))}
@@ -122,7 +43,7 @@ Add here icon of business of the customer
           </div>
         </SidebarBody>
       </Sidebar>
-      {renderActiveView(activeView)}
+      {useRenderActiveViewDashboard(activeView)}
     </div>
   );
 };
