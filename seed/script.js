@@ -210,4 +210,4 @@ const resetDB = async () => {
 };
 
 // resetDB();
-generateData(100).catch(console.error);
+generateData(1000).catch(console.error);
