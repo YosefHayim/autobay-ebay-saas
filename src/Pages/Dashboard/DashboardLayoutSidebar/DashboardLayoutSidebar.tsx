@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Sidebar, SidebarBody, SidebarButton } from "../../../components/ui/sidebar";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "../../../components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { Logo } from "../../../components/Logo";
 import { Link } from "react-router";
@@ -8,6 +8,9 @@ import { NavigationSidebarMenu } from "./NavigationSidebarMenu";
 import { ToggleTheme } from "@/components/ToggleTheme";
 import { handleSidebarButtonClick } from "@/handlers/handleSidebarView";
 import { useRenderActiveViewDashboard } from "@/hooks/useRenderActiveViewDashboard";
+import { AppSidebar } from "@/components/ui/app-sidebar";
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
+import { Separator } from "@radix-ui/react-separator";
 
 const DashboardLayoutSidebar = () => {
   const [open, setOpen] = useState(false);
@@ -25,28 +28,24 @@ const DashboardLayoutSidebar = () => {
         "h-screen",
       )}
     >
-      <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody className="justify-between gap-10">
-          <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto">
-            {open && (
-              <Link to="/dashboard">
-                <Logo />
-              </Link>
-            )}
-            <div className="mt-8 flex flex-col gap-2" onClick={(e) => handleSidebarButtonClick(e, setActiveView)}>
-              {NavigationSidebarMenu?.map((btn) => <SidebarButton key={btn.label} btn={btn} />)}
+      <SidebarProvider>
+        <AppSidebar />
+        <SidebarInset>
+          <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+            <div className="flex items-center gap-2 px-4">
+              <SidebarTrigger className="-ml-1" />
             </div>
+          </header>
+          <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+            <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+              <div className="bg-muted/50 aspect-video rounded-xl" />
+              <div className="bg-muted/50 aspect-video rounded-xl" />
+              <div className="bg-muted/50 aspect-video rounded-xl" />
+            </div>
+            <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
           </div>
-          <div>
-            <ToggleTheme />
-
-            {/* 
-Add here icon of business of the customer
-            */}
-          </div>
-        </SidebarBody>
-      </Sidebar>
-      {useRenderActiveViewDashboard(activeView)}
+        </SidebarInset>
+      </SidebarProvider>
     </div>
   );
 };
