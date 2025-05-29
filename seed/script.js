@@ -26,7 +26,7 @@ const barberServices = [
   "Nose Hair Trim",
 ];
 
-const durationOfServices = ["45 min", "20 min", "15 min", "60 min"];
+const durationOfServices = [45, 20, 15, 60];
 
 const createbusiness = async (business_owner_id) => {
   const business = {
@@ -174,9 +174,8 @@ const createCustomerReviews = async (business_id, customers) => {
 
 const generateData = async (businessCount = 5) => {
   for (let i = 0; i < businessCount; i++) {
-    await createbusinessImages(business.id);
     const owner = await createbusinessOwner();
-    const business = await createbusiness(business.business_owner_id);
+    const business = await createbusiness(owner.id);
     const employees = await createEmployees(business.id);
 
     const allServices = [];
@@ -189,8 +188,9 @@ const generateData = async (businessCount = 5) => {
 
     await createAppointments(customers, allServices);
     await createCustomerReviews(business.id, customers);
+    await createbusinessImages(business.id);
 
-    console.log(`✅ Finished seeding business ${i + 1} with ${customerCount} customers`);
+    console.log(`Finished seeding`);
   }
 };
 
