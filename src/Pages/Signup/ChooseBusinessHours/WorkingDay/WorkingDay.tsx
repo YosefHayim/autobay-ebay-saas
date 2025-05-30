@@ -1,4 +1,4 @@
-import WorkingHours from "../WorkingHours/WorkingHours";
+import { WorkingHours } from "../WorkingHours";
 
 const WorkingDay: React.FC<{ day: string }> = ({ day }) => {
   return (

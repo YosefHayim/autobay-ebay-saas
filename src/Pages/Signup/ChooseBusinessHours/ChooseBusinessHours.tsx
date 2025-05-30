@@ -5,20 +5,20 @@ const BusinessHours = () => {
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
       <h1 className="text-center text-2xl">When can customers schedule appointments?</h1>
       <p>You can change the activity hours later, this isnt permanet.</p>
-      <form className="flex w-2/3 flex-col items-start justify-start gap-2">
-        <WorkingDay day="Sunday" />
+      <form className="flex w-full flex-col items-start justify-start gap-2">
+        <WorkingDay day="Sun" />
         <hr className="w-full" />
-        <WorkingDay day="Monday" />
+        <WorkingDay day="Mon" />
         <hr className="w-full" />
-        <WorkingDay day="Tuesday" />
+        <WorkingDay day="Tue" />
         <hr className="w-full" />
-        <WorkingDay day="Wednesday" />
+        <WorkingDay day="Wed" />
         <hr className="w-full" />
-        <WorkingDay day="Thursday" />
+        <WorkingDay day="Thu" />
         <hr className="w-full" />
-        <WorkingDay day="Friday" />
+        <WorkingDay day="Fri" />
         <hr className="w-full" />
-        <WorkingDay day="Saturday" />
+        <WorkingDay day="Sat" />
       </form>
     </section>
   );

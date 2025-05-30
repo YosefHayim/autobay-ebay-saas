@@ -1,6 +1,6 @@
-import { Input } from "@/components/ui/input";
 import { SparklesText } from "@/components/ui/sparkles-text";
 import { howDidYouHearAboutUsOptions, whichCalendarYouHadOptions } from "./customerOptions";
+import { CustomInput } from "@/components/CustomInput";
 
 const BasicInfoAboutBusiness = () => {
   return (
@@ -13,13 +13,13 @@ const BasicInfoAboutBusiness = () => {
       </div>
       <form className="flex w-2/3 flex-col items-center gap-3">
         <div className="w-full">
-          <Input placeholder="Business name"></Input>
+          <CustomInput placeholder="Business name" />
         </div>
         <div className="w-full">
-          <Input placeholder="Phone number of the business"></Input>
+          <CustomInput placeholder="Phone number of the business " />
         </div>
         <div className="w-full">
-          <Input placeholder="Business address"></Input>
+          <CustomInput placeholder="Business address" />
         </div>
         <div className="flex w-full flex-col">
           <label htmlFor="previous-calendar-use" className="w-full">
