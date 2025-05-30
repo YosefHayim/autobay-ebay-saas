@@ -20,7 +20,12 @@ export const stepSignUpProccess = (currentStep: number) => {
       return <ChooseBusinessTypes />;
 
     case 5:
-      return <ChooseBusinessHours />;
+      return (
+        <ChooseBusinessHours>
+          <h1 className="text-center text-2xl">When can customers schedule appointments?</h1>
+          <p>You can change the activity hours later, this isnt permanet.</p>
+        </ChooseBusinessHours>
+      );
 
     case 6:
       return <ChooseServices />;

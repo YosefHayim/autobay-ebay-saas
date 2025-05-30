@@ -1,5 +1,4 @@
 "use client";
-
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeProvider/ThemeProvider";
 import { CustomToggleButton } from "../CustomToggleButton";
@@ -13,7 +12,7 @@ const ToggleThemeButton = () => {
       variant="outline"
       withoutClass={false}
       className={`group data-[state=on]:hover:bg-muted data-[state=on]:bg-transparent" size-9 w-min p-[1.5em]`}
-      onPressedChange={(pressed) => {
+      onPressedChange={(pressed: string) => {
         if (pressed && theme === "light") setTheme("dark");
         else setTheme("light");
       }}

@@ -1,10 +1,10 @@
+import type { ReactNode } from "react";
 import WorkingDay from "./WorkingDay/WorkingDay";
 
-const BusinessHours = () => {
+const BusinessHours: React.FC<{ children?: ReactNode }> = ({ children }) => {
   return (
     <section className="mt-2 flex w-full flex-col items-center justify-center gap-3">
-      <h1 className="text-center text-2xl">When can customers schedule appointments?</h1>
-      <p>You can change the activity hours later, this isnt permanet.</p>
+      <div className="w-full text-center">{children}</div>
       <form className="flex w-full flex-col items-start justify-start gap-2">
         <WorkingDay day="Sun" />
         <hr className="w-full" />

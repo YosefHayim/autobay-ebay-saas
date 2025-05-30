@@ -23,6 +23,7 @@ const DashboardLayoutSidebar = () => {
               <SidebarTrigger className="-ml-1" />
             </div>
           </header>
+          <hr className="my-2" />
           <div className="flex flex-1 flex-col gap-4 p-4 pt-0">{useRenderActiveViewDashboard(activeView)}</div>
         </SidebarInset>
       </SidebarProvider>
