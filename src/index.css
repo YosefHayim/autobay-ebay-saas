@@ -497,3 +497,7 @@ input {
 .before\:content-\[attr\(data-content\)\]::before {
   content: attr(data-content);
 }
+
+.selected {
+  border: 3px solid black;
+}
