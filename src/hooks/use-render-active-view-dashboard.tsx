@@ -8,7 +8,7 @@ import Location from "@/Pages/Dashboard/Location";
 import Payments from "@/Pages/Dashboard/Payments";
 import Services from "@/Pages/Dashboard/Services";
 import Settings from "@/Pages/Dashboard/Settings";
-import SocialLinks from "@/Pages/Dashboard/SocialLinks/SocialLinks";
+import SocialLinks from "@/Pages/Dashboard/SocialLinks";
 import Profile from "@/Pages/Profile";
 
 export const useRenderActiveViewDashboard = (activeView: string) => {
