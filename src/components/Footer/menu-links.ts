@@ -1,6 +1,9 @@
 import facebookSvg from "/svgs/facebook.svg";
-import instagramSvg from "/svgs/instagram.svg";
+import instagramSvg from "/svgs/instegram.svg";
 import tiktokSvg from "/svgs/tiktok.svg";
+import twitter from "/svgs/twitter.svg";
+import customSvg from "/svgs/custom.svg";
+import linkedinSvg from "/svgs/linkedin.svg";
 import youtubeSvg from "/svgs/youtube.svg";
 
 interface FooterLink {
@@ -15,10 +18,13 @@ interface FooterSection {
 }
 
 export const svgsLinks = {
-  Facebook: facebookSvg,
-  Instegram: instagramSvg,
-  Tiktok: tiktokSvg,
-  Youtube: youtubeSvg,
+  facebook: facebookSvg,
+  instegram: instagramSvg,
+  tiktok: tiktokSvg,
+  youtube: youtubeSvg,
+  linkedin: linkedinSvg,
+  twitter: twitter,
+  custom: customSvg,
 };
 
 export const sociaLinks = [
