@@ -16,7 +16,7 @@ interface FooterSection {
 
 export const svgsLinks = {
   Facebook: facebookSvg,
-  Instagram: instagramSvg,
+  Instegram: instagramSvg,
   Tiktok: tiktokSvg,
   Youtube: youtubeSvg,
 };
