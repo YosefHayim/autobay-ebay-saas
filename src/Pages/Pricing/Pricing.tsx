@@ -1,6 +1,5 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
@@ -12,6 +11,7 @@ import confetti from "canvas-confetti";
 import NumberFlow from "@number-flow/react";
 import { Link } from "react-router";
 import { plans } from "./plans";
+import buttonVariants from "@/components/ui/button-variants";
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);

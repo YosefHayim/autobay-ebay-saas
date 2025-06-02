@@ -8,6 +8,7 @@ export const handleSidebarButtonClick = (e: React.MouseEvent<HTMLElement>, setAc
     switch (activeView) {
       case "Appointments":
       case "Services":
+      case "Analytics":
       case "Payments":
       case "Customers":
       case "Integrations":

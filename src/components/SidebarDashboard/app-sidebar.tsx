@@ -1,11 +1,10 @@
 import * as React from "react";
-import { CalendarClock, Scissors, CreditCard, Users, Settings, Phone, MapPin, Clock, Globe, Sun, Moon } from "lucide-react";
+import { CalendarClock, Scissors, CreditCard, Users, Settings, Phone, MapPin, Clock, Globe, ChartNoAxesCombined } from "lucide-react";
 import { NavUser } from "@/components/SidebarDashboard/nav-user";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarRail } from "@/components/ui/sidebar";
 import { useActiveView } from "@/hooks/use-active-view";
 import { handleSidebarButtonClick } from "@/handlers/handleSidebarView";
 import { NavMain } from "./nav-main";
-import CustomToggleButton from "../ToggleThemeButton/ToggleThemeButton";
 import ToggleTheme from "../ToggleThemeButton/ToggleThemeButton";
 
 const data = {
@@ -17,9 +16,9 @@ const data = {
   navMain: [
     {
       title: "Appointments",
-      url: "#",
       icon: CalendarClock,
     },
+    { title: "Analytics", icon: ChartNoAxesCombined },
     {
       title: "Services",
       icon: Scissors,

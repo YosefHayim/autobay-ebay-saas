@@ -1,3 +1,4 @@
+import Analytics from "@/Pages/Dashboard/Analytics";
 import Appointments from "@/Pages/Dashboard/Appointments";
 import BusinessHours from "@/Pages/Dashboard/BusinessHours/BusinessHours";
 import ContactDetails from "@/Pages/Dashboard/ContactDetails";
@@ -15,6 +16,9 @@ export const useRenderActiveViewDashboard = (activeView: string) => {
   switch (activeView) {
     case "Appointments":
       return <Appointments />;
+
+    case "Analytics":
+      return <Analytics />;
 
     case "Profile":
       return <Profile />;
